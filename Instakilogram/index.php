@@ -39,12 +39,12 @@
                             <!-- FIRST NAME -->
                             <div class="sub-form-group-input">
                                 <label for="firstName" class="sub-form-label">First name</label>
-                                <input id="firstName" rules="required" name="firstName" type="text" placeholder="Ex: Karma" class="form-control">
+                                <input id="firstName" rules="required|min:2|max:20" name="firstName" type="text" placeholder="Ex: Karma" class="form-control">
                             </div>
                             <!-- LAST NAME -->
                             <div class="sub-form-group-input">
                                 <label for="lastName" class="sub-form-label">Last name</label>
-                                <input id="lastName" rules="required" name="lastName" type="text" placeholder="Ex: Nguyen" class="form-control">
+                                <input id="lastName" rules="required|min:2|max:20" name="lastName" type="text" placeholder="Ex: Nguyen" class="form-control">
                             </div>
                         </div>
                         <span class="form-message invalid"></span>
@@ -58,7 +58,7 @@
 
                     <div class="form-group">
                         <label for="password" class="form-label">Password</label>
-                        <input id="password" rules="required|min:6" name="password" type="password" placeholder="Enter the password" class="form-control">
+                        <input id="password" rules="required|min:8|max:20|regexPassword" name="password" type="password" placeholder="Enter the password" class="form-control">
                         <span class="form-message"></span>
                     </div>
 
