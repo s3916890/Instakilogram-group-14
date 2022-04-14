@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Stylesheet CSS -->
-    <link rel="stylesheet" href="style/animation.css">
-    <link rel="stylesheet" href="style/responsive.css">
-    <link rel="stylesheet" href="style/form.css">
-    <link rel="stylesheet" href="style/cookies.css">
+    <link rel="stylesheet" href="../style/animation.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+    <link rel="stylesheet" href="../style/form.css">
+    <link rel="stylesheet" href="../style/cookies.css">
 
     <!-- Javascript -->
-    <script src="script/cookies.js"></script>
+    <script src="../script/cookies.js"></script>
     <title>Instakilogram</title>
 </head>
 
@@ -28,7 +28,7 @@
                 return ('data:' . $image_type . ';base64,' . $base64);
             }
             ?>
-            <img src="<?php print img_create('Demo Instakilogram Design/FormBackgroundImage.png', 'image/png'); ?>" style="width: 100%; height: 100%;" alt="Form Background Image" />
+            <img src="<?php print img_create('../assets/Demo Instakilogram Design/FormBackgroundImage.png', 'image/png'); ?>" style="width: 100%; height: 100%;" alt="Form Background Image" />
         </div>
 
         <!-- REGISTER FORM -->
@@ -85,7 +85,7 @@
         </div>
     </main>
     <!-- JAVASCRIPT -->
-    <script src="script/app.js"></script>
+    <script src="../script/app.js"></script>
     <!-- <script src="./assets/file.js"></script> -->
     <script>
         FormValidator('#register-form', {
