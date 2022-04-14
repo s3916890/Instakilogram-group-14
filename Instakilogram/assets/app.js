@@ -39,6 +39,10 @@ function FormValidator(formSelection, options) {
                 return value.length <= max ? undefined : `Please enter up to ${max} characters`;
             }
         },
+        regexPassword: (value) => {
+            let regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
+            return regex.test(value) ? undefined : 'Password must contain at least 1 lower case letter, at least 1 upper case letter, at least 1 digit' || regex.test(value) === false;
+        },
         isConfirmed: (value) => {
             let prevPassword = $('input[type = password]').value
             return value === prevPassword && prevPassword ? undefined : 'Re-enter password again';
@@ -49,6 +53,7 @@ function FormValidator(formSelection, options) {
     };
     // Get element in DOM based on "formSelector"
     const formElement = $(formSelection);
+    const clearBtn = $('.form-clear');
     var formRules = {};
     // Handle if there is the existence of form element in the DOM
     if (formElement) {
@@ -84,8 +89,8 @@ function FormValidator(formSelection, options) {
             input.onblur = HandleValidator;
             // When user type the value on the input, the error will be CLEARED
             input.oninput = HandleClearError;
+            clearBtn.onclick = HandleResetForm;
         }
-        console.log(formRules);
 
         function HandleValidator(event) {
             let rules = formRules[event.target.name];
@@ -116,9 +121,15 @@ function FormValidator(formSelection, options) {
                 formMessage.innerText = '';
             }
         }
-        // ...... FIXED 
-        function changeFontFamily() {
+        function HandleResetForm(){
             const inputs = $$('input[name]');
+            inputs.forEach((input) => {
+                input.value = '';
+            })
+        }
+        // ...... FIXING
+        function changeFontFamily() {
+            const inputs = $$('input[name][type]');
             // Change the font-family when users input. 
             inputs.forEach((input) => {
                 input.oninput = () => {
@@ -134,7 +145,7 @@ function FormValidator(formSelection, options) {
         let inputs = formElement.querySelectorAll('input[name][rules]');
         let isValid = true;
         for (let input of inputs) {
-            if (!HandleValidator(
+            if (!HandleValidator( 
                 {
                     target: input
                 }
