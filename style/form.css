@@ -1,4 +1,3 @@
-
 * {
     padding: 0;
     margin: 0;
@@ -30,7 +29,7 @@ main {
     animation: slideLeft 1s forwards;
     animation-delay: 0.1s;
 }
-.formRegister{
+.forms{
     display: flex;
     justify-content: center;
     align-items: center;
