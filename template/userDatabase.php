@@ -1,62 +1,103 @@
-<?php
-    /** USER DATABASE */
-    class UserDatabase{
-        public function getFirstName(){
-            return $_POST["firstName"];
-        }
-        public function getLastName(){
-            return $_POST["lastName"]; 
-        }
-        public function getEmail(){
-            return $_POST["email"];
-        }
-        public function getPassword(){
-            return $_POST["password"];
-        }
-        public function getRetypePassword(){
-            return $_POST["password_confirmation"];
-        }
-        public function getProfileLink(){
-            return $_POST["avatar"];
-        }
-        public function databaseAccount(){
-            if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-                if ($this->getFirstName() != '' && $this->getLastName() != '' && $this->getEmail() != '' &&
-                    $this->getPassword() != '' && $this->getRetypePassword() != '' && $this->getProfileLink() != ''){
-                    $file = 'account.json';
-                    if (file_exists($file)){
-                        $current_data = file_get_contents($file);
-                        $array_data = json_decode($current_data, true);
-                        $newArr = array(
-                            'First name' => $this->getFirstName(),
-                            'Last name' => $this->getLastName(),
-                            'Email' => $this->getEmail(),
-                            'Password' => $this->getPassword(),
-                            'Retype Password' => $this->getRetypePassword(),
-                            'Avatar' => $this->getProfileLink(),
-                        );
-                        // CONVERT TO THE NEW ARRAY AND CONVERT JSON
-                        $array_data[] = $newArr;
-                        $final_data = json_encode($array_data, JSON_PRETTY_PRINT);
-                        
-                        print $final_data;
-    
-                        $putContent = file_put_contents($file, $final_data);
-                        // FIXING.........
-                        // if ($putContent) {
-                        //     echo "Successfully Appended!!";
-                        // } 
-                        // else{
-                        //     echo "Unsuccessfully Appended";
-                        // }
-                    }
-                    else{
-                        echo "JSON FILE does not exist";
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">d
+        <title>Result Appending</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background-color: #F5F8FB;
+            }
+            p {
+                font-family: 'Poppins', sans-serif;
+                font-size: 36px;
+                font-weight: bold;
+                position: absolute;
+                top: -100%;
+                right: 50%;
+                transform: translate(50%, -50%);
+                animation: slideTop 1s forwards;
+                animation-delay: 0.1s;
+            }
+            span {
+                color: #9900F0;
+            }
+            @keyframes slideTop {
+
+                to {
+                    opacity: 100%;
+                    top: 50%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <?php
+            /**  USER DATABASE */
+            class UserDatabase {
+                public function getFirstName()
+                {
+                    return $_POST["firstName"];
+                }
+                public function getLastName()
+                {
+                    return $_POST["lastName"];
+                }
+                public function getEmail()
+                {
+                    return $_POST["email"];
+                }
+                public function getPassword()
+                {
+                    return $_POST["password"];
+                }
+                public function getRetypePassword()
+                {
+                    return $_POST["password_confirmation"];
+                }
+                public function getProfileLink()
+                {
+                    return $_POST["avatar"];
+                }
+                public function databaseAccount()
+                {
+                    $newArr = array(
+                        'First name' => $this->getFirstName(),
+                        'Last name' => $this->getLastName(),
+                        'Email' => $this->getEmail(),
+                        'Password' => $this->getPassword(),
+                        'Retype Password' => $this->getRetypePassword(),
+                        'Avatar' => $this->getProfileLink(),
+                    );
+                    // CONVERT TO THE NEW ARRAY TO CONVERT JSON
+                    $array_data[] = $newArr;
+                    $final_data = json_encode($array_data, JSON_PRETTY_PRINT);
+
+                    // if not file is there then automatic create and write inside it.
+                    $file = 'account.txt';
+
+                    $current = file_get_contents($file);
+                    $current .= $final_data;
+                    // Append the contents back to the file
+                    file_put_contents($file, $current);
+                    // Check successfully or unsuccessfully append to file txt
+                    if (file_put_contents($file, $current)) {
+                        echo "<p>Successfully appended to <span>account</span>.txt</p>";
+                    } else {
+                        echo "Unsuccessfully Appended";
                     }
                 }
             }
-        }
-    }
-    $user1 = new UserDatabase();
-    $user1->databaseAccount();
-?>
+        ?>
+        <?php
+            $user = new UserDatabase();
+            $user->databaseAccount(); 
+        ?>
+    </body>
+</html>
