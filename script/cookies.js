@@ -6,16 +6,16 @@ const cookieButton1 = 'I understand';
 const cookieButton2 = "Learn more";
 
 // fade in function
-function fadeIn(elem, display) {
+function fadeIn(elem) {
     let el = document.getElementById(elem);
     el.style.opacity = 0;
-    el.style.display = display || "block";
+    el.style.display = "block";
 
     (function fade() {
         let val = parseFloat(el.style.opacity);
-        if (!((val += 0.02) > 1)) {
+        if (!((val += 0.01) > 1)) {
             el.style.opacity = val;
-            requestAnimationFrame(fade);
+            window.requestAnimationFrame(fade);
         }
     })();
 }
@@ -26,13 +26,16 @@ function FadeOut(elem) {
     el.style.opacity = 1;
 
     (function fade() {
-        if ((el.style.opacity -= 0.02) < 0) {
+        if ((el.style.opacity -= 0.01) < 0) {
             el.style.display = "none";
         } else {
-            requestAnimationFrame(fade);
+            window.requestAnimationFrame(fade);
         }
     })();
 }
+
+// The cookies is made based on w3schools
+// https://www.w3schools.com/js/js_cookies.asp
 
 // set cookie
 function setCookie(name, value, days) {

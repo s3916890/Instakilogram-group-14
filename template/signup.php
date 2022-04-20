@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../style/responsive.css">
     <link rel="stylesheet" href="../style/form.css">
     <link rel="stylesheet" href="../style/cookies.css">
+    <link rel="stylesheet" href="../style/style.css">
 
     <!-- Javascript -->
     <script src="../script/cookies.js"></script>
