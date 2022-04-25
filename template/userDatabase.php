@@ -1,53 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php include "./Instakilogram-group-14/template/userDatabase.php"?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Result Appending</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: #F5F8FB;
-        }
-
-        p {
-            font-family: 'Poppins', sans-serif;
-            font-size: 36px;
-            font-weight: bold;
-            position: absolute;
-            top: -100%;
-            right: 50%;
-            transform: translate(50%, -50%);
-            animation: slideTop 1s forwards;
-            animation-delay: 0.1s;
-        }
-
-        span {
-            color: #9900F0;
-        }
-
-        @keyframes slideTop {
-
-            to {
-                opacity: 100%;
-                top: 50%;
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <?php
-    /**  USER DATABASE */
-    class UserDatabase
+<?php
+    class UserInputDatabase
     {
+        private $fileName = "account.db";
+        private $fileHandle;
+        
+        public function openFile(){
+            $this->fileHandle = fopen($this->fileName, "a+");
+        }
+        // Get all input value of users
         public function getFirstName(){
             return $_POST["firstName"];
         }
@@ -66,37 +28,62 @@
         public function getProfileLink(){
             return $_POST["avatar"];
         }
-        public function databaseAccount(){
-            $newArr = array(
-                'First name' => $this->getFirstName(),
-                'Last name' => $this->getLastName(),
-                'Email' => $this->getEmail(),
-                'Password' => $this->getPassword(),
-                'Retype Password' => $this->getRetypePassword(),
-                'Avatar' => $this->getProfileLink(),
+        // This function's purpose existence is the process of reading and writing the File 
+        public function readAndWriteFileProcess(){
+            $userDatabase = array(
+                'firstName' => $this->getFirstName(),
+                'lastName' => $this->getLastName(),
+                'email' => $this->getEmail(),
+                'password' => $this->getPassword(),
+                'retypePassword' => $this->getRetypePassword(),
+                'avatar' => $this->getProfileLink()
             );
-            // CONVERT TO THE NEW ARRAY TO CONVERT JSON 
-            $final_data = json_encode($newArr, JSON_PRETTY_PRINT);
-            // If not file is there then automatic create and write inside it.
-            $file = 'account.db';
-            $current = file_get_contents($file);
-            $current .= $final_data;
-            // Append the contents back to the file
-            file_put_contents($file, $current);
-            // Check successfully or unsuccessfully append to file txt
-            if (file_put_contents($file, $current)) {
-                echo "<p>Successfully appended to <span>account</span>.txt</p>";
-            } 
-            else {
-                echo "<p>Unsuccessfully appended to <span>account</span>.txt</p>";
+            
+            if (isset($_POST["submit"])){
+                $allowedExtension = array("jpg", "jpeg", "png", "gif");
+                $fileUploadExtension = pathinfo($userDatabase["avatar"], PATHINFO_EXTENSION);
+                // If the extension of file upload is not proper, the executing will immediately exit to the statement. 
+                if(in_array($fileUploadExtension, $allowedExtension)){
+                    if(filesize($this->fileName) == 0){
+                        $firstStorageRecord = array($userDatabase);
+                        $dataToSaveDatabase = $firstStorageRecord;
+                    }
+                    else{
+                        $getUserDatabase = file_get_contents($this->fileName);
+                        $old_records = array_unique(json_decode($getUserDatabase));
+                        /** CHECK DUPLICATION EMAIL PROCESS */
+                        // Iterate the old database to compare the current email value and the email value in file "account.db"
+                        foreach($old_records as $userInputObject){
+                            if($userDatabase["email"] !== $userInputObject->email){
+                                array_push($old_records, $userDatabase);
+                            }
+                        }
+                        $dataToSaveDatabase = $old_records;
+                    }
+                    // PUT CONTENT TO THE FILE
+                    if (!file_put_contents($this->fileName, json_encode($dataToSaveDatabase, JSON_PRETTY_PRINT), LOCK_EX)) {
+                        $preventDuplication = "Error, there is duplication of email value";
+                        echo $preventDuplication;
+                    } 
+                    else {
+                        $success = "Successfully, there is sno duplication of email value";
+                        echo $success;
+                    }
+                }
             }
+
+        }
+        
+        public function finishProcess()
+        {
+            fclose($this->fileHandle);
         }
     }
-    ?>
-    <?php
-    $user = new UserDatabase();
-    $user->databaseAccount();
-    ?>
-</body>
+?>
+<?php
+    $runDatabase = new UserInputDatabase;
 
-</html>
+    $runDatabase->openFile();
+    $runDatabase->readAndWriteFileProcess();
+    $runDatabase->finishProcess();
+?>
