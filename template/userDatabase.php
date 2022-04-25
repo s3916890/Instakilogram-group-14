@@ -30,12 +30,19 @@
         }
         // This function's purpose existence is the process of reading and writing the File 
         public function readAndWriteFileProcess(){
+            // HARSH PASSWORD
+            $password = $this->getPassword(); 
+            $harshPassword = password_hash($password, PASSWORD_DEFAULT);
+            
+            $retypePassword = $this->getRetypePassword();
+            $harshRetypePassword = password_hash($retypePassword, PASSWORD_DEFAULT);
+
             $userDatabase = array(
                 'firstName' => $this->getFirstName(),
                 'lastName' => $this->getLastName(),
                 'email' => $this->getEmail(),
-                'password' => $this->getPassword(),
-                'retypePassword' => $this->getRetypePassword(),
+                'password' => $harshPassword,
+                'retypePassword' => $harshRetypePassword,
                 'avatar' => $this->getProfileLink()
             );
             
