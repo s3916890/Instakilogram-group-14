@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../style/responsive.css">
     <link rel="stylesheet" href="../style/form.css">
     <link rel="stylesheet" href="../style/cookies.css">
-    <link rel="stylesheet" href="../style/style.css">
 
     <!-- Javascript -->
     <script src="../script/cookies.js"></script>
@@ -34,7 +33,7 @@
 
         <!-- REGISTER FORM -->
         <div class="forms">
-            <form action="" method="POST" class="form" id="register-form">
+            <form action="userDatabase.php" method="POST" class="form" id="register-form">
                 <h3 class="heading">SIGN UP</h3>
                 <p class="desc">To join the Instakilogram, please fill out the registeration form.</p>
                 <div class="spacer"></div>
@@ -54,44 +53,44 @@
                             </div>
                         </div>
                         <span class="form-message invalid"></span>
-                    </div>
-
+                    </div>  
+                    <!-- EMAIL ADDRESS -->
                     <div class="form-group">
                         <label for="email" class="form-label">Email Address</label>
                         <input id="email" rules="required|email" name="email" type="text" placeholder="Example: email@domain.com" class="form-control">
                         <span class="form-message"></span>
                     </div>
-
+                    <!-- PASSWORD -->
                     <div class="form-group">
                         <label for="password" class="form-label">Password</label>
                         <input id="password" rules="required|min:8|max:20|regexPassword" name="password" type="password" placeholder="Enter the password" class="form-control">
                         <span class="form-message"></span>
                     </div>
-
+                    <!-- RETYPE PASSWORD -->
                     <div class="form-group">
                         <label for="password_confirmation" class="form-label">Retype Password</label>
                         <input id="password_confirmation" rules="required|isConfirmed" name="password_confirmation" placeholder="Confirm the password" type="password" class="form-control">
                         <span class="form-message"></span>
                     </div>
-
+                    <!-- PROFILE PICTURE -->
                     <div class="form-group">
                         <label for="avatar" class="form-label">Profile Picture</label>
                         <input id="avatar" name="avatar" rules="required|isImage" type="file" class="form-control" placeholder="Profile Picture">
                         <span class="form-message"></span>
                     </div>
                 </div>
-                <button class="form-submit">Register</button>
-                <button class="form-clear">Clear</button>
+                <!-- <button class="form-submit">Register</button> -->
+                <input type="submit" class="form-submit" name="submit"></input>
+                <button class="form-clear">Clear</input>
             </form>
         </div>
     </main>
     <!-- JAVASCRIPT -->
     <script src="../script/app.js"></script>
-    <!-- <script src="./assets/file.js"></script> -->
     <script>
         FormValidator('#register-form', {
             onSubmit: function(data) {
-                console.log(data);
+                
             }
         });
     </script>
