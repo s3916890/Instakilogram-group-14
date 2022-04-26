@@ -177,3 +177,11 @@ nav input:focus {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+/*------------------------------------
+ - COLOR Purple
+ ------------------------------------*/
+  .text-primary {
+    color: #9900f0 !important;
+  }
+  
+
