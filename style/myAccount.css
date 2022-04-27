@@ -112,14 +112,15 @@ nav input::placeholder {
     top: 0;
     height: 1rem;
     width: 100%;
-    transform: translateY(-100%);
+    transform: translateY(-20%);
 }
 
 .dropdown-content a:first-child:before {
     content: "";
     position: absolute;
     top: 0;
-    background-color: #6a11cb;
+    left: 35%;
+    background-color: #4700D8;
     width: 1rem;
     height: 1rem;
     transform: translate(1.5rem, -0.5rem) rotate(45deg);
@@ -136,17 +137,21 @@ nav input::placeholder {
 
 .dropdown-content a:last-child {
     border-radius: 0 0 1rem 1rem;
+    border-top: 1px solid #fff;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     top: 7vh;
-    background-color: #6a11cb;
+    right: 10%;
+    background-color: #4700D8;
     border-radius: 1rem;
-    min-width: 160px;
+    min-width: 230px;
     box-shadow: 0.5rem 1rem 0.5rem rgba(0, 0, 0, 0.2);
     z-index: 1;
+    transform-origin: calc(100% - 40px) top;
+    animation: headerNotifyGrowth ease-in 0.3s;
 }
 
 /* Links inside the dropdown */
@@ -161,6 +166,10 @@ nav input::placeholder {
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
     background-color: #190053;
+}
+
+.dropdown-content i {
+    padding: 0 5px 0;
 }
 
 /* Show the dropdown menu on hover */
@@ -239,16 +248,10 @@ nav input::placeholder {
     text-decoration: none;
 }
 
-/* .post:hover {
-    opacity: 0.6;
-    cursor: pointer;
-} */
-
 .post-image {
     width: 320px;
     height: 330px;
     object-fit: cover;
-    /* margin-top: 44px; */
 }
 
 .author {
@@ -261,37 +264,12 @@ nav input::placeholder {
     box-shadow: 0 10px 1rem -1rem black;
 }
 
-
-.arrow-container {
-    margin: 13px 8px;
+select {
+    text-decoration: none;
+    border-style: none;
+    outline: 0px;
+    font-size: 1.1rem;
 }
-
-.arrow {
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: flex;
-    padding: 5px;
-}
-
-.down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-
-.author h1 {
-    font-size: 1.2rem;
-}
-
-.dropdown-status {
-    display: none;
-}
-
-/* .info-container {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    align-items: center;
-} */
 
 .avatar {
     --avatar-width-side: 28.85px;

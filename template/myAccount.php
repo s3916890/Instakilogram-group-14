@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/myAccount.css">
     <title>Instakilogram</title>
+    
     <!-- Javascript -->
     <script src="../script/cookies.js"></script>
 </head>
@@ -16,38 +17,7 @@
 <body>
     <div class="homepage-container">
         <!-- Header of the site -->
-        <header id="header">
-            <nav>
-                <div class="homepage-logo">
-                    <a href="homepage.php">
-                        <h1>InstaKilogram</h1>
-                    </a>
-                </div>
-
-                <div class="searchBar">
-                    <input type="text" placeholder="Search InstaKilogram..." class="searchInput">
-                    <button id="search-btn" type="submit"><i
-                            class="icon-style fa-lg fa-solid fa-magnifying-glass"></i></button>
-                </div>
-
-                <div class="avatar-container">
-                    <div class="user">
-                        <div class="profile-pic">
-                            <img src="../assets/karma2710.jpeg" alt="profile-pic">
-                        </div>
-
-                    </div>
-                    <div class="dropdown">
-                        <button class="dropbtn">My Account</button>
-                        <div class="dropdown-content">
-                            <a href="#">My profile</a>
-                            <a href="#">Change Image</a>
-                            <a href="#">Log Out</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </header>
+        <?php include "loginHeader.php" ?>
 
         <!-- Main content section -->
         <!-- CONTENT ROW -->
@@ -63,100 +33,113 @@
             </div>
             <!-- First row -->
             <div class="post-content">
-                <a href="#" class="post">
+                <div class="post">
                     <div class="author">
-                        <h1 class="option">Public</h1>
-                        <div class="arrow-container">
-                            <p> <i class="arrow down"></i></p>
-                            <!-- <div class="dropdown-status">
-                                <a href="#">Public</a>
-                                <a href="#">Internal</a>
-                                <a href="#">Private</a>
-                            </div> -->
-                        </div>
+                        <label for="status"></label>
+                        <select name="status" class="status">
+                            <option value="public">Public</option>
+                            <option value="internal">Internal</option>
+                            <option value="private">Private</option>
+                        </select>
                     </div>
                     <img src="../assets/aesthetic.jpg" class="post-image" alt="post image">
-                </a>
-                <a href="#" class="post">
+                </div>
+                <div class="post">
                     <div class="author">
-                        <h1 class="option">Internal</h1>
-                        <div class="arrow-container">
-                            <p> <i class="arrow down"></i></p>
-                        </div>
+                        <label for="status"></label>
+                        <select name="status" class="status">
+                            <option value="public">Public</option>
+                            <option value="internal">Internal</option>
+                            <option value="private">Private</option>
+                        </select>
                     </div>
                     <img src="../assets/aesthetic.jpg" class="post-image" alt="post image">
-                </a>
-                <a href="#" class="post">
+                </div>
+                <div class="post">
                     <div class="author">
-                        <h1 class="option">Private</h1>
-                        <div class="arrow-container">
-                            <p> <i class="arrow down"></i></p>
-                        </div>
+                        <label for="status"></label>
+                        <select name="status" class="status">
+                            <option value="public">Public</option>
+                            <option value="internal">Internal</option>
+                            <option value="private">Private</option>
+                        </select>
                     </div>
                     <img src="../assets/aesthetic.jpg" class="post-image" alt="post image">
-                </a>
+                </div>
             </div>
 
             <!-- Second row -->
             <div class="post-content">
-                <a href="#" class="post">
+                <div class="post">
                     <div class="author">
-                        <h1 class="option">Public</h1>
-                        <div class="arrow-container">
-                            <p> <i class="arrow down"></i></p>
-                        </div>
+                        <label for="status"></label>
+                        <select name="status" class="status">
+                            <option value="public">Public</option>
+                            <option value="internal">Internal</option>
+                            <option value="private">Private</option>
+                        </select>
                     </div>
                     <img src="../assets/aesthetic.jpg" class="post-image" alt="post image">
-                </a>
-                <a href="#" class="post">
+                </div>
+                <div class="post">
                     <div class="author">
-                        <h1 class="option">Internal</h1>
-                        <div class="arrow-container">
-                            <p> <i class="arrow down"></i></p>
-                        </div>
+                        <label for="status"></label>
+                        <select name="status" class="status">
+                            <option value="public">Public</option>
+                            <option value="internal">Internal</option>
+                            <option value="private">Private</option>
+                        </select>
                     </div>
                     <img src="../assets/aesthetic.jpg" class="post-image" alt="post image">
-                </a>
-                <a href="#" class="post">
+                </div>
+                <div class="post">
                     <div class="author">
-                        <h1 class="option">Private</h1>
-                        <div class="arrow-container">
-                            <p> <i class="arrow down"></i></p>
-                        </div>
+                        <label for="status"></label>
+                        <select name="status" class="status">
+                            <option value="public">Public</option>
+                            <option value="internal">Internal</option>
+                            <option value="private">Private</option>
+                        </select>
                     </div>
                     <img src="../assets/aesthetic.jpg" class="post-image" alt="post image">
-                </a>
+                </div>
             </div>
 
             <!-- Third row -->
             <div class="post-content">
-                <a href="#" class="post">
+                <div class="post">
                     <div class="author">
-                        <h1 class="option">Public</h1>
-                        <div class="arrow-container">
-                            <p> <i class="arrow down"></i></p>
-                        </div>
+                        <label for="status"></label>
+                        <select name="status" class="status">
+                            <option value="public">Public</option>
+                            <option value="internal">Internal</option>
+                            <option value="private">Private</option>
+                        </select>
                     </div>
                     <img src="../assets/aesthetic.jpg" class="post-image" alt="post image">
-                </a>
-                <a href="#" class="post">
+                </div>
+                <div class="post">
                     <div class="author">
-                        <h1 class="option">Internal</h1>
-                        <div class="arrow-container">
-                            <p> <i class="arrow down"></i></p>
-                        </div>
+                        <label for="status"></label>
+                        <select name="status" class="status">
+                            <option value="public">Public</option>
+                            <option value="internal">Internal</option>
+                            <option value="private">Private</option>
+                        </select>
                     </div>
                     <img src="../assets/aesthetic.jpg" class="post-image" alt="post image">
-                </a>
-                <a href="#" class="post">
+                </div>
+                <div class="post">
                     <div class="author">
-                        <h1 class="option">Private</h1>
-                        <div class="arrow-container">
-                            <p> <i class="arrow down"></i></p>
-                        </div>
+                        <label for="status"></label>
+                        <select name="status" class="status">
+                            <option value="public">Public</option>
+                            <option value="internal">Internal</option>
+                            <option value="private">Private</option>
+                        </select>
                     </div>
                     <img src="../assets/aesthetic.jpg" class="post-image" alt="post image">
-                </a>
+                </div>
             </div>
         </main>
 

@@ -30,10 +30,10 @@
 
                     <!-- SIGN BUTTON -->
                     <ul class="signBtn">
-                        <a href="../template/login.php"><li class="btn-item">
+                        <a href="../template/form/login.php"><li class="btn-item">
                             <button class="transparent-btn">Log In</button>
                         </li></a>
-                        <a href="../template/signup.php"><li class="btn-item">
+                        <a href="../template/form/signup.php"><li class="btn-item">
                             <button class="transparent-btn">Sign Up</button>
                         </li></a>
                     </ul>
@@ -45,7 +45,7 @@
             <main id="main">
                 <!-- First row -->
                 <div class="post-content">
-                    <a href="../template/login.php" class="post">
+                    <a href="../template/form/login.php" class="post">
                         <div class="author">
                             <div class="info-container">
                                 <img src="../assets/karma2710.jpeg" class="avatar" alt="avatar">
@@ -55,7 +55,7 @@
                         </div>
                         <img src="../assets/aesthetic.jpg" class="post-image" alt="post image">
                     </a>
-                    <a href="../template/login.php" class="post">
+                    <a href="../template/form/login.php" class="post">
                         <div class="author">
                             <div class="info-container">
                                 <img src="../assets/karma2710.jpeg" class="avatar" alt="avatar">
@@ -69,7 +69,7 @@
 
                 <!-- Second row -->
                 <div class="post-content">
-                    <a href="../template/login.php" class="post">
+                    <a href="../template/form/login.php" class="post">
                         <div class="author">
                             <div class="info-container">
                                 <img src="../assets/karma2710.jpeg" class="avatar" alt="avatar">
@@ -79,7 +79,7 @@
                         </div>
                         <img src="../assets/aesthetic.jpg" class="post-image" alt="post image">
                     </a>
-                    <a href="../template/login.php" class="post">
+                    <a href="../template/form/login.php" class="post">
                         <div class="author">
                             <div class="info-container">
                                 <img src="../assets/karma2710.jpeg" class="avatar" alt="avatar">
@@ -93,7 +93,7 @@
 
                 <!-- Third row -->
                 <div class="post-content">
-                    <a href="../template/login.php" class="post">
+                    <a href="../template/form/login.php" class="post">
                         <div class="author">
                             <div class="info-container">
                                 <img src="../assets/karma2710.jpeg" class="avatar" alt="avatar">
@@ -103,7 +103,7 @@
                         </div>
                         <img src="../assets/aesthetic.jpg" class="post-image" alt="post image">
                     </a>
-                    <a href="../template/login.php" class="post">
+                    <a href="../template/form/login.php" class="post">
                         <div class="author">
                             <div class="info-container">
                                 <img src="../assets/karma2710.jpeg" class="avatar" alt="avatar">
@@ -117,12 +117,7 @@
             </main>
 
             <!-- Footer -->
-            <footer id="footer">
-                <a class="footer-link" href="../template/html/aboutUs.html">About Us</a>
-                <a class="footer-link" href="../template/html/privacy.html">Privacy</a>
-                <a class="footer-link" href="../template/html/help.html">Help</a>
-                &copy; Instakilogram FROM GROUP 14
-            </footer>
+            <?php include "../template/homepageFooter.php" ?>
             
         </div>
     </body>

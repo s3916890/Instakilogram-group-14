@@ -148,16 +148,17 @@ nav input::placeholder {
 
 .dropdown-content a:last-child {
     border-radius: 0 0 1rem 1rem;
+    border-top: 1px solid #fff;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     top: 7vh;
-    right: 30%;
+    right: 10%;
     background-color: #4700D8;
     border-radius: 1rem;
-    min-width: 160px;
+    min-width: 230px;
     box-shadow: 0.5rem 1rem 0.5rem rgba(0, 0, 0, 0.2);
     z-index: 1;
     transform-origin: calc(100% - 40px) top;
@@ -176,6 +177,10 @@ nav input::placeholder {
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
     background-color: #190053;
+}
+
+.dropdown-content i {
+    padding: 0 5px 0;
 }
 
 /* Show the dropdown menu on hover */
