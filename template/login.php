@@ -30,7 +30,7 @@
                 return ('data:' . $image_type . ';base64,' . $base64);
             }
             ?>
-            <img src="<?php print img_create('../assets/Demo Instakilogram Design/FormBackgroundImage.png', 'image/png'); ?>"
+            <img src="<?php print img_create('../assets/FormBackgroundImage.png', 'image/png'); ?>"
                 style="width: 100%; height: 100%;" alt="Form Background Image" />
         </div>
 
