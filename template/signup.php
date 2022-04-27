@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../style/responsive.css">
     <link rel="stylesheet" href="../style/form.css">
     <link rel="stylesheet" href="../style/cookies.css">
-    <link rel="stylesheet" href="../style/style.css">
 
     <!-- Javascript -->
     <script src="../script/cookies.js"></script>
@@ -29,7 +28,7 @@
                 return ('data:' . $image_type . ';base64,' . $base64);
             }
             ?>
-            <img src="<?php print img_create('../assets/FormBackgroundImage.png', 'image/png'); ?>" style="width: 100%; height: 100%;" alt="Form Background Image" />
+            <img src="<?php print img_create('../assets/Demo Instakilogram Design/FormBackgroundImage(Register).png', 'image/png'); ?>" style="width: 100%; height: 100%;" alt="Form Background Image" />
         </div>
 
         <!-- REGISTER FORM -->
@@ -39,22 +38,25 @@
                 <p class="desc">To join the Instakilogram, please fill out the registeration form.</p>
                 <div class="spacer"></div>
                 <div class="form-container">
+                    <!-- USER NAME -->
                     <div class="form-group">
-                        <!-- SEPARATE THE FIRST AND LAST NAME -->
-                        <div class="sub-form-group">
-                            <!-- FIRST NAME -->
-                            <div class="sub-form-group-input">
-                                <label for="firstName" class="sub-form-label">First name</label>
-                                <input id="firstName" rules="required|min:2|max:20" name="firstName" type="text" placeholder="Ex: Karma" class="form-control">
-                            </div>
-                            <!-- LAST NAME -->
-                            <div class="sub-form-group-input">
-                                <label for="lastName" class="sub-form-label">Last name</label>
-                                <input id="lastName" rules="required|min:2|max:20" name="lastName" type="text" placeholder="Ex: Nguyen" class="form-control">
-                            </div>
-                        </div>
-                        <span class="form-message invalid"></span>
-                    </div>  
+                        <label for="userName" class="form-label">Username</label>
+                        <input id="userName" rules="required" name="userName" type="text" placeholder="karma.2710" class="form-control">
+                        <span class="form-message"></span>
+                    </div>
+                    <!-- FIRST NAME AND LAST NAME -->
+                    <div class="form-group">
+                        <!-- FIRST NAME -->
+                        <label for="firstName" class="form-label">First name</label>
+                        <input id="firstName" rules="required|min:2|max:20" name="firstName" type="text" placeholder="Ex: Karma" class="form-control">
+                        <span class="form-message"></span>
+                    </div>
+                    <!-- LAST NAME -->
+                    <div class="form-group">
+                        <label for="lastName" class="form-label">Last name</label>
+                        <input id="lastName" rules="required|min:2|max:20" name="lastName" type="text" placeholder="Ex: Nguyen" class="form-control">
+                        <span class="form-message"></span>
+                    </div>
                     <!-- EMAIL ADDRESS -->
                     <div class="form-group">
                         <label for="email" class="form-label">Email Address</label>
@@ -91,7 +93,7 @@
     <script>
         FormValidator('#register-form', {
             onSubmit: function(data) {
-                
+
             }
         });
     </script>

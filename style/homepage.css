@@ -99,13 +99,14 @@ nav input::placeholder {
 /* Dropdown Button */
 .dropbtn {
     background-color: transparent;
-    font-weight: bold;
+    font-weight: 600;
     color: black;
     padding: 16px;
     font-size: 16px;
     border: none;
     border-radius: 1rem;
     transition: ease-in-out 0.2s;
+    transform: translateX(-7px);
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -122,14 +123,15 @@ nav input::placeholder {
     top: 0;
     height: 1rem;
     width: 100%;
-    transform: translateY(-100%);
+    transform: translateY(-20%);
 }
 
 .dropdown-content a:first-child:before {
     content: "";
     position: absolute;
     top: 0;
-    background-color: #6a11cb;
+    left: 35%;
+    background-color: #4700D8;
     width: 1rem;
     height: 1rem;
     transform: translate(1.5rem, -0.5rem) rotate(45deg);
@@ -152,11 +154,14 @@ nav input::placeholder {
     display: none;
     position: absolute;
     top: 7vh;
-    background-color: #6a11cb;
+    right: 30%;
+    background-color: #4700D8;
     border-radius: 1rem;
     min-width: 160px;
     box-shadow: 0.5rem 1rem 0.5rem rgba(0, 0, 0, 0.2);
     z-index: 1;
+    transform-origin: calc(100% - 40px) top;
+    animation: headerNotifyGrowth ease-in 0.3s;
 }
 
 /* Links inside the dropdown */
@@ -335,4 +340,14 @@ nav input::placeholder {
 
 #footer .footer-link:hover {
     color: var(--primary-color);
+}
+@keyframes headerNotifyGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
