@@ -1,4 +1,4 @@
-<?php include "./Instakilogram-group-14/template/signup.php.php" ?>
+<?php include "signup.php" ?>
 
 <?php
 class UserInputDatabase
@@ -96,9 +96,9 @@ class UserInputDatabase
 }
 ?>
 <?php
-$runDatabase = new UserInputDatabase;
+    $runDatabase = new UserInputDatabase;
 
-$runDatabase->openFile();
-$runDatabase->readAndWriteFileProcess();
-$runDatabase->finishProcess();
+    $runDatabase->openFile();
+    $runDatabase->readAndWriteFileProcess();
+    $runDatabase->finishProcess();
 ?>
