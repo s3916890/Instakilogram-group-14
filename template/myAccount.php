@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/myAccount.css">
     <title>Instakilogram</title>
-    
     <!-- Javascript -->
     <script src="../script/cookies.js"></script>
 </head>
