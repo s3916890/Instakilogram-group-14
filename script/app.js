@@ -140,7 +140,7 @@ function FormValidator(formSelection, options) {
     }
     // Handle the form submitting behavior
     formElement.onsubmit = (event) => {
-        event.preventDefault();
+        // event.preventDefault();
         // Confirm the validation of form
         let inputs = formElement.querySelectorAll('input[name][rules]');
         let isValid = true;

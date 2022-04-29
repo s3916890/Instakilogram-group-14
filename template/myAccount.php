@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://use.fontawesome.com/releases/v6.1.1/js/all.js" data-auto-replace-svg="nest"></script>
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/myAccount.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/myAccount.css">
     <title>Instakilogram</title>
     <!-- Javascript -->
     <script src="../script/cookies.js"></script>
