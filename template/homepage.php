@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../style/homepage.css">
     <link rel="stylesheet" href="../style/cookies.css">
     <link rel="stylesheet" media="screen and (max-width: 767px)" href="../style/phone.css" />
-    <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 767px)" href="../style/tablet.css" />
+    <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1023px)" href="../style/tablet.css" />
 
 
     <title>Instakilogram</title>
