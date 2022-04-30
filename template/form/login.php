@@ -59,7 +59,7 @@
                     </div>
 
                 </div>
-                <button class="form-submit">Log in</button>
+                <input type="submit" class="form-submit"></input>
                 <a href="signup.php">
                     <p class="desc">Don't have an account? Register a new one</p>
                 </a>
