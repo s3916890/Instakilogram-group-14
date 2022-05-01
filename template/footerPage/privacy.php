@@ -7,16 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy</title>
 
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    
     <!-- Stylesheet CSS -->
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="/style/cookies.css">
-
+    <link rel="stylesheet" href="/style/footerPage.css">
+    <link rel="stylesheet" href="/style/header.css">
+    <!-- <link rel="stylesheet" href="/style/footer.css"> -->
+    
     <!-- Javascript -->
     <script src="../script/cookies.js"></script>
+
 </head>
 
 <body>
-    <div class="privacy-container">
+    <!-- Header of the site -->
+    <?php include '../loginHeader.php' ?>
+    <main id="privacy">
         <!-- The content is based on Instagram Policy -->
         <!-- https://help.Instagram.com/519522125107875/?maybe_redirect_pol=0 -->
         <h1>Instakilogram Data Policy</h1>
@@ -243,8 +252,14 @@
             Policy
             before you choose to continue using our Products.
         </p>
-    </div>
-
+    </main>
+    <!-- Footer -->
+    <footer id="footer">
+        <a class="footer-link" href="aboutUs.php">About Us</a>
+        <a class="footer-link" href="privacy.php">Privacy</a>
+        <a class="footer-link" href="help.php">Help</a>
+        &copy; Instakilogram FROM GROUP 14
+    </footer>
 </body>
 
 </html>

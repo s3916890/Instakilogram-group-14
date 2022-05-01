@@ -1,6 +1,6 @@
 <footer id="footer">
-    <a class="footer-link" href="../template/html/aboutUs.html">About Us</a>
-    <a class="footer-link" href="../template/html/privacy.html">Privacy</a>
-    <a class="footer-link" href="../template/html/help.html">Help</a>
+    <a class="footer-link" href="/template/footerPage/aboutUs.php">About Us</a>
+    <a class="footer-link" href="/template/footerPage/privacy.php">Privacy</a>
+    <a class="footer-link" href="/template/footerPage/help.php">Help</a>
     &copy; Instakilogram FROM GROUP 14
 </footer>

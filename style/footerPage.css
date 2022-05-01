@@ -1,0 +1,73 @@
+h1, h2, h3, h4, h5, h6 {
+    color: #4700D8;
+}
+
+/* About us page */
+body {
+    font-size: 1rem;
+    line-height: 2;
+    overflow-x: hidden; 
+    min-height: 1vw;
+}
+
+#about-us {
+    padding: 78px 0;
+    display: flex;
+    flex-direction: row;
+    margin: 5rem;
+}
+
+#about-us img {
+    height: 30rem;
+    width: 30rem;
+    margin: 0 10px;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Help page */
+#faq {
+    margin: 5rem;
+}
+
+#faq h1, #faq h6{
+    color: #4700D8;
+}
+
+/* Privacy page */
+#privacy {
+    margin: 5rem;
+}
+
+#privacy h2 {
+    color: #2f018b;
+}
+
+#privacy h3 {
+    color: #3702b3;
+}
+
+/* FOOTER: FIXED LATER */
+#footer {
+    bottom: 0;
+    margin: 1rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: space-around;
+    color: #5e5e5e;
+    font-weight: bold;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #5e5e5e;
+}
+
+#footer a:hover {
+    color: #4700D8;
+}

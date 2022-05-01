@@ -8,6 +8,7 @@ body {
     background-color: #F5F7FB;
 }
 
+<<<<<<< HEAD
 #header {
     margin: 10px;
 }
@@ -194,6 +195,8 @@ nav input::placeholder {
     text-decoration: none;
 }
 
+=======
+>>>>>>> 68ef40109e89c4c178366f71f931c69a3a47b3e8
 #main {
     min-height: 100vh;
 }

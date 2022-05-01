@@ -1,28 +1,25 @@
 #header {
-    margin: 10px;
-
+    margin: 0;
 }
 
-#footer {
-    position: absolute;
-    margin: 10px;
-    width: 100%;
-    height: 10%;
-    display: flex;
-    flex-direction: row;
-    align-items: left;
-    justify-content: space-around;
-    color: #5e5e5e;
-    font-weight: bold;
+.header-logo,
+.searchBar {
+    margin-top: 14px;
 }
 
-#footer a {
+.header-logo h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height */
+    letter-spacing: -0.06em;
+    color: #000000;
+}
+
+.header-logo a {
     text-decoration: none;
-    color: #5e5e5e;
-}
-
-#footer a:hover {
-    color: #4700D8;
 }
 
 /* Nav bar */
@@ -35,12 +32,7 @@ nav {
     justify-content: space-around;
 }
 
-section {
-    padding: 30px;
-    margin: 30px;
-}
-
-.searchbar {
+.searchBar {
     height: 80%;
     width: 30%;
     display: flex;
@@ -60,20 +52,26 @@ section {
 
 nav input {
     outline: none;
-    border: 1px solid rgb(192, 192, 192);
+    border: 1px solid #C4C4C4;
     width: 100%;
     height: 80%;
     padding: 0px 0.5rem;
     font-size: 1rem;
     transition: ease-in-out 0.2s;
+    background-color: transparent;
 }
 
-nav input:hover {
-    background: rgb(231, 231, 231);
+nav input::placeholder {
+    font-family: 'Poppins', sans-serif;
+    color: #C8C4C4;
+    position: absolute;
+    left: 24px;
+    top: 15%;
 }
 
-nav input:focus {
-    background: rgb(231, 231, 231);
+.homepage-logo,
+.searchBar {
+    margin-top: 14px;
 }
 
 .avatar-container {
@@ -112,6 +110,10 @@ nav input:focus {
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
+    top: 0;
+}
+
+.account-field {
     position: relative;
     display: inline-block;
     min-width: 160px;
@@ -131,6 +133,7 @@ nav input:focus {
     content: "";
     position: absolute;
     top: 0;
+    left: 35%;
     background-color: #4700D8;
     width: 1rem;
     height: 1rem;
@@ -139,7 +142,7 @@ nav input:focus {
 }
 
 .dropdown-content a:first-child:hover:before {
-    background-color: #6a11cb;
+    background-color: #190053;
 }
 
 .dropdown-content a:first-child {
@@ -148,17 +151,21 @@ nav input:focus {
 
 .dropdown-content a:last-child {
     border-radius: 0 0 1rem 1rem;
+    border-top: 1px solid #fff;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     top: 7vh;
+    right: 10%;
     background-color: #4700D8;
     border-radius: 1rem;
-    min-width: 160px;
+    min-width: 230px;
     box-shadow: 0.5rem 1rem 0.5rem rgba(0, 0, 0, 0.2);
     z-index: 1;
+    transform-origin: calc(100% - 40px) top;
+    animation: headerNotifyGrowth ease-in 0.3s;
 }
 
 /* Links inside the dropdown */
@@ -172,7 +179,11 @@ nav input:focus {
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: #6a11cb;
+    background-color: #190053;
+}
+
+.dropdown-content i {
+    padding: 0 5px 0;
 }
 
 /* Show the dropdown menu on hover */
@@ -180,9 +191,79 @@ nav input:focus {
     display: block;
 }
 
-/*------------------------------------
- - COLOR Purple
- ------------------------------------*/
-.text-primary {
-    color: #4700D8 !important;
+/*  PHONE  */
+@media screen and (max-width: 767px) {
+    nav {
+        width: fit-content;
+    }
+
+    .icon-style {
+        padding: 5px;
+        color: #fff;
+    }
+
+    #search-btn {
+        width: fit-content;
+        height: 70%;
+    }
+
+    nav input {
+        width: 15rem;
+        height: 70%;
+        font-size: 0.8rem;
+    }
+
+    input::placeholder {
+        font-size: 0.6rem;
+    }
+
+    .header-logo h1 {
+        font-size: 1rem;
+    }
+
+    .avatar-container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+    }
+
+    /* Dropdown Section */
+    .dropbtn {
+        display: none;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content:before {
+        position: absolute;
+        top: 0;
+        height: 1rem;
+        width: 100%;
+    }
+
+    .dropdown-content a:first-child:before {
+        left: 55%;
+    }
+
+    .dropdown-content{
+        top: 3vh;
+    }
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #search-btn {
+        width: fit-content;
+        height: 80%;
+        padding: 0 5px;
+    }
+
+    nav input {
+        width: 15rem;
+        height: 80%;
+        font-size: 1rem;
+    }
+
+    input::placeholder {
+        font-size: 0.8rem;
+    }
 }
