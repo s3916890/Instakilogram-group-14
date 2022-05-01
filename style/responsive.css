@@ -1,7 +1,7 @@
-/* RESPONSIVE */
+/* PHONE */
+@media screen and (max-width: 767px) {
 
-/* IPHONE */
-@media screen and (min-width: 375px) and (max-width: 767px) {
+    /* LOGIN AND SIGNUP PAGES */
     .formBackgroundImage{
         display: none;
     }
@@ -9,5 +9,92 @@
         transform: translateX(-3rem);
         animation: none;
         right: 0;
+    }
+
+    /* HOMEPAGE */
+    .homepage-container {
+        display: block;
+        width: 140%;
+    }
+    
+    .main {
+        display: flex;
+        flex-flow: column;
+    }
+    
+    .post-content {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .post {
+        text-decoration: none;
+        margin: 4rem auto 0;
+        width: 20rem;
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    }
+
+    .post:hover {
+        opacity: 1;
+    }
+
+    .post-image {
+        height: 100%;
+        width: 20rem;
+        margin: 0 auto;
+    }
+
+    .author {
+        width: 100%;
+    }
+
+    .option {
+        font-size: 90%;
+    }
+
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* HOMEPAGE */
+    .homepage-container {
+        display: block;
+        width: 100%;
+    }
+    
+    .main {
+        display: flex;
+        flex-flow: column;
+    }
+    
+    .post-content {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .post {
+        text-decoration: none;
+        margin: 6rem auto 0;
+        width: fit-content;
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    }
+
+    .post:hover {
+        opacity: 1;
+    }
+
+    .post-image {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .author {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .option {
+        font-size: 90%;
     }
 }

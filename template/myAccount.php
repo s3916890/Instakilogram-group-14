@@ -8,6 +8,8 @@
     <script src="https://use.fontawesome.com/releases/v6.1.1/js/all.js" data-auto-replace-svg="nest"></script>
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/myAccount.css">
+    <link rel="stylesheet" href="../style/header.css">
+
     <title>Instakilogram</title>
     <!-- Javascript -->
     <script src="../script/cookies.js"></script>
@@ -144,9 +146,9 @@
 
         <!-- Footer -->
         <footer id="footer">
-            <a class="footer-link" href="html/aboutUs.html">About Us</a>
-            <a class="footer-link" href="html/privacy.html">Privacy</a>
-            <a class="footer-link" href="html/help.html">Help</a>
+            <a class="footer-link" href="footerPage/aboutUs.php">About Us</a>
+            <a class="footer-link" href="footerPage/privacy.php">Privacy</a>
+            <a class="footer-link" href="footerPage/help.php">Help</a>
             &copy; Instakilogram FROM GROUP 14
         </footer>
 

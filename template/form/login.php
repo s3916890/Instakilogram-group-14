@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <main class="container">
+    <main class="form-containers">
         <div class="formBackgroundImage">
             <!-- BACKGROUND IMAGE -->
             <?php
