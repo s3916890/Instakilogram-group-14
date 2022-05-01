@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://use.fontawesome.com/releases/v6.1.1/js/all.js" data-auto-replace-svg="nest"></script>
+        <link rel="stylesheet" href="../style/myAccount.css">
+        <link rel="stylesheet" href="../style/style.css">
+        <title>Instakilogram</title>
+        <!-- Javascript -->
+        <script src="../script/cookies.js"></script>
+    </head>
+    
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://use.fontawesome.com/releases/v6.1.1/js/all.js" data-auto-replace-svg="nest"></script>
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/myAccount.css">
-    <title>Instakilogram</title>
-    <!-- Javascript -->
-    <script src="../script/cookies.js"></script>
-</head>
-
-<body>
+    <body>
     <div class="homepage-container">
         <!-- Header of the site -->
-        <?php include "loginHeader.php" ?>
-
+        <?php include "loginHeader.php"; ?>
         <!-- Main content section -->
         <!-- CONTENT ROW -->
         <main id="main">
@@ -26,8 +25,60 @@
                     <img src="../assets/karma2710.jpeg" class="avt" alt="avatar">
                 </div>
                 <div class="profile-info">
-                    <h1 class="userName">karma.2710</h1>
-                    <button>Upload and share image</button>
+                    <?php 
+                        include "./form/userDatabase.php"; 
+                        
+                    ?>
+                    <h1 class="userName">
+                        <?php
+                            if (isset($_POST["userName"]) && $_POST["userName"] != "") {
+                                $answer = htmlspecialchars(trim($_POST["userName"]));
+                                echo $answer;
+                            }
+                            else{
+                                echo "karma.2710";
+                            }
+                        ?> 
+                    </h1>
+                    <ul class="viewInformation">
+                        <li class="keyName">First name: 
+                            <span class="keyValue">
+                                <?php
+                                    if (isset($_POST["firstName"])) {
+                                        echo $_POST["firstName"];
+                                    }  
+                                    else{
+                                        echo "Nguyen";
+                                    }
+                                ?> 
+                            </span>
+                        </li>
+                        <li class="keyName">Last name: 
+                            <span class="keyValue">
+                                <?php
+                                    if (isset($_POST["lastName"])) {
+                                        echo $_POST["lastName"];
+                                    }  
+                                    else{
+                                        echo "Loi";
+                                    }
+                                ?> 
+                            </span>
+                        </li>
+                        <li class="keyName">Email: 
+                            <span class="keyValue">
+                                <?php
+                                    if (isset($_POST["email"])) {
+                                        echo $_POST["email"];
+                                    }   
+                                    else{
+                                        echo "nguyenphucloi2710@gmail.com";
+                                    }
+                                ?> 
+                            </span>
+                        </li>
+                    </ul>
+                    <button class="uploadBtn">Upload and share image</button>
                 </div>
             </div>
             <!-- First row -->

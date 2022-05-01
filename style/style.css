@@ -4,6 +4,13 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root{
+    --primary-color-1: #4700D8;
+    --primary-color-2: #F5F7FB;
+    --black-color: #000;
+    --white-color: #fff;
+    --primary-font: 'Poppins', sans-serif;
+}
 
 html {
     color: #333;

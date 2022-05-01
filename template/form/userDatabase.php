@@ -4,15 +4,15 @@
         private $fileName = "account.db";
         private $fileHandle;
 
-        public function openFile()
+        public function handleOpenFile()
         {
             $this->fileHandle = fopen($this->fileName, "a+");
         }
+        // Get all input value of users
         public function getUserName()
         {
             return $_POST["userName"];
         }
-        // Get all input value of users
         public function getFirstName()
         {
             return $_POST["firstName"];
@@ -27,33 +27,22 @@
         }
         public function getPassword()
         {
-            return $_POST["password"];
-        }
-        public function getRetypePassword()
-        {
-            return $_POST["password_confirmation"];
+            $harshPassword = password_hash($_POST["password"], PASSWORD_DEFAULT);
+            return $harshPassword;
         }
         public function getProfileLink()
         {
             return $_POST["avatar"];
         }
         // This function's purpose existence is the process of reading and writing the File 
-        public function readAndWriteFileProcess()
-        {
-            // HARSH PASSWORD AND RETYPE PASSWORD
-            $password = $this->getPassword();
-            $harshPassword = password_hash($password, PASSWORD_DEFAULT);
-
-            $retypePassword = $this->getRetypePassword();
-            $harshRetypePassword = password_hash($retypePassword, PASSWORD_DEFAULT);
-
+        public function handleReadAndWriteFile()
+        {;
             $userDatabase = array(
                 'userName' => $this->getUserName(),
                 'firstName' => $this->getFirstName(),
                 'lastName' => $this->getLastName(),
                 'email' => $this->getEmail(),
-                'password' => $harshPassword,
-                'retypePassword' => $harshRetypePassword,
+                'password' => $this->getPassword(),
                 'avatar' => $this->getProfileLink()
             );
 
@@ -101,7 +90,8 @@
 <?php
     $runDatabase = new UserInputDatabase;
 
-    $runDatabase->openFile();
-    $runDatabase->readAndWriteFileProcess();
+    $runDatabase->handleOpenFile();
+    $runDatabase->handleReadAndWriteFile();
     $runDatabase->finishProcess();
+    
 ?>

@@ -1,7 +1,7 @@
 <header id="header">
     <nav>
         <div class="homepage-logo">
-            <a href="index.php">
+            <a href="#">
                 <h1>InstaKilogram</h1>
             </a>
         </div>
