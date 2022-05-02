@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="account-field">
-                <button class="dropbtn">My Account</button>
+                <button class="dropBtn">My Account</button>
                 <div class="dropdown-content">
                     <a href="myAccount.php">
                         <div class="dropdown-container">

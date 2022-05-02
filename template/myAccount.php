@@ -8,33 +8,29 @@
         <link rel="stylesheet" href="../style/myAccount.css">
         <link rel="stylesheet" href="../style/style.css">
         <link rel="stylesheet" href="../style/header.css">
-
+        
         <title>Instakilogram</title>
         <!-- Javascript -->
         <script src="../script/cookies.js"></script>
     </head>
-
+    
     <body>
-    <div class="homepage-container">
-        <!-- Header of the site -->
-        <?php include "loginHeader.php"; ?>
-        <!-- Main content section -->
-        <!-- CONTENT ROW -->
-        <main id="main">
-            <div class="profile">
-                <div class="avatar-section">
-                    <img src="../assets/karma2710.jpeg" class="avt" alt="avatar">
-                </div>
-                <div class="profile-info">
-                    <?php 
-                        include "form/userDatabase.php"; 
-                        
-                    ?>
-                    <h1 class="userName">
-                        <?php
-                            if (isset($_POST["userName"]) && $_POST["userName"] != "") {
-                                $answer = htmlspecialchars(trim($_POST["userName"]));
-                                echo $answer;
+        <div class="homepage-container">
+            <!-- Header of the site -->
+            <?php include "loginHeader.php"; ?>
+            <!-- Main content section -->
+            <!-- CONTENT ROW -->
+            <main id="main">
+                <div class="profile">
+                    <div class="avatar-section">
+                        <img src="../assets/karma2710.jpeg" class="avt" alt="avatar">
+                    </div>
+                    <div class="profile-info">
+                        <h1 class="userName">
+                            <?php
+                            if (isset($_POST["userName"])) {
+                                include "./form/userDatabase.php";
+                                echo $_POST["userName"];
                             }
                             else{
                                 echo "karma.2710";
@@ -46,6 +42,7 @@
                             <span class="keyValue">
                                 <?php
                                     if (isset($_POST["firstName"])) {
+                                        include "./form/userDatabase.php";
                                         echo $_POST["firstName"];
                                     }  
                                     else{
@@ -58,6 +55,7 @@
                             <span class="keyValue">
                                 <?php
                                     if (isset($_POST["lastName"])) {
+                                        include "./form/userDatabase.php";
                                         echo $_POST["lastName"];
                                     }  
                                     else{
@@ -70,6 +68,7 @@
                             <span class="keyValue">
                                 <?php
                                     if (isset($_POST["email"])) {
+                                        include "./form/userDatabase.php";
                                         echo $_POST["email"];
                                     }   
                                     else{

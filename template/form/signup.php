@@ -91,9 +91,9 @@
     </main>
     <!-- SAVE DATABASE TO ACCOUNT.DB-->
     <?php
-        if (isset($_POST["submit"])) {
-            include "userDatabase.php";
-        }
+    if (isset($_POST["submit"])) {
+        include "userDatabase.php";
+    }
     ?>
     <!-- JAVASCRIPT -->
     <script src="../../script/app.js"></script>

@@ -38,5 +38,13 @@
         "email": "nanh@gmail.com",
         "password": "$2y$10$Cc.r38Q.9ZjBnxdCu5UrH.Jscy5Wd0dhuTkWpOap5p8OZoXP6ujIq",
         "avatar": "alexandru-acea-TMkrN9QZERw-unsplash.jpeg"
+    },
+    {
+        "userName": "miley2k",
+        "firstName": "My",
+        "lastName": "Dang",
+        "email": "mydang2k@gmail.com",
+        "password": "$2y$10$j6TSoqJtgbJjGMCOaS4IbOnbfCu8S3SdD39aFw.N2N9pI9wMeUPQ.",
+        "avatar": "alexandru-acea-TMkrN9QZERw-unsplash.jpeg"
     }
 ]

@@ -36,7 +36,7 @@
         }
         // This function's purpose existence is the process of reading and writing the File 
         public function handleReadAndWriteFile()
-        {;
+        {
             $userDatabase = array(
                 'userName' => $this->getUserName(),
                 'firstName' => $this->getFirstName(),
@@ -93,5 +93,11 @@
     $runDatabase->handleOpenFile();
     $runDatabase->handleReadAndWriteFile();
     $runDatabase->finishProcess();
+
+    // $userName = $runDatabase->getUserName();
+    // $firstName = $runDatabase->getFirstName();
+    // $lastName = $runDatabase->getLastName();
+    // $email = $runDatabase->getEmail();
+
     
 ?>
