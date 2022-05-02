@@ -18,7 +18,7 @@
     </head>
 
     <body>
-        <main class="container">
+        <main class="form-containers">
             <div class="formBackgroundImage">
                 <!-- BACKGROUND IMAGE -->
                 <?php
@@ -33,7 +33,6 @@
                     style="width: 100%; height: 100%;" alt="Form Background Image" />
             </div>
 
-<<<<<<< HEAD
             <!-- LOGIN FORM -->
             <div class="forms">
                 <form action="verifyPassword.php" method="POST" class="form" id="login-form">
@@ -41,23 +40,6 @@
                     <p class="desc">To log in the account, please fill out the form bellow.</p>
                     <div class="spacer"></div>
                     <div class="form-container">
-=======
-<body>
-    <main class="form-containers">
-        <div class="formBackgroundImage">
-            <!-- BACKGROUND IMAGE -->
-            <?php
-            function img_create($filename, $image_type)
-            {
-                $content = file_get_contents($filename);
-                $base64  = base64_encode($content);
-                return ('data:' . $image_type . ';base64,' . $base64);
-            }
-            ?>
-            <img src="<?php print img_create('../../assets/FormBackgroundImage(Login).png', 'image/png'); ?>"
-                style="width: 100%; height: 100%;" alt="Form Background Image" />
-        </div>
->>>>>>> 68ef40109e89c4c178366f71f931c69a3a47b3e8
 
                         <!-- EMAIL -->
                         <div class="form-group">

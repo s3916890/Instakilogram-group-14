@@ -1,10 +1,6 @@
 <header id="header">
     <nav>
-<<<<<<< HEAD
-        <div class="homepage-logo">
-=======
         <div class="header-logo">
->>>>>>> 68ef40109e89c4c178366f71f931c69a3a47b3e8
             <a href="#">
                 <h1>InstaKilogram</h1>
             </a>
