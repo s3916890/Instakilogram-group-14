@@ -1,50 +1,11 @@
 [
     {
+        "userID": "user-6270f47824429",
         "userName": "karma.2710",
-        "firstName": "Nguyen",
-        "lastName": "Loi",
-        "email": "bo.codename.bourbon@gmail.com",
-        "password": "$2y$10$jV.Rz5uDem5DDaQ2nAGSluwP2ygr8pBfhrMWSe3iEoS13fsBO0\/YK",
-        "avatar": "ffec364fd040455e3387c8d2ccb79193.png"
-    },
-    {
-        "userName": "katiee.crazii",
-        "firstName": "Hai",
-        "lastName": "Yen",
-        "email": "haiyen1201@gmail.com",
-        "password": "$2y$10$1g3BjIoIQFMroBUPsNmOguhlVgji2ht7aowy4uW.XgB\/JO3U729y2",
-        "avatar": "ffec364fd040455e3387c8d2ccb79193.png"
-    },
-    {
-        "userName": "pb_twister",
-        "firstName": "Gia",
-        "lastName": "Huy",
-        "email": "pbtwister@gmail.com",
-        "password": "$2y$10$.lg5Z5U0U9QNIlyrPmBXyuwsZzNM3iErWegjnZHpesAgCxg6Vx0tq",
-        "avatar": "PngItem_5091064.png"
-    },
-    {
-        "userName": "karma.2710",
-        "firstName": "Nguyen",
-        "lastName": "Loi",
-        "email": "naubanhtrung9183@gmail.com",
-        "password": "$2y$10$aShoSVMlHdsxgpaililhZOFKbsgXovxHz2wOzxMZAsX\/r1mKX0I.m",
-        "avatar": "ffec364fd040455e3387c8d2ccb79193.png"
-    },
-    {
-        "userName": "nanh__",
         "firstName": "Karma",
         "lastName": "Nguyen",
-        "email": "nanh@gmail.com",
-        "password": "$2y$10$Cc.r38Q.9ZjBnxdCu5UrH.Jscy5Wd0dhuTkWpOap5p8OZoXP6ujIq",
-        "avatar": "alexandru-acea-TMkrN9QZERw-unsplash.jpeg"
-    },
-    {
-        "userName": "miley2k",
-        "firstName": "My",
-        "lastName": "Dang",
-        "email": "mydang2k@gmail.com",
-        "password": "$2y$10$j6TSoqJtgbJjGMCOaS4IbOnbfCu8S3SdD39aFw.N2N9pI9wMeUPQ.",
+        "email": "bo.codename.bourbon@gmail.com",
+        "password": "$2y$10$71NwuSBepmPrEGv2OXGffeNGvaT6XSO.B1zD76KtrGzvxfSs4CIM2",
         "avatar": "alexandru-acea-TMkrN9QZERw-unsplash.jpeg"
     }
 ]

@@ -3,7 +3,7 @@
     {
         private $fileName = "account.db";
         private $fileHandle;
-
+        
         public function handleOpenFile()
         {
             $this->fileHandle = fopen($this->fileName, "a+");
@@ -34,10 +34,20 @@
         {
             return $_POST["avatar"];
         }
+        public function registeredInformation(){
+            $userRegisteredInformation = array(
+                'userName' => $this->getUserName(),
+                'firstName' => $this->getFirstName(),
+                'lastName' => $this->getLastName(),
+                'email' => $this->getEmail(),
+            );
+            return $userRegisteredInformation;
+        }
         // This function's purpose existence is the process of reading and writing the File 
         public function handleReadAndWriteFile()
         {
             $userDatabase = array(
+                'userID' => "user-".uniqid(),
                 'userName' => $this->getUserName(),
                 'firstName' => $this->getFirstName(),
                 'lastName' => $this->getLastName(),
@@ -69,14 +79,36 @@
                         $dataToSaveDatabase = $oldUserDatabase;
                     }
                     // PUT CONTENT TO THE FILE
-                    if (!file_put_contents($this->fileName, json_encode($dataToSaveDatabase, JSON_PRETTY_PRINT), LOCK_EX)) {
-                        $preventDuplication = "Error, there is duplication of email value";
-                        echo $preventDuplication;
-                    } 
-                    else {
-                        $success = "Successfully, there is no duplication of email value";
-                        echo $success;
+                    if (file_put_contents($this->fileName, json_encode($dataToSaveDatabase, JSON_PRETTY_PRINT), LOCK_EX)) {
+                        header("Location: ./login.php");
                     }
+                    
+                }
+                else {
+                    exit;
+                    // header("Location: ./signup.php");
+                    // $userLoginDatabase = array(
+                    //     'email' => $this->getEmail(),
+                    //     'password' => $this->getPassword(),
+                    // );
+                    // if (isset($_POST["submit"])) {
+                    //     $getUserRegisterDatabase = file_get_contents("account.db");
+                    //     $decodingUserRegisterDatabase = json_decode($getUserRegisterDatabase);
+                    //     $currentPasswordDatabase = array();
+
+                    //     foreach ($decodingUserRegisterDatabase as $userRegisterValue) {
+                    //         array_push($currentPasswordDatabase, $userRegisterValue->password);
+                    //     }
+                    //     foreach ($currentPasswordDatabase as $passwordValue) {
+                    //         if (password_verify($userLoginDatabase["password"], $passwordValue)) {
+                    //             // include "../myAccount.php";
+                    //             include "route.php";
+                    //             routeToAnotherPage("../myAccount.php");
+                    //         } else {
+                    //             continue;
+                    //         }
+                    //     }
+                    // }
                 }
             }
         }
@@ -94,10 +126,4 @@
     $runDatabase->handleReadAndWriteFile();
     $runDatabase->finishProcess();
 
-    // $userName = $runDatabase->getUserName();
-    // $firstName = $runDatabase->getFirstName();
-    // $lastName = $runDatabase->getLastName();
-    // $email = $runDatabase->getEmail();
-
-    
 ?>

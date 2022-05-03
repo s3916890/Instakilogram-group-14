@@ -1,3 +1,4 @@
+<?php session_start()?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,12 +23,12 @@
         <div class="formBackgroundImage">
             <!-- BACKGROUND IMAGE -->
             <?php
-            function img_create($filename, $image_type)
-            {
-                $content = file_get_contents($filename);
-                $base64  = base64_encode($content);
-                return ('data:' . $image_type . ';base64,' . $base64);
-            }
+                function img_create($filename, $image_type)
+                {
+                    $content = file_get_contents($filename);
+                    $base64  = base64_encode($content);
+                    return ('data:' . $image_type . ';base64,' . $base64);
+                }
             ?>
             <img src="<?php print img_create('../../assets/FormBackgroundImage(Register).png', 'image/png'); ?>" style="width: 100%; height: 100%;" alt="Form Background Image" />
         </div>
@@ -105,5 +106,3 @@
         });
     </script>
 </body>
-
-</html>

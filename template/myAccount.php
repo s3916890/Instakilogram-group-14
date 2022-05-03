@@ -28,21 +28,21 @@
                     <div class="profile-info">
                         <h1 class="userName">
                             <?php
-                            if (isset($_POST["userName"])) {
-                                include "./form/userDatabase.php";
-                                echo $_POST["userName"];
-                            }
-                            else{
-                                echo "karma.2710";
-                            }
-                        ?> 
+                                // if ($_POST["submit"]){
+                                    if (isset($_POST["userName"])) {
+                                        echo $_POST["userName"];
+                                    }
+                                    else{
+                                        echo "karma.2710";
+                                    }
+                                // }
+                            ?> 
                     </h1>
                     <ul class="viewInformation">
                         <li class="keyName">First name: 
                             <span class="keyValue">
                                 <?php
                                     if (isset($_POST["firstName"])) {
-                                        include "./form/userDatabase.php";
                                         echo $_POST["firstName"];
                                     }  
                                     else{
@@ -55,7 +55,6 @@
                             <span class="keyValue">
                                 <?php
                                     if (isset($_POST["lastName"])) {
-                                        include "./form/userDatabase.php";
                                         echo $_POST["lastName"];
                                     }  
                                     else{
@@ -68,7 +67,6 @@
                             <span class="keyValue">
                                 <?php
                                     if (isset($_POST["email"])) {
-                                        include "./form/userDatabase.php";
                                         echo $_POST["email"];
                                     }   
                                     else{

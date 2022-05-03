@@ -4,9 +4,15 @@
         private $fileName = "account.db";
         private $fileHandle;
 
-        public function handleOpenFile()
+        public function getUserName(){
+            return $_POST["userName"];
+        }
+        public function getFirstName(){
+            return $_POST["firstName"];
+        }
+        public function getLastName()
         {
-            $this->fileHandle = fopen($this->fileName, "a+");
+            return $_POST["lastName"];
         }
         public function getEmail()
         {
@@ -20,6 +26,9 @@
         public function handleVerifyingPassword()
         {
             $userLoginDatabase = array(
+                'userName' => $this->getUserName(),
+                'firstName' => $this->getFirstName(),
+                'lastName' => $this->getLastName(),
                 'email' => $this->getEmail(),
                 'password' => $this->getPassword(),
             );            
@@ -33,7 +42,7 @@
                 }
                 foreach($currentPasswordDatabase as $passwordValue){
                     if(password_verify($userLoginDatabase["password"], $passwordValue)){
-                        echo("Password Valid :3");
+                        include "../myAccount.php";
                     }
                     else{
                         continue;
@@ -41,16 +50,9 @@
                 }
             }
         }
-        public function handleCloseFile()
-        {
-            fclose($this->fileHandle);
-        }
     }
 ?>
 <?php
     $runDatabase = new VerifyingPassword;
-
-    $runDatabase->handleOpenFile();
     $runDatabase->handleVerifyingPassword();
-    $runDatabase->handleCloseFile();
 ?>
