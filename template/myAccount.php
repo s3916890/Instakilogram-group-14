@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -23,39 +24,29 @@
             <main id="main">
                 <div class="profile">
                     <div class="avatar-section">
-                        <img src="../assets/karma2710.jpeg" class="avt" alt="avatar">
+                        <img src= <?php $_SESSION["avatar"]; ?> class="avt" alt="avatar">
                     </div>
                     <div class="profile-info">
                         <h1 class="userName">
                             <?php
-                                // if ($_POST["submit"]){
-                                    if (isset($_POST["userName"])) {
-                                        echo $_POST["userName"];
-                                    }
-                                    else{
-                                        echo "karma.2710";
-                                    }
-                                // }
+                                echo $_SESSION["userName"];
                             ?> 
                     </h1>
                     <ul class="viewInformation">
                         <li class="keyName">First name: 
                             <span class="keyValue">
                                 <?php
-                                    if (isset($_POST["firstName"])) {
-                                        echo $_POST["firstName"];
+                                    if (isset($_SESSION["firstName"])){
+                                        echo $_SESSION["firstName"];
                                     }  
-                                    else{
-                                        echo "Nguyen";
-                                    }
                                 ?> 
                             </span>
                         </li>
                         <li class="keyName">Last name: 
                             <span class="keyValue">
                                 <?php
-                                    if (isset($_POST["lastName"])) {
-                                        echo $_POST["lastName"];
+                                    if (isset($_SESSION["lastName"])) {
+                                        echo $_SESSION["lastName"];
                                     }  
                                     else{
                                         echo "Loi";
@@ -66,12 +57,9 @@
                         <li class="keyName">Email: 
                             <span class="keyValue">
                                 <?php
-                                    if (isset($_POST["email"])) {
-                                        echo $_POST["email"];
+                                    if (isset($_SESSION["email"])) {
+                                        echo $_SESSION["email"];
                                     }   
-                                    else{
-                                        echo "nguyenphucloi2710@gmail.com";
-                                    }
                                 ?> 
                             </span>
                         </li>

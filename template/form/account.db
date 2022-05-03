@@ -1,11 +1,20 @@
 [
     {
-        "userID": "user-6270f47824429",
-        "userName": "karma.2710",
+        "userID": "user-6271316061350",
+        "userName": "nami2710",
         "firstName": "Karma",
         "lastName": "Nguyen",
         "email": "bo.codename.bourbon@gmail.com",
-        "password": "$2y$10$71NwuSBepmPrEGv2OXGffeNGvaT6XSO.B1zD76KtrGzvxfSs4CIM2",
+        "password": "$2y$10$wj4JvO7zqls\/zu\/JaupUYOWsJ15.qH6a0UwBG50Owi6gUCpv4z\/AS",
+        "avatar": "karma2710.jpeg"
+    },
+    {
+        "userID": "user-627136b693bf4",
+        "userName": "pb_twister",
+        "firstName": "Gia",
+        "lastName": "Huy",
+        "email": "nguyenphucloi2710@gmail.com",
+        "password": "$2y$10$8tET27bhPWe3VDvho6veKeCnFMBwmriHLSaFQAMWq7G\/yDXdlcDJK",
         "avatar": "alexandru-acea-TMkrN9QZERw-unsplash.jpeg"
     }
 ]
