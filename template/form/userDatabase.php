@@ -11,28 +11,41 @@
         // Get all input value of users
         public function getUserName()
         {
-            return $_POST["userName"];
+            if(isset($_POST['userName'])){
+                return $_POST["userName"];
+            }
         }
         public function getFirstName()
         {
-            return $_POST["firstName"];
+
+            if(isset($_POST['firstName'])){
+                return $_POST["firstName"];
+            }        
         }
         public function getLastName()
         {
-            return $_POST["lastName"];
+            if(isset($_POST['lastName'])){
+                return $_POST["lastName"];
+            }         
         }
         public function getEmail()
         {
-            return $_POST["email"];
+            if(isset($_POST['email'])){
+                return $_POST["email"];
+            }  
         }
         public function getPassword()
         {
-            $harshPassword = password_hash($_POST["password"], PASSWORD_DEFAULT);
-            return $harshPassword;
+            if(isset($_POST['password'])){
+                $harshPassword = password_hash($_POST["password"], PASSWORD_DEFAULT);
+                return $harshPassword;
+            }
         }
         public function getProfileLink()
         {
-            return $_POST["avatar"];
+            if(isset($_POST['avatar'])){
+                return $_POST["avatar"];
+            }
         }
         // This function's purpose existence is the process of reading and writing the File 
         public function handleReadAndWriteFile()

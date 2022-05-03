@@ -34,8 +34,10 @@
                 foreach($currentPasswordDatabase as $passwordValue){
                     if(password_verify($userLoginDatabase["password"], $passwordValue)){
                         echo("Password Valid :3");
+                        header("Location: ../homepage.php"); 
                     }
                     else{
+                        echo("Password Invalid :3");
                         continue;
                     }
                 }

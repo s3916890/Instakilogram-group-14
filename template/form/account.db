@@ -38,5 +38,13 @@
         "email": "nanh@gmail.com",
         "password": "$2y$10$Cc.r38Q.9ZjBnxdCu5UrH.Jscy5Wd0dhuTkWpOap5p8OZoXP6ujIq",
         "avatar": "alexandru-acea-TMkrN9QZERw-unsplash.jpeg"
+    },
+    {
+        "userName": "ThuPham02",
+        "firstName": "Thu",
+        "lastName": "Pham",
+        "email": "s3878246@rmit.edu.vn",
+        "password": "$2y$10$.CA\/hUdf5JshzBmXq\/pnNOE665wAY13wlyY5wmrtDsm2MtTzIp89.",
+        "avatar": "Screen Shot 2022-01-17 at 21.38.17.png"
     }
 ]
