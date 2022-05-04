@@ -20,6 +20,7 @@
                 $_SESSION["lastName"] = $decodeDatabase[$i]->lastName;
                 $_SESSION["email"] = $email;
 
+                setcookie("userID", $decodeDatabase[$i]->userID, time() + 3600, "/");
                 header("location: ../homepage.php");
             } 
             else {

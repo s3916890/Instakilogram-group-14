@@ -1,7 +1,7 @@
 <header id="header">
     <nav>
         <div class="header-logo">
-            <a href="#">
+            <a href="homepage.php">
                 <h1>InstaKilogram</h1>
             </a>
         </div>
@@ -31,7 +31,7 @@
                             Change User Profile
                         </div>
                     </a>
-                    <a href="#">Log Out</a>
+                    <a href="logout.php">Log Out</a>
                 </div>
             </div>
         </div>
