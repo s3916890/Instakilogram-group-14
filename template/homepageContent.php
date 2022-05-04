@@ -7,7 +7,12 @@
             <div class="author">
                 <div class="info-container">
                     <img src="../assets/karma2710.jpeg" class="avatar" alt="avatar">
-                    <h1 class="userName">karma.2710</h1>
+                    <h1 class="userName"><?php
+                            if(isset($_SESSION["userName"])){
+                                echo $_SESSION["userName"];
+                            }
+                            ?> 
+                    </h1>
                 </div>
                 <h2 class="option">Public</h2>
             </div>
@@ -17,7 +22,12 @@
             <div class="author">
                 <div class="info-container">
                     <img src="../assets/karma2710.jpeg" class="avatar" alt="avatar">
-                    <h1 class="userName">karma.2710</h1>
+                    <h1 class="userName"><?php
+                            if(isset($_SESSION["userName"])){
+                                echo $_SESSION["userName"];
+                            }
+                            ?> 
+                    </h1>
                 </div>
                 <h2 class="option">Public</h2>
             </div>
@@ -31,7 +41,12 @@
             <div class="author">
                 <div class="info-container">
                     <img src="../assets/karma2710.jpeg" class="avatar" alt="avatar">
-                    <h1 class="userName">karma.2710</h1>
+                    <h1 class="userName"><?php
+                            if(isset($_SESSION["userName"])){
+                                echo $_SESSION["userName"];
+                            }
+                            ?> 
+                    </h1>
                 </div>
                 <h2 class="option">Public</h2>
             </div>
@@ -41,7 +56,12 @@
             <div class="author">
                 <div class="info-container">
                     <img src="../assets/karma2710.jpeg" class="avatar" alt="avatar">
-                    <h1 class="userName">karma.2710</h1>
+                    <h1 class="userName"><?php
+                            if(isset($_SESSION["userName"])){
+                                echo $_SESSION["userName"];
+                            }
+                            ?> 
+                    </h1>
                 </div>
                 <h2 class="option">Public</h2>
             </div>
@@ -55,7 +75,12 @@
             <div class="author">
                 <div class="info-container">
                     <img src="../assets/karma2710.jpeg" class="avatar" alt="avatar">
-                    <h1 class="userName">karma.2710</h1>
+                    <h1 class="userName"><?php
+                            if(isset($_SESSION["userName"])){
+                                echo $_SESSION["userName"];
+                            }
+                            ?> 
+                    </h1>
                 </div>
                 <h2 class="option">Public</h2>
             </div>
@@ -65,7 +90,12 @@
             <div class="author">
                 <div class="info-container">
                     <img src="../assets/karma2710.jpeg" class="avatar" alt="avatar">
-                    <h1 class="userName">karma.2710</h1>
+                    <h1 class="userName"><?php
+                            if(isset($_SESSION["userName"])){
+                                echo $_SESSION["userName"];
+                            }
+                            ?> 
+                    </h1>
                 </div>
                 <h2 class="option">Public</h2>
             </div>

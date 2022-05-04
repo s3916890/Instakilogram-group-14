@@ -1,28 +1,20 @@
 [
     {
-        "userID": "user-6271316061350",
-        "userName": "nami2710",
+        "userID": "user-6271f7d442dee",
+        "userName": "karma.2710",
         "firstName": "Karma",
         "lastName": "Nguyen",
-        "email": "bo.codename.bourbon@gmail.com",
-        "password": "$2y$10$wj4JvO7zqls\/zu\/JaupUYOWsJ15.qH6a0UwBG50Owi6gUCpv4z\/AS",
+        "email": "nguyenphucloi2710@gmail.com",
+        "password": "$2y$10$nb8W.n2X6IQFiUzPprUsgO4yBYeZqzFAELUfM5fsrX32h7ymm2lfK",
         "avatar": "karma2710.jpeg"
     },
     {
-        "userID": "user-627136b693bf4",
-        "userName": "pb_twister",
-        "firstName": "Gia",
-        "lastName": "Huy",
-        "email": "nguyenphucloi2710@gmail.com",
-        "password": "$2y$10$8tET27bhPWe3VDvho6veKeCnFMBwmriHLSaFQAMWq7G\/yDXdlcDJK",
-        "avatar": "alexandru-acea-TMkrN9QZERw-unsplash.jpeg"
-    },
-    {
-        "userName": "ThuPham02",
-        "firstName": "Thu",
-        "lastName": "Pham",
-        "email": "s3878246@rmit.edu.vn",
-        "password": "$2y$10$.CA\/hUdf5JshzBmXq\/pnNOE665wAY13wlyY5wmrtDsm2MtTzIp89.",
-        "avatar": "Screen Shot 2022-01-17 at 21.38.17.png"
+        "userID": "user-6271faaa4a299",
+        "userName": "bourbon2710",
+        "firstName": "Nguyen",
+        "lastName": "Loi",
+        "email": "bo.codename.bourbon@gmail.com",
+        "password": "$2y$10$Tmo6A\/XngsRJAfMiYtRAyeir.FcmKjaIdknmlszZUKYpP\/.QLYwDe",
+        "avatar": "FormBackgroundImage(Register).png"
     }
 ]

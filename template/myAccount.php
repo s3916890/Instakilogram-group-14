@@ -24,12 +24,14 @@
             <main id="main">
                 <div class="profile">
                     <div class="avatar-section">
-                        <img src= <?php $_SESSION["avatar"]; ?> class="avt" alt="avatar">
+                        <img src= "../assets/karma2710.jpeg" class="avt" alt="avatar">
                     </div>
                     <div class="profile-info">
                         <h1 class="userName">
                             <?php
+                            if(isset($_SESSION["userName"])){
                                 echo $_SESSION["userName"];
+                            }
                             ?> 
                     </h1>
                     <ul class="viewInformation">
@@ -48,9 +50,6 @@
                                     if (isset($_SESSION["lastName"])) {
                                         echo $_SESSION["lastName"];
                                     }  
-                                    else{
-                                        echo "Loi";
-                                    }
                                 ?> 
                             </span>
                         </li>
