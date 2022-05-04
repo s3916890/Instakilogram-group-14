@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/style/form.css">
     <link rel="stylesheet" href="/style/cookies.css">
     <link rel="stylesheet" href="/style/style.css">
+    
 
     <!-- Javascript -->
     <script src="/script/cookies.js"></script>
@@ -51,6 +52,12 @@
                     <div class="form-group">
                         <label for="password" class="form-label">Password</label>
                         <input id="current-password" name="password" type="password" placeholder="Enter the password" class="form-control">
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">Remember me</label>
+                        <input id="remember" name="remember" type="checkbox" placeholder="Enter the password" class="form-control">
                         <span class="form-message"></span>
                     </div>
                 </div>
