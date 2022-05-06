@@ -27,12 +27,6 @@
         <?php include "../template/homepageFooter.php" ?>
 
     </div>
-    <script>
-        history.pushState(null, null, null);
-        window.addEventListener('popstate', function() {
-            history.pushState(null, null, null);
-        });
-    </script>
 </body>
 
 

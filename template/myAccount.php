@@ -63,7 +63,7 @@
                             </span>
                         </li>
                     </ul>
-                    <button class="uploadBtn">Upload and share image</button>
+                    <input type="submit" class="uploadBtn">Upload and share image</input>
                 </div>
             </div>
             <!-- First row -->
