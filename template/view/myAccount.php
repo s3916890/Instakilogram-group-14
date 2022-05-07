@@ -25,7 +25,7 @@ if (!isset($_SESSION['loggedin'])) {
 <body>
     <div class="homepage-container">
         <!-- Header of the site -->
-        <?php include "loginHeader.php"; ?>
+        <?php include_once "loginHeader.php"; ?>
         <!-- Main content section -->
         <!-- CONTENT ROW -->
         <main id="main">
@@ -42,18 +42,18 @@ if (!isset($_SESSION['loggedin'])) {
                 <div class="profile-info">
                     <h1 class="userName">
                         <?php
-                        if (isset($_SESSION["userName"])){
+                        if (isset($_SESSION["userName"])) {
                             echo $_SESSION["userName"];
-                        }                          
+                        }
                         ?>
                     </h1>
                     <ul class="viewInformation">
                         <li class="keyName">First name:
                             <span class="keyValue">
                                 <?php
-                                if (isset($_SESSION["firstName"])){
+                                if (isset($_SESSION["firstName"])) {
                                     echo $_SESSION["firstName"];
-                                }  
+                                }
                                 ?>
                             </span>
                         </li>
@@ -62,7 +62,7 @@ if (!isset($_SESSION['loggedin'])) {
                                 <?php
                                 if (isset($_SESSION["lastName"])) {
                                     echo $_SESSION["lastName"];
-                                }  
+                                }
                                 ?>
                             </span>
                         </li>
@@ -71,19 +71,23 @@ if (!isset($_SESSION['loggedin'])) {
                                 <?php
                                 if (isset($_SESSION["email"])) {
                                     echo $_SESSION["email"];
-                                }   
+                                }
                                 ?>
                             </span>
                         </li>
                     </ul>
-                    <button class="uploadBtn">Change User Avatar</button>
+                    <form class="change-avatar" method="POST" action="../model/avatarChange.php" enctype='multipart/form-data'>
+                        <input id="new-avatar" name="newAvatar" type="file" placeholder="New Profile Picture">
+                        <button type="submit" name="submit" class="uploadBtn">Change Avatar</button>
+                    </form>
+
                 </div>
             </div>
 
         </main>
 
         <!-- Footer -->
-        <?php include "footer.php"?>
+        <?php include_once "footer.php" ?>
 
     </div>
 </body>

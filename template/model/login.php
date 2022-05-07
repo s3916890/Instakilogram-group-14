@@ -12,9 +12,8 @@ if (isset($_POST["submit"])) {
     for ($i = 0; $i < count($decodeDatabase); $i++) {
         // Go to homepage if the email and password are correct
         if ( strtolower($email) === strtolower($decodeDatabase[$i]->email) and password_verify($pass, $decodeDatabase[$i]->password)) {
-            $_SESSION["userID"] = $decodeDatabase[$i]->userID;
             $_SESSION["loggedin"] = true;
-
+            $_SESSION["userID"] = $decodeDatabase[$i]->userID;
             $_SESSION["userName"] = $decodeDatabase[$i]->userName;
             $_SESSION["firstName"] = $decodeDatabase[$i]->firstName;
             $_SESSION["lastName"] = $decodeDatabase[$i]->lastName;

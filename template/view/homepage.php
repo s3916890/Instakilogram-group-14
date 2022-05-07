@@ -32,7 +32,7 @@ if (!isset($_SESSION['loggedin'])) {
 <body>
     <div class="homepage-container">
         <!-- Header of the site -->
-        <?php include 'loginHeader.php' ?>
+        <?php include_once "loginHeader.php"; ?>
 
         <!-- Main content section -->
         <main id="main">
@@ -79,7 +79,8 @@ if (!isset($_SESSION['loggedin'])) {
             </div>
         </main>
 
-        <?php include "footer.php"?>
+        <!-- Footer -->
+        <?php include_once "footer.php" ?>
     </div>
 </body>
 

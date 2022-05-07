@@ -75,7 +75,6 @@
                         <span class="form-message"></span>
                     </div>
                 </div>
-                <!-- <button class="form-submit">Register</button> -->
                 <input type="submit" class="form-submit" name="submit"></input>
                 <button class="form-clear">Clear</input>
 

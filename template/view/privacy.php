@@ -16,13 +16,13 @@ if (!isset($_SESSION['loggedin'])) {
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-    
+
     <!-- Stylesheet CSS -->
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="/style/cookies.css">
     <link rel="stylesheet" href="/style/footerPage.css">
     <link rel="stylesheet" href="/style/header.css">
-    
+
     <!-- Javascript -->
     <script src="../../script/cookies.js"></script>
 
@@ -30,7 +30,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 <body>
     <!-- Header of the site -->
-    <?php include 'loginHeader.php' ?>
+    <?php include_once "loginHeader.php"; ?>
     <main id="privacy">
         <!-- The content is based on Instagram Policy -->
         <!-- https://help.Instagram.com/519522125107875/?maybe_redirect_pol=0 -->
@@ -260,12 +260,7 @@ if (!isset($_SESSION['loggedin'])) {
         </p>
     </main>
     <!-- Footer -->
-    <footer id="footer">
-        <a class="footer-link" href="aboutUs.php">About Us</a>
-        <a class="footer-link" href="privacy.php">Privacy</a>
-        <a class="footer-link" href="help.php">Help</a>
-        &copy; Instakilogram FROM GROUP 14
-    </footer>
+    <?php include_once "footer.php" ?>
 </body>
 
 </html>
