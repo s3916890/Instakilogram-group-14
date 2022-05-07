@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['userID'])) {
-    header('location: ../../www/index.php');
+if (!isset($_SESSION['loggedin'])) {
+    header('location: login.php');
 }
 ?>
 
@@ -20,7 +20,7 @@ if (!isset($_SESSION['userID'])) {
     <!-- Stylesheet CSS -->
     <link rel="stylesheet" href="../../style/style.css">
     <link rel="stylesheet" href="../../style/homepage.css">
-    <link rel="stylesheet" href="../style/cookies.css">
+    <link rel="stylesheet" href="../../style/cookies.css">
     <link rel="stylesheet" href="../../style/header.css">
     <link rel="stylesheet" href="../../style/footer.css">
     <link rel="stylesheet" href="../../style/responsive.css">
@@ -41,12 +41,22 @@ if (!isset($_SESSION['userID'])) {
                 <form method="post" action="../model/postGenerator.php" enctype='multipart/form-data'>
                     <input id="post-image" name="post-image" type="file" placeholder="Post Image">
                     Description <input type="textarea" name="description">
+
+                    <div class="">
+                        <label for="status"></label>
+                        <select name="status" class="status">
+                            <option value="public">Public</option>
+                            <option value="internal">Internal</option>
+                            <option value="private">Private</option>
+                        </select>
+                    </div>
+
                     <input type="submit" name="upload" value="Upload">
                 </form>
             </div>
 
             <div class="post-content">
-                <a href="../template/login.php" class="post">
+                <!-- <a href="../template/login.php" class="post">
                     <div class="author">
                         <div class="info-container">
                             <img src="../assets/karma2710.jpeg" class="avatar" alt="avatar">
@@ -55,7 +65,7 @@ if (!isset($_SESSION['userID'])) {
                         <h2 class="option">Public</h2>
                     </div>
                     <img src="../assets/aesthetic.jpg" class="post-image" alt="post image">
-                </a>
+                </a> -->
                 <!-- <a href="../template/login.php" class="post">
                     <div class="author">
                         <div class="info-container">
@@ -68,6 +78,8 @@ if (!isset($_SESSION['userID'])) {
                 </a> -->
             </div>
         </main>
+
+        <?php include "footer.php"?>
     </div>
 </body>
 

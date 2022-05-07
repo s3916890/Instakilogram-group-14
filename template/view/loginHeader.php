@@ -14,11 +14,11 @@
             <div class="user">
                 <div class="profile-pic">
                     <?php
-                       if (isset($_SESSION['avatar'])) {
-                        ?>
-                        <img src="<?php echo '../../userAvatar/' . $_SESSION['avatar']; ?>">
-                        <?php
-                       } 
+                    if (isset($_SESSION['avatar'])) {
+                    ?>
+                        <img src="<?php echo '../../userAvatar/' . $_SESSION['avatar']; ?>" class="avatar" alt="Avatar">
+                    <?php
+                    }
                     ?>
                 </div>
             </div>
@@ -29,12 +29,6 @@
                         <div class="dropdown-container">
                             <i class="fa-solid fa-user"></i>
                             My profile
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="dropdown-container">
-                            <i class="fa-solid fa-images"></i>
-                            Change User Profile
                         </div>
                     </a>
                     <a href="../model/logout.php">Log Out</a>

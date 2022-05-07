@@ -1,11 +1,13 @@
 <?php
 session_start();
+// Change to the time in Ho Chi Minh City
+date_default_timezone_set('Asia/Ho_Chi_Minh');
 
 if (isset($_POST['upload'])) {
     $post = array(
         'postImage' => $_FILES['post-image']['name'],
         'description' => $_POST['description'],
-        'created_time' => date('Y-m-d h:i:s')
+        'created_time' => date('Y-m-d H:i:s')
     );
 
     $fileName = "post.db";

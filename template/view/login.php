@@ -8,10 +8,12 @@
     <title>Instakilogram</title>
 
     <!-- Stylesheet CSS -->
-    <link rel="stylesheet" href="/style/animation.css">
-    <link rel="stylesheet" href="/style/responsive.css">
-    <link rel="stylesheet" href="/style/form.css">
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="../../style/animation.css">
+    <link rel="stylesheet" href="../../style/responsive.css">
+    <link rel="stylesheet" href="../../style/form.css">
+    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="../../style/cookies.css">
+
 
     <!-- Javascript -->
     <script src="../../script/cookies.js"></script>
