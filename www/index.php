@@ -1,4 +1,3 @@
-<?php header("Cache-Control: no-cache, must-revalidate"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,20 +18,7 @@
 </head>
 
 <body>
-    <div class="homepage-container">
-        <?php include "nonLoginHeader.php" ?>
 
-        <?php include "nonLoginContent.php" ?>
-        <!-- Footer -->
-        <?php include "../template/homepageFooter.php" ?>
-
-    </div>
-    <script>
-        history.pushState(null, null, null);
-        window.addEventListener('popstate', function() {
-            history.pushState(null, null, null);
-        });
-    </script>
 </body>
 
 

@@ -29,36 +29,36 @@
                     <div class="profile-info">
                         <h1 class="userName">
                             <?php
-                            if(isset($_SESSION["userName"])){
-                                echo $_SESSION["userName"];
-                            }
+                            // if(isset($_SESSION["userName"])){
+                            //     echo $_SESSION["userName"];
+                            // }
                             ?> 
                     </h1>
                     <ul class="viewInformation">
                         <li class="keyName">First name: 
                             <span class="keyValue">
                                 <?php
-                                    if (isset($_SESSION["firstName"])){
-                                        echo $_SESSION["firstName"];
-                                    }  
+                                    // if (isset($_SESSION["firstName"])){
+                                    //     echo $_SESSION["firstName"];
+                                    // }  
                                 ?> 
                             </span>
                         </li>
                         <li class="keyName">Last name: 
                             <span class="keyValue">
                                 <?php
-                                    if (isset($_SESSION["lastName"])) {
-                                        echo $_SESSION["lastName"];
-                                    }  
+                                    // if (isset($_SESSION["lastName"])) {
+                                    //     echo $_SESSION["lastName"];
+                                    // }  
                                 ?> 
                             </span>
                         </li>
                         <li class="keyName">Email: 
                             <span class="keyValue">
                                 <?php
-                                    if (isset($_SESSION["email"])) {
-                                        echo $_SESSION["email"];
-                                    }   
+                                    // if (isset($_SESSION["email"])) {
+                                    //     echo $_SESSION["email"];
+                                    // }   
                                 ?> 
                             </span>
                         </li>
