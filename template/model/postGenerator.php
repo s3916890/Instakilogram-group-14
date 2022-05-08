@@ -7,14 +7,14 @@ if (isset($_POST['upload'])) {
     $post = array(
         'postImage' => $_FILES['post-image']['name'],
         'description' => $_POST['description'],
-        'created_time' => date('Y-m-d H:i:s')
+        'createdTime' => date('Y-m-d H:i:s')
     );
 
-    $fileName = "post.db";
+    $fileName = "database/post.db";
     stat(iconv('UTF-8', 'ISO-8859-1', $fileName));
 
     // Set the path to save the image
-    $target_dir    = "../../postImage/";
+    $target_dir    = "../../assets/postImage/";
     $target_file   = $target_dir . basename($_FILES["post-image"]["name"]);
     $allowUpload   = true;
     $fileUploadExtension = pathinfo($target_file, PATHINFO_EXTENSION);

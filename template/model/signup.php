@@ -14,10 +14,10 @@
         if (empty($_POST["userName"]) || empty($_POST["firstName"] || empty($_POST["lastName"]) || empty($_POST["email"]) || empty($_POST["password"]) || empty($_POST["password_confirmation"]) || empty($_POST["avatar"]))) {
             header("location: ../view/signup.php");
         } else {
-            $fileName = "accounts.db";
+            $fileName = "database/accounts.db";
             stat(iconv('UTF-8', 'ISO-8859-1', $fileName));
             // Set the path to save the image
-            $target_dir    = "../../userAvatar/";
+            $target_dir    = "../../assets/userAvatar/";
             $target_file   = $target_dir . basename($_FILES["avatar"]["name"]);
             $allowUpload   = true;
             $fileUploadExtension = pathinfo($target_file,PATHINFO_EXTENSION);
@@ -59,7 +59,6 @@
                 $encoded_data = json_encode($data_to_save, JSON_PRETTY_PRINT);
 
                 if(!file_put_contents($fileName, $encoded_data, LOCK_EX)){
-                    // $error = "Error storing message, please try again";
                     header("location:../view/signup.php");
                 } 
             }
