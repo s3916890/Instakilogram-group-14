@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 if (!isset($_SESSION['loggedin'])) {
     header('location: login.php');
 }
@@ -57,31 +56,47 @@ if (!isset($_SESSION['loggedin'])) {
 
             <div class="post-content">
                 <!-- <a href="../template/login.php" class="post">
-                    <div class="author">
-                        <div class="info-container">
-                            <img src="../assets/karma2710.jpeg" class="avatar" alt="avatar">
-                            <h1 class="userName">karma.2710</h1>
+                        <div class="author">
+                            <div class="info-container">
+                                <img src="../assets/karma2710.jpeg" class="avatar" alt="avatar">
+                                <h1 class="userName">karma.2710</h1>
+                            </div>
+                            <h2 class="option">Public</h2>
                         </div>
-                        <h2 class="option">Public</h2>
-                    </div>
-                    <img src="../assets/aesthetic.jpg" class="post-image" alt="post image">
-                </a> -->
+                        <img src="../assets/aesthetic.jpg" class="post-image" alt="post image">
+                    </a> -->
                 <!-- <a href="../template/login.php" class="post">
-                    <div class="author">
-                        <div class="info-container">
-                            <img src="../assets/karma2710.jpeg" class="avatar" alt="avatar">
-                            <h1 class="userName">karma.2710</h1>
+                        <div class="author">
+                            <div class="info-container">
+                                <img src="../assets/karma2710.jpeg" class="avatar" alt="avatar">
+                                <h1 class="userName">karma.2710</h1>
+                            </div>
+                            <h2 class="option">Public</h2>
                         </div>
-                        <h2 class="option">Public</h2>
-                    </div>
-                    <img src="../assets/aesthetic.jpg" class="post-image" alt="post image">
-                </a> -->
+                        <img src="../assets/aesthetic.jpg" class="post-image" alt="post image">
+                    </a> -->
+                <?php if (isset($_SESSION["optionStatus"])) : ?>
+                    <?php
+                        foreach($_SESSION["decodePost"] as $post){
+                            include "post.php";
+                        }
+                    ?>
+                <?php endif ?>
+
+
             </div>
         </main>
 
         <!-- Footer -->
         <?php include_once "footer.php" ?>
     </div>
+
+    <script>
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
+
+        const postContainer = $(".postContent");
+    </script>
 </body>
 
 </html>
