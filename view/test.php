@@ -18,15 +18,15 @@
         <div class="pageNumbers" id="pagination"></div>
     </main>
 
-    <!-- <script src="./pagination.js">
-        $fileName = ("./database/account.db");
+    <script src="./pagination.js">
+        $fileName = ("../database/account.db");
         $getUserAccountFromFile = file_get_contents($fileName);
         $decodeUserAccount = json_decode($getUserAccountFromFile);
 
         const listItem = $decodeUserAccount;
         displayList(listItem, listElement, rows, currentPage);
         setupPagination(listItem, paginationElement, rows);
-    </script> -->
+    </script>
 </body>
 
 </html>

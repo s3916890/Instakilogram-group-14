@@ -25,7 +25,7 @@
 <body>
     <div class="homepage-container">
         <!-- Header of the site -->
-        <?php include_once "loginHeader.php"; ?>
+        <?php include_once "../inc/header.php" ?>
         <!-- Main content section -->
         <!-- CONTENT ROW -->
         <main id="main">
@@ -87,7 +87,7 @@
         </main>
 
         <!-- Footer -->
-        <?php include_once "footer.php" ?>
+        <?php include_once "../inc/footer.php" ?>
 
     </div>
 </body>

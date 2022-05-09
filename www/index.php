@@ -3,7 +3,6 @@ $_SESSION['public'] = true;
 $_SESSION['loggedin'] = false;
 $_SESSION['private'] = false;
 $_SESSION['internal'] = false;
-
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +31,7 @@ $_SESSION['internal'] = false;
 <body>
     <div class="homepage-container">
         <!-- Header of the site -->
+        <?php include_once "../inc/header.php" ?>
 
         <!-- Main content section -->
         <main id="main">
@@ -45,6 +45,8 @@ $_SESSION['internal'] = false;
         </main>
 
         <!-- Footer -->
+        <?php include_once "../inc/footer.php" ?>
+
     </div>
 
 </body>
