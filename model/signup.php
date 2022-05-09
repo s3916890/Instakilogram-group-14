@@ -1,5 +1,6 @@
 <?php
     if(isset($_POST['submit'])){
+
         $new_message = array(
             "userID" => "user-" . uniqid(),
             "userName" => $_POST['userName'],

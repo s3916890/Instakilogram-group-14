@@ -5,6 +5,7 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 
 if (isset($_POST['upload'])) {
     $post = array(
+        "postID" => "post-" . uniqid(),
         'postImage' => $_FILES['post-image']['name'],
         'description' => $_POST['description'],
         'createdTime' => date('Y-m-d H:i:s'),
@@ -13,7 +14,6 @@ if (isset($_POST['upload'])) {
         'uName' => $_SESSION['userName'],
         'uAva' => $_SESSION['avatar'],
     );
-
     $fileName = "../database/post.db";
     stat(iconv('UTF-8', 'ISO-8859-1', $fileName));
     // Set the path to save the image
@@ -48,6 +48,5 @@ if (isset($_POST['upload'])) {
         }
     }
     header("location:../view/homepage.php");
-
 }
 ?>
