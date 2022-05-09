@@ -1,7 +1,7 @@
 <?php
 session_start();
-$_SESSION['internal'] = true;
-$_SESSION['public'] = true;
+    $_SESSION['internal'] = true;
+    $_SESSION['public'] = true;
 
 if (!isset($_SESSION['loggedin'])) {
     header('location: login.php');
