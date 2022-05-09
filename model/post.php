@@ -7,10 +7,18 @@ if ($decodeDatabase != null) {
         $postImg = '
         <div class="post">
             <div class="author">
+                <div class="info-container">
+                    <img src= "../assets/userAvatar/' . $value['uAva'] . '"class="avatar" alt="Avatar">
+                    <h1 class="user-name">' . $value['uName'] . '</h1>
+                </div>
                 <label for="status">
-                    ' . $value['status'] . '
-                </label>
+                ' . $value['status'] . '
+                </label>   
             </div>
+            <div class="post-desc">
+                <p class="created-time">' . $value['createdTime'] .  '</p>
+                <p class="description">' . $value['description'] . '</p>
+            </div>  
             <img src= "../assets/postImage/' . $value['postImage'] . '"class="post-image" alt="Post Image">
         </div>';
         if ($value['status'] === 'public') {
@@ -20,7 +28,7 @@ if ($decodeDatabase != null) {
             if ($_SESSION['loggedin'] === true) {
                 $_SESSION['internal'] = true;
                 echo $postImg;
-            } 
+            }
         } elseif ($value['status'] === 'private') {
             if ($_SESSION['loggedin'] === true && $_SESSION['userID'] === $value['uID']) {
                 $_SESSION['private'] = true;

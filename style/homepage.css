@@ -68,6 +68,7 @@ body {
     text-decoration: none;
 }
 
+/* Main section */
 #main {
     grid-area: content;
 }
@@ -76,53 +77,44 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 0 100px;
+    /* padding: 0 10rem; */
 }
 
 .post {
     background: white;
     color: black;
-    margin: 16px auto;
+    margin: 2rem auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 357px;
-    height: 386px;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+    width: 30rem;
+    height: 30rem;
     text-decoration: none;
-    transform: translateY(4rem);
-}
-
-.post:hover {
-    opacity: 0.6;
-    cursor: pointer;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
 }
 
 .post-image {
-    width: 250px;
-    height: 250px;
+    width: 30rem;
+    height: 22.5rem;
     object-fit: cover;
-    margin-top: 44px;
+    margin: auto;
 }
+
 .post label{
-    font-size: 1.25rem;
     position: relative;
-    left: 42%;
-    top: 22%;
     text-transform: capitalize;
+    margin: auto;
 }
 .author {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    width: 356px;
-    height: 50px;
+    width: 30rem;
     background-color: #fff;
-    box-shadow: 0 10px 1rem -1rem black;
+    margin: 1rem 0;
 }
 
 .author h1 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-left: 1rem;
 }
 
@@ -134,27 +126,24 @@ body {
 }
 
 .avatar {
-    --avatar-width-side: 28.85px;
-    --avatar-height-side: 30px;
     border-radius: 50%;
-    width: var(--avatar-width-side);
-    height: var(--avatar-height-side);
+    width: 3rem;
+    height: 3rem;
     object-fit: cover;
     margin-left: 1rem;
 }
 
-.userName {
+.user-name {
     font-weight: 500;
 }
 
-.option {
-    display: flex;
-    width: 20%;
-    margin: 0;
-    font-size: 16px;
-    font-weight: 400;
-    justify-content: center;
-    align-items: center;
+.post-desc {
+    position: relative;
+    margin: 0 1rem;
+}
+
+.created-time {
+    font-size: 0.8rem;
 }
 
 /* FOOTER */
