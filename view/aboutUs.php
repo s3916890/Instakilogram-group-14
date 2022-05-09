@@ -14,13 +14,13 @@ if (!isset($_SESSION['loggedin'])) {
     <title>About Us</title>
 
     <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="/style/cookies.css">
-    <link rel="stylesheet" href="/style/footerPage.css">
-    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/cookies.css">
+    <link rel="stylesheet" href="../style/footerPage.css">
+    <link rel="stylesheet" href="../style/header.css">
 
     <!-- Javascript -->
-    <script src="../../script/cookies.js"></script>
+    <script src="../script/cookies.js"></script>
 </head>
 
 <body>
@@ -29,7 +29,7 @@ if (!isset($_SESSION['loggedin'])) {
 
     <!-- Main section -->
     <main id="about-us">
-        <img src="../../assets/karma2710.jpeg" alt="Our Group Picture">
+        <img src="../assets/karma2710.jpeg" alt="Our Group Picture">
         <div class="about-text">
             <h1>About Us</h1>
             <h2>Instakilogram</h2>

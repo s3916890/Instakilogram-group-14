@@ -1,7 +1,11 @@
 <?php
+session_start();
+$_SESSION['internal'] = true;
 $_SESSION['public'] = true;
-$_SESSION['loggedin'] = false;
 
+if (!isset($_SESSION['loggedin'])) {
+    header('location: login.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -30,9 +34,28 @@ $_SESSION['loggedin'] = false;
 <body>
     <div class="homepage-container">
         <!-- Header of the site -->
+        <?php include_once "loginHeader.php"; ?>
 
         <!-- Main content section -->
         <main id="main">
+
+            <div class="posts-upload">
+                <form method="post" action="../model/postGenerator.php" enctype='multipart/form-data'>
+                    <input id="post-image" name="post-image" type="file" placeholder="Post Image">
+                    Description <input type="textarea" name="description">
+
+                    <div class="">
+                        <label for="status"></label>
+                        <select name="status" class="status">
+                            <option value="public">Public</option>
+                            <option value="internal">Internal</option>
+                            <option value="private">Private</option>
+                        </select>
+                    </div>
+
+                    <input type="submit" name="upload" value="Upload">
+                </form>
+            </div>
 
             <div class="post-content">
                 <?php
@@ -43,6 +66,7 @@ $_SESSION['loggedin'] = false;
         </main>
 
         <!-- Footer -->
+        <?php include_once "footer.php" ?>
     </div>
 
 </body>

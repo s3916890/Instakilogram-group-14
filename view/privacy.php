@@ -18,13 +18,13 @@ if (!isset($_SESSION['loggedin'])) {
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 
     <!-- Stylesheet CSS -->
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="/style/cookies.css">
-    <link rel="stylesheet" href="/style/footerPage.css">
-    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/cookies.css">
+    <link rel="stylesheet" href="../style/footerPage.css">
+    <link rel="stylesheet" href="../style/header.css">
 
     <!-- Javascript -->
-    <script src="../../script/cookies.js"></script>
+    <script src="../script/cookies.js"></script>
 
 </head>
 

@@ -8,22 +8,22 @@
     <title>Instakilogram</title>
 
     <!-- Stylesheet CSS -->
-    <link rel="stylesheet" href="../../style/animation.css">
-    <link rel="stylesheet" href="../../style/responsive.css">
-    <link rel="stylesheet" href="../../style/form.css">
-    <link rel="stylesheet" href="../../style/style.css">
-    <link rel="stylesheet" href="../../style/cookies.css">
+    <link rel="stylesheet" href="../style/animation.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+    <link rel="stylesheet" href="../style/form.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/cookies.css">
 
 
     <!-- Javascript -->
-    <script src="../../script/cookies.js"></script>
+    <script src="../script/cookies.js"></script>
 </head>
 
 <body>
     <main class="form-containers">
         <div class="formBackgroundImage">
             <!-- BACKGROUND IMAGE -->
-            <img src="../../assets/FormBackgroundImage(Login).png" style="width: 100%; height: 100%;" alt="Form Background Image" />
+            <img src="../assets/FormBackgroundImage(Login).png" style="width: 100%; height: 100%;" alt="Form Background Image" />
         </div>
 
         <!-- LOGIN FORM -->

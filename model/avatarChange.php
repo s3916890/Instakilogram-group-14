@@ -7,12 +7,12 @@ if (!isset($_SESSION['loggedin'])) {
 ?>
 
 <?php
-$getDatabase = file_get_contents("database/accounts.db");
+$getDatabase = file_get_contents("../database/accounts.db");
 $decodeDatabase = json_decode($getDatabase, true);
 
 if (isset($_POST["submit"])) {
     $newAvatar = $_FILES['newAvatar']['name'];
-    $target_dir    = "../../assets/userAvatar/";
+    $target_dir    = "../assets/userAvatar/";
     $target_file   = $target_dir . basename($newAvatar);
     $allowUpload   = true;
     $fileUploadExtension = pathinfo($target_file,PATHINFO_EXTENSION);
@@ -38,7 +38,7 @@ if (isset($_POST["submit"])) {
     }
     header("location: ../view/myAccount.php");
     // encode array to json and save to file
-    file_put_contents('database/accounts.db', json_encode($decodeDatabase));
+    file_put_contents('../database/accounts.db', json_encode($decodeDatabase));
 
 }
 ?>

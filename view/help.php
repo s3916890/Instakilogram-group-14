@@ -20,14 +20,13 @@ if (!isset($_SESSION['loggedin'])) {
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css" rel="stylesheet" />
 
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="../../style/style.css">
-  <link rel="stylesheet" href="../../style/cookies.css">
-  <link rel="stylesheet" href="../../style/footerPage.css">
-  <link rel="stylesheet" href="../../style/header.css">
-  <!-- <link rel="stylesheet" href="/style/footer.css"> -->
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="../style/cookies.css">
+  <link rel="stylesheet" href="../style/footerPage.css">
+  <link rel="stylesheet" href="../style/header.css">
 
   <!-- Javascript -->
-  <script src="../../script/cookies.js"></script>
+  <script src="../script/cookies.js"></script>
 </head>
 
 <body>
