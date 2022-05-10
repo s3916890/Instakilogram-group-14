@@ -76,8 +76,7 @@
                     </div>
                 </div>
                 <input type="submit" class="form-submit" name="submit"></input>
-                <button class="form-clear">Clear</input>
-
+                <input type="reset" class="form-clear" name="clear"></input>
             </form>
         </div>
     </main>

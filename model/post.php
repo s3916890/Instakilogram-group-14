@@ -1,5 +1,5 @@
 <?php
-$postDatabase = file_get_contents("../database/post.db");
+$postDatabase = file_get_contents("../../database/post.db");
 $decodeDatabase = json_decode($postDatabase, true);
 
 if ($decodeDatabase != null) {

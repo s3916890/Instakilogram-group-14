@@ -7,7 +7,7 @@ if (!isset($_SESSION['loggedin'])) {
 ?>
 
 <?php
-$getDatabase = file_get_contents("../database/accounts.db");
+$getDatabase = file_get_contents("../../database/accounts.db");
 $decodeDatabase = json_decode($getDatabase, true);
 
 if (isset($_POST["submit"])) {
@@ -32,7 +32,7 @@ if (isset($_POST["submit"])) {
     }
     header("location: ../view/myAccount.php");
     // encode array to json and save to file
-    file_put_contents('../database/accounts.db', json_encode($decodeDatabase));
+    file_put_contents('../../database/accounts.db', json_encode($decodeDatabase));
 
 }
 ?>

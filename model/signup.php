@@ -15,7 +15,7 @@
         if (empty($_POST["userName"]) || empty($_POST["firstName"] || empty($_POST["lastName"]) || empty($_POST["email"]) || empty($_POST["password"]) || empty($_POST["password_confirmation"]) || empty($_POST["avatar"]))) {
             header("location: ../view/signup.php");
         } else {
-            $fileName = "../database/accounts.db";
+            $fileName = "../../database/accounts.db";
             stat(iconv('UTF-8', 'ISO-8859-1', $fileName));
             // Set the path to save the image
             $targetDirectory    = "../assets/userAvatar/";

@@ -1,5 +1,5 @@
 <?php
-    $fileName = "../database/accounts.db";
+    $fileName = "../../database/accounts.db";
     $oldRecords = json_decode(file_get_contents($fileName), TRUE);
     $currentEmailInFileDb = array();
     $currentRegisterTimeInFileDb = array();

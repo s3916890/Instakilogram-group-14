@@ -53,7 +53,6 @@ function FormValidator(formSelection, options) {
     };
     // Get element in DOM based on "formSelector"
     const formElement = $(formSelection);
-    const clearBtn = $('.form-clear');
     var formRules = {};
     // Handle if there is the existence of form element in the DOM
     if (formElement) {
@@ -89,7 +88,6 @@ function FormValidator(formSelection, options) {
             input.onblur = HandleValidator;
             // When user type the value on the input, the error will be CLEARED
             input.oninput = HandleClearError;
-            clearBtn.onclick = HandleResetForm;
         }
 
         function HandleValidator(event) {
@@ -114,28 +112,11 @@ function FormValidator(formSelection, options) {
         }
         function HandleClearError(event) {
             const formGroup = GetParentElement(event.target, '.form-group');
-            // const inputs = $$('input[name]');
             if (formGroup.classList.contains('invalid')) {
                 formGroup.classList.remove('invalid');
                 const formMessage = formGroup.querySelector('.form-message');
                 formMessage.innerText = '';
             }
-        }
-        function HandleResetForm(){
-            const inputs = $$('input[name]');
-            inputs.forEach((input) => {
-                input.value = '';
-            })
-        }
-        // ...... FIXING
-        function changeFontFamily() {
-            const inputs = $$('input[name][type]');
-            // Change the font-family when users input. 
-            inputs.forEach((input) => {
-                input.oninput = () => {
-                    input.style.fontFamily = 'Poppins, sans-serif';
-                }
-            })
         }
     }
     // Handle the form submitting behavior

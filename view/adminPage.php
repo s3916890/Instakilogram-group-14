@@ -23,7 +23,7 @@
 
 <body>
     <div class="homepage-container">
-        <?php include "../view/headerNonLogin.php"; ?>
+        <?php include "../inc/header.php"; ?>
         <main>
             <div class="list" id="list"></div>
             <div class="pageNumbers" id="pagination"></div>
