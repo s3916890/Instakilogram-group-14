@@ -9,7 +9,7 @@
 <body>
     <header>
         <div id='logo'>Logo</div>
-        <div id='search bar'></div>
+        <div id='search bar'></div> <!-- include search bar code -->
     </header>
     <main>
         <div class='allAccounts'>
