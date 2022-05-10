@@ -14,7 +14,6 @@ if (isset($_POST["submit"])) {
     $newAvatar = $_FILES['newAvatar']['name'];
     $target_dir    = "../assets/userAvatar/";
     $target_file   = $target_dir . basename($newAvatar);
-    $allowUpload   = true;
     $fileUploadExtension = pathinfo($target_file,PATHINFO_EXTENSION);
     $allowedExtension = array("jpg", "jpeg", "png", "gif");
     // If the extension of file upload is not proper, the executing will immediately exit to the statement. 
@@ -23,12 +22,7 @@ if (isset($_POST["submit"])) {
             // print_r($value['userID']);
             if ($value['userID'] === $_SESSION['userID']) {
                 $decodeDatabase[$key]['avatar'] = $newAvatar;
-
-                if ($allowUpload) {
-                    if (move_uploaded_file($_FILES['newAvatar']["tmp_name"], $target_file)) {   
-                        $flag = true;
-                    }
-                }  
+                move_uploaded_file($_FILES['newAvatar']["tmp_name"], $target_file);  
 
                 if (isset($_SESSION['avatar'])) {
                     $_SESSION['avatar'] = $newAvatar;

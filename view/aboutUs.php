@@ -1,10 +1,7 @@
 <?php
-session_start();
-
-if (!isset($_SESSION['loggedin'])) {
-    header('location: login.php');
-}
+session_start()
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +15,8 @@ if (!isset($_SESSION['loggedin'])) {
     <link rel="stylesheet" href="../style/cookies.css">
     <link rel="stylesheet" href="../style/footerPage.css">
     <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+    <link rel="stylesheet" href="../style/homepage.css">
 
     <!-- Javascript -->
     <script src="../script/cookies.js"></script>
@@ -25,7 +24,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 <body>
     <!-- Header of the site -->
-    <?php include_once "loginHeader.php"; ?>
+    <?php include_once "../inc/header.php" ?>
 
     <!-- Main section -->
     <main id="about-us">
@@ -45,7 +44,7 @@ if (!isset($_SESSION['loggedin'])) {
         </div>
     </main>
     <!-- Footer -->
-    <?php include_once "footer.php" ?>
+    <?php include_once "../inc/footer.php" ?>
 </body>
 
 </html>

@@ -1,7 +1,8 @@
 <?php
 $_SESSION['public'] = true;
 $_SESSION['loggedin'] = false;
-
+$_SESSION['private'] = false;
+$_SESSION['internal'] = false;
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +32,7 @@ $_SESSION['loggedin'] = false;
     <?php include "../view/headerNonLogin.php" ?>
     <div class="homepage-container">
         <!-- Header of the site -->
+        <?php include_once "../inc/header.php" ?>
 
         <!-- Main content section -->
         <main id="main">
@@ -44,6 +46,8 @@ $_SESSION['loggedin'] = false;
         </main>
 
         <!-- Footer -->
+        <?php include_once "../inc/footer.php" ?>
+
     </div>
 
 </body>

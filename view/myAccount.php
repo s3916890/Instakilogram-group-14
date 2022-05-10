@@ -1,9 +1,14 @@
 <?php
-    session_start();
+session_start();
 
-    if (!isset($_SESSION['loggedin'])) {
-        header('location: login.php');
-    }
+// $_SESSION['myAccount'] = true;
+// $_SESSION['public'] = true;
+// $_SESSION['private'] = true;
+// $_SESSION['internal'] = true;
+
+if (!isset($_SESSION['loggedin'])) {
+    header('location: login.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,8 +19,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://use.fontawesome.com/releases/v6.1.1/js/all.js" data-auto-replace-svg="nest"></script>
     <link rel="stylesheet" href="../style/myAccount.css">
+    <link rel="stylesheet" href="../style/homepage.css">
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/footer.css">
 
     <title>Instakilogram</title>
     <!-- Javascript -->
@@ -25,7 +32,7 @@
 <body>
     <div class="homepage-container">
         <!-- Header of the site -->
-        <?php include_once "loginHeader.php"; ?>
+        <?php include_once "../inc/header.php" ?>
         <!-- Main content section -->
         <!-- CONTENT ROW -->
         <main id="main">
@@ -81,13 +88,20 @@
                         <button type="submit" name="submit" class="uploadBtn">Change Avatar</button>
                     </form>
 
+
+                    <div class="post-content">
+                        <?php
+                        include '../model/post.php';
+                        ?>
+
+                    </div>
                 </div>
             </div>
 
         </main>
 
         <!-- Footer -->
-        <?php include_once "footer.php" ?>
+        <?php include_once "../inc/footer.php" ?>
 
     </div>
 </body>
