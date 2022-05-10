@@ -27,19 +27,43 @@ if ($postDatabase != null) {
                 </div>';
             }
         }
-        if ($value['status'] === 'public') {
-            $_SESSION['public'] = true;
-            echo $postImg;
-        } elseif ($value['status'] === 'internal') {
-            if ($_SESSION['loggedin'] === true) {
-                $_SESSION['internal'] = true;
-                echo $postImg;
+
+        $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+        $url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+        $_SESSION['currentURL'] = parse_url($url, PHP_URL_PATH);
+        if ($_SESSION['currentURL'] === '/view/myAccount.php') {
+            // echo parse_url($url, PHP_URL_PATH);
+            if ($_SESSION['userID'] === $value['uID']) {
+                if ($value['status'] === 'public') {
+                    $_SESSION['public'] = true;
+                    echo $postImg;
+                } elseif ($value['status'] === 'internal') {
+                    if ($_SESSION['loggedin'] === true) {
+                        $_SESSION['internal'] = true;
+                        echo $postImg;
+                    }
+                } elseif ($value['status'] === 'private') {
+                    if ($_SESSION['loggedin'] === true && $_SESSION['userID'] === $value['uID']) {
+                        $_SESSION['private'] = true;
+                        echo $postImg;
+                    }
+                };
             }
-        } elseif ($value['status'] === 'private') {
-            if ($_SESSION['loggedin'] === true && $_SESSION['userID'] === $value['uID']) {
-                $_SESSION['private'] = true;
+        } else {
+            if ($value['status'] === 'public') {
+                $_SESSION['public'] = true;
                 echo $postImg;
-            }
+            } elseif ($value['status'] === 'internal') {
+                if ($_SESSION['loggedin'] === true) {
+                    $_SESSION['internal'] = true;
+                    echo $postImg;
+                }
+            } elseif ($value['status'] === 'private') {
+                if ($_SESSION['loggedin'] === true && $_SESSION['userID'] === $value['uID']) {
+                    $_SESSION['private'] = true;
+                    echo $postImg;
+                }
+            };
         }
     }
 }
