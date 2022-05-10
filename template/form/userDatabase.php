@@ -47,6 +47,12 @@
                 return $_POST["avatar"];
             }
         }
+        public function getRegisteredDate()
+        {
+            if(isset($_POST['submit'])) {
+                return date('Y-m-d h:i:s'); 
+            }
+        }
         // This function's purpose existence is the process of reading and writing the File 
         public function handleReadAndWriteFile()
         {
@@ -57,7 +63,8 @@
                 'lastName' => $this->getLastName(),
                 'email' => $this->getEmail(),
                 'password' => $this->getPassword(),
-                'avatar' => $this->getProfileLink()
+                'avatar' => $this->getProfileLink(),
+                'created_date' => $this->getRegisteredDate()
             );
 
             if (isset($_POST["submit"])) {
