@@ -1,7 +1,7 @@
 <?php
 session_start();
-    $_SESSION['internal'] = true;
-    $_SESSION['public'] = true;
+$_SESSION['internal'] = true;
+$_SESSION['public'] = true;
 
 if (!isset($_SESSION['loggedin'])) {
     header('location: login.php');
@@ -25,7 +25,7 @@ if (!isset($_SESSION['loggedin'])) {
     <link rel="stylesheet" href="../style/cookies.css">
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/footer.css">
-    <link rel="stylesheet" href="../style/responsive.css">
+    <!-- <link rel="stylesheet" href="../style/responsive.css"> -->
 
     <!-- Javascript -->
     <script src="../script/cookies.js"></script>
@@ -36,13 +36,14 @@ if (!isset($_SESSION['loggedin'])) {
         <!-- Header of the site -->
         <?php include_once "../inc/header.php" ?>
 
-        <!-- Main content section -->
-        <main id="main">
 
-            <div class="posts-upload">
+        <!-- Main content section -->
+        <main class="main-section">
+
+            <div class="post-upload">
                 <form method="post" action="../model/postGenerator.php" enctype='multipart/form-data'>
-                    <input id="post-image" name="post-image" type="file" placeholder="Post Image">
-                    Description <input type="textarea" name="description">
+                    <input class="post-image" name="post-image" type="file" placeholder="Post Image">
+                    Description <input id="desc-input" type="textarea" name="description">
 
                     <div class="selectOption">
                         <label for="status"></label>
@@ -53,14 +54,13 @@ if (!isset($_SESSION['loggedin'])) {
                         </select>
                     </div>
 
-                    <input type="submit" name="upload" value="Upload" id="upload" class="upload">
-                    <label for="upload" class="uploadLabel">Upload</label>
+                    <input type="submit" name="upload" value="Upload" class="upload">
                 </form>
             </div>
 
             <div class="post-content">
                 <?php
-                    include '../model/post.php';
+                include '../model/post.php';
                 ?>
 
             </div>
@@ -68,6 +68,8 @@ if (!isset($_SESSION['loggedin'])) {
 
         <!-- Footer -->
         <?php include_once "../inc/footer.php" ?>
+
+    </div>
     </div>
 
 </body>

@@ -27,13 +27,6 @@
         flex-flow: column;
     }
 
-    .post {
-        text-decoration: none;
-        margin: 4rem auto 0;
-        width: 20rem;
-        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
-    }
-
     .post:hover {
         opacity: 1;
     }

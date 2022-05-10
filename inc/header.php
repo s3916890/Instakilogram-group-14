@@ -1,4 +1,4 @@
-<header id="header">
+<header id="header-section">
     <nav>
         <div class="header-logo">
             <?php

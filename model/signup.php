@@ -38,7 +38,7 @@
                         array_push($currentUsernameInFileDb, strtolower($userInputObject['userName']));
                     }
                     // CHECK DUPLICATION EMAIL PROCESS
-                    if (!in_array(strtolower($newMessage["email"]), $currentEmailInFileDb) && !in_array(strtolower($newMessage["userName"]), $currentUsernameInFileDb)){
+                    if (!in_array(strtolower($newMessage["email"]), $currentEmailInFileDb)){
                         if ($_FILES["avatar"]["error"] == 0) {
                             array_push($oldRecords, $newMessage);
                             header("location:../view/login.php");

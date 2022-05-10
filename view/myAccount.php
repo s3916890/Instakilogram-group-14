@@ -18,9 +18,8 @@ if (!isset($_SESSION['loggedin'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://use.fontawesome.com/releases/v6.1.1/js/all.js" data-auto-replace-svg="nest"></script>
-    <link rel="stylesheet" href="../style/myAccount.css">
-    <link rel="stylesheet" href="../style/homepage.css">
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/homepage.css">
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/footer.css">
 
@@ -35,7 +34,8 @@ if (!isset($_SESSION['loggedin'])) {
         <?php include_once "../inc/header.php" ?>
         <!-- Main content section -->
         <!-- CONTENT ROW -->
-        <main id="main">
+        <main class="main-section">
+
             <div class="profile">
                 <div class="avatar-section">
                     <?php
@@ -87,15 +87,15 @@ if (!isset($_SESSION['loggedin'])) {
                         <input id="new-avatar" name="newAvatar" type="file" placeholder="New Profile Picture">
                         <button type="submit" name="submit" class="uploadBtn">Change Avatar</button>
                     </form>
-
-
-                    <div class="post-content">
-                        <?php
-                        include '../model/post.php';
-                        ?>
-
-                    </div>
                 </div>
+
+            </div>
+
+            <div class="post-content">
+                <?php
+                include '../model/post.php';
+                ?>
+
             </div>
 
         </main>
@@ -103,7 +103,9 @@ if (!isset($_SESSION['loggedin'])) {
         <!-- Footer -->
         <?php include_once "../inc/footer.php" ?>
 
+
     </div>
+
 </body>
 
 </html>

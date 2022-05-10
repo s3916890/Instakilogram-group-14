@@ -19,10 +19,10 @@ $_SESSION['internal'] = false;
     <!-- Stylesheet CSS -->
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/homepage.css">
-    <link rel="stylesheet" href="../style/cookies.css">
+    <!-- <link rel="stylesheet" href="../style/cookies.css"> -->
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/footer.css">
-    <link rel="stylesheet" href="../style/responsive.css">
+    <!-- <link rel="stylesheet" href="../style/responsive.css"> -->
 
     <!-- Javascript -->
     <script src="../script/cookies.js"></script>
@@ -34,8 +34,7 @@ $_SESSION['internal'] = false;
         <?php include_once "../inc/header.php" ?>
 
         <!-- Main content section -->
-        <main id="main">
-
+        <main class="main-section">
             <div class="post-content">
                 <?php
                     include '../model/post.php';
