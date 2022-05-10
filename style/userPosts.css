@@ -1,0 +1,29 @@
+
+.created-time-adminPage{
+    position: relative;
+    left: -160px;
+    top: 12%;
+}
+.description-adminPage{
+    position: relative;
+    top: 0.8rem;
+    left: -160px;
+    margin-bottom: 16px;
+}
+.user-name-adminPage{
+    font-weight: 400;
+}
+.author label{
+    position: relative;
+    top: -0.3rem;
+}
+.post-adminPage{
+    position: relative;
+    top: 480px;
+    right: 530px;
+    margin: -2rem auto 8rem;
+}
+.info-container{
+    position: relative;
+    top: -6px;
+}

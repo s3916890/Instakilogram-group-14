@@ -1,1 +1,62 @@
-[{"userID":"user-627901d7d10a0","userName":"karma.2710","firstName":"Nguyen","lastName":"Loi","email":"bo.codename.bourbon@gmail.com","password":"$2y$10$HuvSBGGqgUkB5i47hrYN5e5te77mVk95kYVGb3qUTOtetYWpe5PP2","avatar":"twister.jpeg"}]
+[
+    {
+        "userID": "user-62794c29e865f",
+        "userName": "karma.2710",
+        "firstName": "Nguyen",
+        "lastName": "Loi",
+        "email": "bo.codename.bourbon@gmail.com",
+        "password": "$2y$10$66cTEprfgsQSaLaJMztphe3RGPcWmVTkOOKpY0zQHvwUI8laF4JI6",
+        "avatar": "karma2710.jpeg",
+        "registerTime": "2022-05-09 17:15:22"
+    },
+    {
+        "userID": "user-62794d37271c3",
+        "userName": "nanh__",
+        "firstName": "Anh",
+        "lastName": "Truong",
+        "email": "anhtruong@gmail.com",
+        "password": "$2y$10$M8fXoGHQAwOx8rrRWR3IkO15XgfrTNJ52\/b6NPWiog\/0BD\/iig.Ym",
+        "avatar": "aesthetic.jpg",
+        "registerTime": "2022-05-09 17:19:51"
+    },
+    {
+        "userID": "user-62794d7bcab86",
+        "userName": "pb_twister",
+        "firstName": "Gia",
+        "lastName": "Huy",
+        "email": "giahuy123@gmail.com",
+        "password": "$2y$10$ao3KfKpCEUggIsoYuRLrOONXVhcd0AEQZQALAnjEAZtPTzMjjcfuq",
+        "avatar": "twister.jpeg",
+        "registerTime": "2022-05-09 17:20:59"
+    },
+    {
+        "userID": "user-62794f147efc2",
+        "userName": "yugishle",
+        "firstName": "Nguyen",
+        "lastName": "Loi",
+        "email": "yugishle@gmail.com",
+        "password": "$2y$10$M2J4S4cM3M1CE6K3BXnbEuIC.85GGmgbR791wPZ6obtbp8gql9pna",
+        "avatar": "yugish.jpeg",
+        "registerTime": "2022-05-09 17:27:48"
+    },
+    {
+        "userID": "user-62795db812321",
+        "userName": "miley2k",
+        "firstName": "My",
+        "lastName": "Dang",
+        "email": "mydang@gmail.com",
+        "password": "$2y$10$2umH46cDxwNxQuZBhUp\/ve4yzX1gRQGbAcTIh1PL0zHvcqWQ7a0RK",
+        "avatar": "miley.jpeg",
+        "registerTime": "2022-05-09 18:30:16"
+    },
+    {
+        "userID": "user-62795e5cb2d4a",
+        "userName": "aestheticVibe",
+        "firstName": "Karma",
+        "lastName": "Nguyen",
+        "email": "aestheticvibe@gmail.com",
+        "password": "$2y$10$724Bh7oVEyCK8QxRQk2aNum5E5YNX6F\/nSIWVr3\/2yzyPKPvb9NGW",
+        "avatar": "aesthetic.jpg",
+        "registerTime": "2022-05-09 18:33:00"
+    }
+]

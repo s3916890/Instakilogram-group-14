@@ -28,6 +28,7 @@ $_SESSION['loggedin'] = false;
 </head>
 
 <body>
+    <?php include "../view/headerNonLogin.php" ?>
     <div class="homepage-container">
         <!-- Header of the site -->
 

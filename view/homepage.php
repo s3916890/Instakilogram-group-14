@@ -44,16 +44,17 @@ if (!isset($_SESSION['loggedin'])) {
                     <input id="post-image" name="post-image" type="file" placeholder="Post Image">
                     Description <input type="textarea" name="description">
 
-                    <div class="">
+                    <div class="selectOption">
                         <label for="status"></label>
                         <select name="status" class="status">
-                            <option value="public">Public</option>
-                            <option value="internal">Internal</option>
-                            <option value="private">Private</option>
+                            <option class="optionValue" value="public">Public</option>
+                            <option class="optionValue" value="internal">Internal</option>
+                            <option class="optionValue" value="private">Private</option>
                         </select>
                     </div>
 
-                    <input type="submit" name="upload" value="Upload">
+                    <input type="submit" name="upload" value="Upload" id="upload" class="upload">
+                    <label for="upload" class="uploadLabel">Upload</label>
                 </form>
             </div>
 

@@ -16,7 +16,46 @@ body {
     grid-template-areas: 'header header header'
         'content content footer'
 }
+.posts-upload{
+    transform: translateX(33.125%);
+}
+.selectOption{
+    transform: translateX(14%) translateY(15%);
+}
+.status{
 
+}
+.optionValue{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    transition: all 300ms;
+}
+.upload{
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+
+}
+.uploadLabel{
+    background-color: var(--primary-color-1);
+    color: var(--white-color);
+    padding: 4px 16px;
+    font-size: 1rem;
+    border-radius: 50px;
+    position: relative;
+    left: 13.2%;
+    top: 16px;
+    cursor: pointer;
+}
+.uploadLabel:hover{
+    opacity: 0.8;
+}
 #header {
     grid-area: header;
 }
@@ -83,7 +122,7 @@ body {
 .post {
     background: white;
     color: black;
-    margin: 2rem auto;
+    margin: 4rem auto;
     display: flex;
     flex-direction: column;
     width: 30rem;
