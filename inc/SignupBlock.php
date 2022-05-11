@@ -1,6 +1,6 @@
 <!-- SIGN BUTTON -->
 <div >
-    <ul class="signBtn">
+    <ul class="sign-btn">
         <a href="../view/login.php">
             <li class="btn-item">
                 <button class="transparent-btn">Log In</button>

@@ -3,7 +3,7 @@
 }
 
 .header-logo,
-.searchBar {
+.search-bar {
     margin: 1rem;
 }
 
@@ -32,7 +32,7 @@ nav {
     justify-content: space-around;
 }
 
-.searchBar {
+.search-bar {
     height: 50%;
     width: 40%;
     display: flex;
@@ -94,7 +94,7 @@ nav input::placeholder {
 }
 
 /* Dropdown Button */
-.dropBtn {
+.drop-btn {
     background-color: transparent;
     font-weight: bold;
     color: black;
@@ -189,7 +189,7 @@ nav input::placeholder {
 }
 
 /* Log in/Sign up button */
-.signBtn {
+.sign-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -227,7 +227,7 @@ nav input::placeholder {
         color: #fff;
     }
 
-    .searchBar {
+    .search-bar {
         height: 50%;
         width: 70%;
     }
@@ -257,7 +257,7 @@ nav input::placeholder {
     }
 
     /* Dropdown Section */
-    .dropBtn {
+    .drop-btn {
         display: none;
     }
 

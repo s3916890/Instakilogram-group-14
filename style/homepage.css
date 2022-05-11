@@ -82,6 +82,12 @@ body {
     margin-bottom: 1rem;
 }
 
+.author label{
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    /* background-color: red; */
+}
+
 .info-container {
     display: flex;
     flex-direction: row;
@@ -114,7 +120,7 @@ body {
     word-break: keep-all;
 }
 
-.selectOption {
+.select-option {
     align-self: center;
     margin: 1rem 0;
 }
@@ -150,7 +156,7 @@ body {
 
 
 /* My account page  */
-.userName {
+.account-name {
     text-align: left;
     font-size: 24px;
     font-weight: 600;
@@ -164,16 +170,16 @@ body {
     /* justify-content: flex-start; */
 }
 
-.keyName{
+.key-name{
     font-size: 16px;
     font-weight: 500;
 }
 
-.keyValue{
+.key-value{
     font-weight: 400;
 }
 
-.uploadBtn {
+.upload-btn {
     width: fit-content;
     padding: 0.65rem;
     font-family: var(--primary-font);
@@ -185,7 +191,7 @@ body {
     position: relative;
 }
 
-.uploadBtn:hover{
+.upload-btn:hover{
     transform: scale(1.05);
     transition: 0.5s;
     cursor: pointer;
@@ -219,7 +225,7 @@ body {
     align-items: center;
 }
 
-.userName{
+.account-name{
     margin-left: 2rem;
 }
 
@@ -227,7 +233,7 @@ body {
     font-weight: bold;
 }
 
-.viewInformation {
+.view-information {
     margin-right: 2rem;
 }
 
@@ -246,7 +252,7 @@ body {
         flex-direction: column;
         align-items: flex-start;
     }
-    .userName{
+    .account-name{
         margin-left: 0.5rem;
         margin-top: 0.5rem;
     }

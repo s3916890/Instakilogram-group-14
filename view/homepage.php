@@ -45,7 +45,7 @@ if (!isset($_SESSION['loggedin'])) {
                     <input class="post-image" name="post-image" type="file" placeholder="Post Image">
                     Description <input id="desc-input" type="textarea" name="description">
 
-                    <div class="selectOption">
+                    <div class="select-option">
                         <label for="status"></label>
                         <select name="status" class="status">
                             <option class="optionValue" value="public">Public</option>

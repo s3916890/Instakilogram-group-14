@@ -177,3 +177,25 @@ html {
     margin-top: 36px;
 }
 
+
+@keyframes slideLeft {
+    from{
+        opacity: 0;
+        left: -100%;
+    }
+    to{
+        opacity: 100%;
+        left: 0;
+    }
+}
+
+@keyframes slideRight{
+    from{
+        opacity: 0;
+        right: -100%;
+    }
+    to{
+        opacity: 100%;
+        right: 0;
+    }
+}
