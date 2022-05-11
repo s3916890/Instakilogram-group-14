@@ -4,13 +4,14 @@
     $currentEmailInFileDb = array();
     $currentRegisterTimeInFileDb = array();
 
+    function user_created_time_cmp($firstPost, $nextPost) {
+        return strtotime($nextPost['registerTime']) - strtotime($firstPost['registerTime']);
+    }
+    uasort($oldRecords, 'user_created_time_cmp');
     foreach ($oldRecords as $userInputObject) {
         array_push($currentEmailInFileDb, strtolower($userInputObject['email']));
         array_push($currentRegisterTimeInFileDb, strtolower($userInputObject['registerTime']));
     }
-
-    $currentEmailInFileDb = array_reverse($currentEmailInFileDb);
-    $currentRegisterTimeInFileDb = array_reverse($currentRegisterTimeInFileDb);
 
 
     $listUserAccounts = array();
@@ -19,3 +20,4 @@
     }    
     $_SESSION["listUserAccounts"] = $listUserAccounts;
 ?>
+

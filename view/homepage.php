@@ -1,8 +1,6 @@
 <?php
 session_start();
-$_SESSION['internal'] = true;
-$_SESSION['public'] = true;
-
+$_SESSION['adminLoggedIn'] = false;
 if (!isset($_SESSION['loggedin'])) {
     header('location: login.php');
 }

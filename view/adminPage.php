@@ -1,11 +1,9 @@
 <?php
 session_start();
-$_SESSION['loggedin'] = false;
-$_SESSION['private'] = true;
-if (!isset($_SESSION['loggedin'])) {
-    header('location: ../view/adminPage.php');
+if (!isset($_SESSION['adminLoggedIn'])) {
+    header('location: AdminLogin.php');
 }
- ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,12 +17,11 @@ if (!isset($_SESSION['loggedin'])) {
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/cookies.css">
     <link rel="stylesheet" href="../style/header.css">
-    <link rel="stylesheet" href="../style/homepageNonLogin.css">
     <link rel="stylesheet" href="../style/homepage.css">
     <link rel="stylesheet" href="../style/pagination.css">
-    <link rel="stylesheet" href="../style/responsive.css">
+    <!-- <link rel="stylesheet" href="../style/responsive.css"> -->
     <link rel="stylesheet" href="../style/footer.css">
-    <link rel="stylesheet" href="../style/userPosts.css">
+    <!-- <link rel="stylesheet" href="../style/userPosts.css"> -->
 
 
     <title></title>
@@ -32,18 +29,27 @@ if (!isset($_SESSION['loggedin'])) {
 
 <body>
     <div class="homepage-container">
-        <?php include "../inc/header.php"; ?>
-        <main>
+        <!-- Header of the site -->
+        <!-- Main content section -->
+        <!-- CONTENT ROW -->
+        <main class="main-section">
             <div class="list" id="list"></div>
             <div class="pageNumbers" id="pagination"></div>
+            <div class="post-content">
+                <?php
+                include '../model/post.php';
+                ?>
+
+            </div>
         </main>
-        <div class="userPosts"><?php include "../model/post.php" ?></div>
+        <!-- Footer -->
+        <?php include_once "../inc/footer.php" ?>
     </div>
 
     <script src="../script/pagination.js"></script>
     <script>
         <?php include "../model/listUserAccount.php" ?>
-        <?php $listUserAccounts = $_SESSION["listUserAccounts"]; ?>
+        <?php $listUserAccounts = $_SESSION["listUserAccounts"] ?>
 
         let listAccounts = new Array();
 

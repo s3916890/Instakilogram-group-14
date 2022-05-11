@@ -1,8 +1,7 @@
 <?php
-$_SESSION['public'] = true;
+$_SESSION['adminLoggedIn'] = false;
 $_SESSION['loggedin'] = false;
-$_SESSION['private'] = false;
-$_SESSION['internal'] = false;
+
 ?>
 
 <!DOCTYPE html>

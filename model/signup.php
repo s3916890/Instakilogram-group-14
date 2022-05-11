@@ -44,7 +44,6 @@ if (isset($_POST['submit'])) {
                     header("location:../view/signup.php");
                 }
 
-
                 $dataToSave = $oldRecords;
             }
 

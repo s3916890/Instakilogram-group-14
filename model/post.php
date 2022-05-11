@@ -3,8 +3,14 @@ $postDatabase = json_decode(file_get_contents("../../database/post.db"), true);
 $accountDatabase = json_decode(file_get_contents("../../database/accounts.db"), true);
 
 if ($postDatabase != null) {
+    function post_created_time_cmp($firstPost, $nextPost) {
+        return strtotime($nextPost['createdTime']) - strtotime($firstPost['createdTime']);
+    }
+    uasort($postDatabase, 'post_created_time_cmp');
+
     foreach ($postDatabase as $key => $value) {
         foreach ($accountDatabase as $k => $v) {
+            // change the avatar appearing in the post
             if ($value['uID'] === $v['userID']) {
                 $value['uAva'] = $v['avatar'];
                 $postImg = '
@@ -26,17 +32,17 @@ if ($postDatabase != null) {
                 </div>';
             }
         }
+        if ($_SESSION['adminLoggedIn']) {
+            echo $postImg;
+        }
         if ($value['status'] === 'public') {
-            $_SESSION['public'] = true;
             echo $postImg;
         } elseif ($value['status'] === 'internal') {
             if ($_SESSION['loggedin'] === true) {
-                $_SESSION['internal'] = true;
                 echo $postImg;
             }
         } elseif ($value['status'] === 'private') {
             if ($_SESSION['loggedin'] === true && $_SESSION['userID'] === $value['uID']) {
-                $_SESSION['private'] = true;
                 echo $postImg;
             }
         }
