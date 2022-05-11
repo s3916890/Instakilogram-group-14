@@ -6,7 +6,6 @@ function FormValidator(formSelection, options) {
     if (!options) {
         options = {};
     }
-    /** @function GetParentElement:  ..... */
     function GetParentElement(element, selector) {
         while (element.parentElement) {
             if (element.parentElement.matches(selector)) {

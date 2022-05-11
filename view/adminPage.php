@@ -1,4 +1,11 @@
-<?php session_start(); ?>
+<?php
+session_start();
+$_SESSION['loggedin'] = false;
+$_SESSION['private'] = true;
+if (!isset($_SESSION['loggedin'])) {
+    header('location: ../view/adminPage.php');
+}
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +25,8 @@
     <link rel="stylesheet" href="../style/responsive.css">
     <link rel="stylesheet" href="../style/footer.css">
     <link rel="stylesheet" href="../style/userPosts.css">
+
+
     <title></title>
 </head>
 
@@ -34,11 +43,11 @@
     <script src="../script/pagination.js"></script>
     <script>
         <?php include "../model/listUserAccount.php" ?>
-        <?php $listUserAccounts = $_SESSION["listRegisterTime"]; ?>
+        <?php $listUserAccounts = $_SESSION["listUserAccounts"]; ?>
 
         let listAccounts = new Array();
 
-        <?php foreach ($_SESSION["listRegisterTime"] as $userKey => $userValue) { ?>
+        <?php foreach ($_SESSION["listUserAccounts"] as $userKey => $userValue) { ?>
             listAccounts.push("<?php echo $userValue; ?>");
         <?php } ?>
 

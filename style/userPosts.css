@@ -16,6 +16,7 @@
 .author label{
     position: relative;
     top: -0.3rem;
+    text-transform: capitalize;
 }
 .post-adminPage{
     position: relative;

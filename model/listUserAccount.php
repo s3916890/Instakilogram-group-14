@@ -9,13 +9,12 @@
         array_push($currentRegisterTimeInFileDb, strtolower($userInputObject['registerTime']));
     }
 
-    $_SESSION["listUserAccounts"] = $currentEmailInFileDb;
-
-    $newCurrentRegisterTime = array();
+    $listUserAccounts = array();
     for($i = 0; $i < sizeof($currentRegisterTimeInFileDb); $i++){
-        array_push($newCurrentRegisterTime, $currentEmailInFileDb[$i] . " (" . $currentRegisterTimeInFileDb[$i] . ")");
+        array_push($listUserAccounts, $currentEmailInFileDb[$i] . " (" . $currentRegisterTimeInFileDb[$i] . ")");
     }
-    ksort($newCurrentRegisterTime);
-    $_SESSION["listRegisterTime"] = $newCurrentRegisterTime;
+    ksort($listUserAccounts);
+    
+    $_SESSION["listUserAccounts"] = $listUserAccounts;
 
 ?>
