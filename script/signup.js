@@ -46,6 +46,7 @@ function FormValidator(formSelection, options) {
         isConfirmed: (value) => {
             let prevPassword = $('input[type = password]').value
             return value === prevPassword && prevPassword ? undefined : 'Re-enter password again';
+            
         },
         isImage: (value) => {
             return value ? undefined : 'Please fill this image';
@@ -121,7 +122,6 @@ function FormValidator(formSelection, options) {
     }
     // Handle the form submitting behavior
     formElement.onsubmit = (event) => {
-        // event.preventDefault();
         // Confirm the validation of form
         let inputs = formElement.querySelectorAll('input[name][rules]');
         let isValid = true;
@@ -134,6 +134,7 @@ function FormValidator(formSelection, options) {
                 isValid = false;
             }
         }
+        // console.log(isValid)
         if (isValid) {
             if (typeof options.onSubmit === 'function') {
                 let enableInputs = formElement.querySelectorAll('input[name]');
@@ -153,6 +154,8 @@ function FormValidator(formSelection, options) {
             else {
                 formElement.submit();
             }
+        } else {
+            event.preventDefault()
         }
     }
 }
