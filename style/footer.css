@@ -1,4 +1,5 @@
 #footer {
+    height: 5vh;
     bottom: 0;
     margin: 1rem 0;
     width: 100%;
@@ -7,6 +8,7 @@
     justify-content: space-around;
     color: #5e5e5e;
     font-weight: bold;
+    align-items: center;
 }
 
 #footer a {
@@ -21,12 +23,15 @@
 /*  PHONE  */
 @media screen and (max-width: 767px) {
     #footer {
-        /* display: none; */
-        position: static;
+        display: flex;
+        /* position: static; */
         margin: 1rem auto;
         width: fit-content;
         flex-direction: column;
+        justify-content: space-around;
         border: none;
+        height: 20vh;
+        width: 100%;
     }
 }
 

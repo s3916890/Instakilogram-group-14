@@ -47,42 +47,45 @@ if (!isset($_SESSION['loggedin'])) {
                     ?>
                 </div>
                 <div class="profile-info">
-                    <h1 class="userName">
-                        <?php
-                        if (isset($_SESSION["userName"])) {
-                            echo $_SESSION["userName"];
-                        }
-                        ?>
-                    </h1>
-                    <ul class="viewInformation">
-                        <li class="keyName">First name:
-                            <span class="keyValue">
-                                <?php
-                                if (isset($_SESSION["firstName"])) {
-                                    echo $_SESSION["firstName"];
-                                }
-                                ?>
-                            </span>
-                        </li>
-                        <li class="keyName">Last name:
-                            <span class="keyValue">
-                                <?php
-                                if (isset($_SESSION["lastName"])) {
-                                    echo $_SESSION["lastName"];
-                                }
-                                ?>
-                            </span>
-                        </li>
-                        <li class="keyName">Email:
-                            <span class="keyValue">
-                                <?php
-                                if (isset($_SESSION["email"])) {
-                                    echo $_SESSION["email"];
-                                }
-                                ?>
-                            </span>
-                        </li>
-                    </ul>
+                    <div class="information">
+                        <h1 class="userName">
+                            <?php
+                            if (isset($_SESSION["userName"])) {
+                                echo $_SESSION["userName"];
+                            }
+                            ?>
+                        </h1>
+                        <ul class="viewInformation">
+                            <li class="keyName">First name:
+                                <span class="keyValue">
+                                    <?php
+                                    if (isset($_SESSION["firstName"])) {
+                                        echo $_SESSION["firstName"];
+                                    }
+                                    ?>
+                                </span>
+                            </li>
+                            <li class="keyName">Last name:
+                                <span class="keyValue">
+                                    <?php
+                                    if (isset($_SESSION["lastName"])) {
+                                        echo $_SESSION["lastName"];
+                                    }
+                                    ?>
+                                </span>
+                            </li>
+                            <li class="keyName">Email:
+                                <span class="keyValue">
+                                    <?php
+                                    if (isset($_SESSION["email"])) {
+                                        echo $_SESSION["email"];
+                                    }
+                                    ?>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
                     <form class="change-avatar" method="POST" action="../model/avatarChange.php" enctype='multipart/form-data'>
                         <input id="new-avatar" name="newAvatar" type="file" placeholder="New Profile Picture">
                         <button type="submit" name="submit" class="uploadBtn">Change Avatar</button>

@@ -33,10 +33,10 @@ nav {
 }
 
 .searchBar {
-    height: 80%;
+    height: 50%;
     width: 40%;
     display: flex;
-    margin: auto;
+    /* margin: auto; */
 }
 
 .icon-style {
@@ -45,34 +45,29 @@ nav {
 }
 
 #search-btn {
-    height: 60%;
+    height: 100%;
     width: 10%;
     background-color: #4700D8;
     border: none;
+    border-radius: 0 1rem 1rem 0;
 }
 
 nav input {
     outline: none;
     border: 1px solid #C4C4C4;
     width: 100%;
-    height: 60%;
     padding: 0px 0.5rem;
     font-size: 1rem;
-    /* transition: ease-in-out 0.2s; */
     background-color: transparent;
+    border-radius: 1rem 0 0 1rem;
 }
 
 nav input::placeholder {
     font-family: 'Poppins', sans-serif;
     color: #C8C4C4;
-    position: absolute;
+    /* position: absolute; */
     left: 24px;
     top: 15%;
-}
-
-.homepage-logo,
-.searchBar {
-    margin-top: 1rem;
 }
 
 .avatar-container {
@@ -91,7 +86,7 @@ nav input::placeholder {
 }
 
 .user img {
-    --img-side: 7vh;
+    --img-side: 5vh;
     width: var(--img-side);
     height: var(--img-side);
     border-radius: var(--img-side);
@@ -159,14 +154,14 @@ nav input::placeholder {
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 7vh;
+    top: 6vh;
     right: 10%;
     background-color: #4700D8;
     border-radius: 1rem;
     min-width: 230px;
     box-shadow: 0.5rem 1rem 0.5rem rgba(0, 0, 0, 0.2);
     z-index: 1;
-    transform-origin: calc(100% - 40px) top;
+    transform-origin: calc(100% - 50px) top;
     animation: dropDownContentGrowth ease-in 0.3s;
 }
 
@@ -221,7 +216,7 @@ nav input::placeholder {
     transform: scale(1.06);
 }
 
-/*  PHONE  */
+/*  PHONE  and Ipad */
 @media screen and (max-width: 1023px) {
     nav {
         width: 100%; 
@@ -282,7 +277,15 @@ nav input::placeholder {
         top: 3vh;
     }
 }
-
+/* Phone only */
+@media screen and (max-width: 767px) {
+    .header-logo{
+        margin: 0.5rem
+    }
+    .avatar-container {
+        width: max-content
+    }
+}
 
 @keyframes dropDownContentGrowth {
     from {
