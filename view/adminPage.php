@@ -24,7 +24,7 @@ if (!isset($_SESSION['adminLoggedIn'])) {
     <!-- <link rel="stylesheet" href="../style/userPosts.css"> -->
 
 
-    <title></title>
+    <title>Admin Page</title>
 </head>
 
 <body>
