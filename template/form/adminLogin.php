@@ -6,7 +6,7 @@ if (isset($_POST["submit"])) {
     $pass = $_POST["user_password"];
     // Validate user input information
         if ($userName === 'adminName' and $pass === 'admin@123') {
-            $_SESSION["loggedin"] = true;
+            $_SESSION["adminLoggedin"] = true;
             $_SESSION["userName"] = $userName;
             $_SESSION["password"] = $pass;
             header("location:../adminHomepage.php");
