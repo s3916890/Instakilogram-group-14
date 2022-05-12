@@ -16,7 +16,11 @@ function displayList(items, wrapper, rowsPerPage, page) {
         let itemElement = document.createElement("div");
         itemElement.classList.add("item");
 
-        itemElement.innerText = paginationItem; 
+        itemElement.innerText = paginationItem;
+        itemElement.onclick = function() {
+            ='?myaccount.php'
+        }
+
 
         wrapper.appendChild(itemElement);
     }
