@@ -1,24 +1,3 @@
-<?php
-session_start();
-if (isset($_POST["submit"])) {
-    // store user's input data 
-    $userName = $_POST["user_name"];
-    $pass = $_POST["user_password"];
-    // Validate user input information
-        if ($userName === 'adminName' and $pass === 'admin@123') {
-            $_SESSION["loggedin"] = true;
-            $_SESSION["userName"] = $userName;
-            $_SESSION["password"] = $pass;
-            header("location:../adminHomepage.php");
-            setcookie("userID", $userName, time() + 3600, "/");
-        } else {
-        // Reload the page if the email or the password is incorrect
-            header("location:adminLogin.php");
-            echo('Re-enter your login information');
-        }
-
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +8,7 @@ if (isset($_POST["submit"])) {
     <title>Login</title>
 </head>
 <body>
-    <form method="POST" action='/Users/myluong/Desktop/Instakilogram-group-14/template/adminLogin.php'>
+    <form method="POST" action='validateAdmin.php'>
         <div class='form-row'>
             <div class='form-label' >
                 <label for='user_name'>Enter your username:</label>
