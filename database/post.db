@@ -1,0 +1,33 @@
+[
+    {
+        "postID": "post-627cf7391972b",
+        "postImage": "mimi-thian-XWvqhWCAAoo-unsplash.jpg",
+        "description": "",
+        "createdTime": "2022-05-12 19:02:01",
+        "status": "public",
+        "uID": "user-627cf720a5363",
+        "uName": "fe",
+        "uAva": "ngan-huynh-Rjp-Zmw6q_A-unsplash.jpg"
+    },
+    {
+        "postID": "post-687cf7391972b",
+        "postImage": "mimi-thian-XWvqhWCAAoo-unsplash.jpg",
+        "description": "",
+        "createdTime": "2022-05-12 19:02:01",
+        "status": "public",
+        "uID": "user-627cf720a5363",
+        "uName": "fe",
+        "uAva": "ngan-huynh-Rjp-Zmw6q_A-unsplash.jpg"
+    },
+    {
+        "postID": "post-697cf7391972b",
+        "postImage": "mimi-thian-XWvqhWCAAoo-unsplash.jpg",
+        "description": "",
+        "createdTime": "2022-05-12 19:02:01",
+        "status": "public",
+        "uID": "user-627cf720a5363",
+        "uName": "fe",
+        "uAva": "ngan-huynh-Rjp-Zmw6q_A-unsplash.jpg"
+    }
+
+]

@@ -1,6 +1,8 @@
 <?php
-$postDatabase = json_decode(file_get_contents("../../database/post.db"), true);
-$accountDatabase = json_decode(file_get_contents("../../database/accounts.db"), true);
+$postDatabase = json_decode(file_get_contents("../database/post.db"), true);
+$accountDatabase = json_decode(file_get_contents("../database/account.db"), true);
+
+
 
 if ($postDatabase != null) {
     function post_created_time_cmp($firstPost, $nextPost) {
@@ -25,10 +27,17 @@ if ($postDatabase != null) {
                         </label>   
                     </div>
                     <div class="post-desc">
+                        <p class="created-time">' . $value['postID'] .  '</p>
                         <p class="created-time">' . $value['createdTime'] .  '</p>
                         <p class="description">' . $value['description'] . '</p>
+                        <form method="post">
+
+                        <button onclick="clickMe()"> Click </button>
+                        </form>
                     </div>  
                     <img src= "../assets/postImage/' . $value['postImage'] . '"class="post-image" alt="Post Image">
+                    
+
                 </div>';
             }
         }
@@ -48,3 +57,8 @@ if ($postDatabase != null) {
         }
     }
 }
+function clickMe(){
+    var result ="<?php php_func(); ?>"
+    document.write(result);
+    }
+

@@ -14,7 +14,7 @@ if (isset($_POST['upload'])) {
         'uName' => $_SESSION['userName'],
         'uAva' => $_SESSION['avatar'],
     );
-    $fileName = "../../database/post.db";
+    $fileName = "../database/post.db";
     stat(iconv('UTF-8', 'ISO-8859-1', $fileName));
     // Set the path to save the image
     $target_dir    = "../assets/postImage/";
