@@ -13,7 +13,6 @@
         array_push($currentRegisterTimeInFileDb, strtolower($userInputObject['registerTime']));
     }
 
-
     $listUserAccounts = array();
     for($i = 0; $i < sizeof($currentRegisterTimeInFileDb); $i++){
         array_push($listUserAccounts, $currentEmailInFileDb[$i] . " (" . $currentRegisterTimeInFileDb[$i] . ")");

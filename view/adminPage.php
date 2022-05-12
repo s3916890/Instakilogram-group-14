@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 if (!isset($_SESSION['adminLoggedIn'])) {
     header('location: AdminLogin.php');
 }
@@ -19,12 +20,9 @@ if (!isset($_SESSION['adminLoggedIn'])) {
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/homepage.css">
     <link rel="stylesheet" href="../style/pagination.css">
-    <!-- <link rel="stylesheet" href="../style/responsive.css"> -->
     <link rel="stylesheet" href="../style/footer.css">
-    <!-- <link rel="stylesheet" href="../style/userPosts.css"> -->
 
-
-    <title></title>
+    <title>Admin Page</title>
 </head>
 
 <body>
@@ -48,9 +46,6 @@ if (!isset($_SESSION['adminLoggedIn'])) {
 
     <script src="../script/pagination.js"></script>
     <script>
-        <?php include "../model/listUserAccount.php" ?>
-        <?php $listUserAccounts = $_SESSION["listUserAccounts"] ?>
-
         let listAccounts = new Array();
 
         <?php foreach ($_SESSION["listUserAccounts"] as $userKey => $userValue) { ?>

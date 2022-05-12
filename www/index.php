@@ -1,5 +1,6 @@
 <?php
 $_SESSION['adminLoggedIn'] = false;
+$_SESSION['myAccount'] = false;
 $_SESSION['loggedin'] = false;
 
 ?>

@@ -167,6 +167,7 @@ body {
     flex-direction: column;
     list-style-type: none;
     line-height: 2;
+    margin-right: 2rem;
     /* justify-content: flex-start; */
 }
 
@@ -225,16 +226,8 @@ body {
     align-items: center;
 }
 
-.account-name{
-    margin-left: 2rem;
-}
-
 .keyName {
     font-weight: bold;
-}
-
-.view-information {
-    margin-right: 2rem;
 }
 
 .change-avatar {

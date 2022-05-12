@@ -3,7 +3,8 @@ $postDatabase = json_decode(file_get_contents("../../database/post.db"), true);
 $accountDatabase = json_decode(file_get_contents("../../database/accounts.db"), true);
 
 if ($postDatabase != null) {
-    function post_created_time_cmp($firstPost, $nextPost) {
+    function post_created_time_cmp($firstPost, $nextPost)
+    {
         return strtotime($nextPost['createdTime']) - strtotime($firstPost['createdTime']);
     }
     uasort($postDatabase, 'post_created_time_cmp');
@@ -32,18 +33,23 @@ if ($postDatabase != null) {
                 </div>';
             }
         }
-        if ($_SESSION['adminLoggedIn']) {
-            echo $postImg;
-        }
-        if ($value['status'] === 'public') {
-            echo $postImg;
-        } elseif ($value['status'] === 'internal') {
-            if ($_SESSION['loggedin'] === true) {
+        if ($_SESSION['myAccount']) {
+            if ($_SESSION['userID'] === $value['uID']) {
                 echo $postImg;
             }
-        } elseif ($value['status'] === 'private') {
-            if ($_SESSION['loggedin'] === true && $_SESSION['userID'] === $value['uID']) {
+        } elseif ($_SESSION['adminLoggedIn']) {
+            echo $postImg;
+        } else {
+            if ($value['status'] === 'public') {
                 echo $postImg;
+            } elseif ($value['status'] === 'internal') {
+                if ($_SESSION['loggedin'] === true) {
+                    echo $postImg;
+                }
+            } elseif ($value['status'] === 'private') {
+                if ($_SESSION['loggedin'] === true && $_SESSION['userID'] === $value['uID']) {
+                    echo $postImg;
+                }
             }
         }
     }
