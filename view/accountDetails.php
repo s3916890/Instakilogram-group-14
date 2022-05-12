@@ -4,22 +4,6 @@ session_start();
 if (!isset($_SESSION['adminLoggedin'])) {
     header('location: adminLogin.php');
 }
-
-// read json file
-$json_data = file_get_contents("../database/account.db");
-
-// decode json to associative array
-$acocunt = json_decode($json_data, true);
-
-// get array index to delete
-$arr_index = array();
-foreach ($account as $key => $value)
-{
-    if ($value['accountID'])
-    {
-        $arr_index[] = $key;
-    }
-}
 ?>
 
 
