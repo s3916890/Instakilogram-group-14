@@ -1,4 +1,3 @@
-July Lương
 <?php
 session_start();
 if (!isset($_SESSION['adminLoggedIn'])) {
@@ -31,6 +30,10 @@ if (!isset($_SESSION['adminLoggedIn'])) {
 <body>
     <div class="homepage-container">
         <!-- Header of the site -->
+        <?php
+                include '../inc/header.php';
+                ?>
+
         <!-- Main content section -->
         <!-- CONTENT ROW -->
         <main class="main-section">
