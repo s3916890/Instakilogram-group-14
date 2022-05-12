@@ -2,7 +2,9 @@
 $postDatabase = json_decode(file_get_contents("../database/post.db"), true);
 $accountDatabase = json_decode(file_get_contents("../database/account.db"), true);
 
-
+if(array_key_exists('button1', $_POST)) {
+    button1();
+}
 
 if ($postDatabase != null) {
     function post_created_time_cmp($firstPost, $nextPost) {
@@ -32,7 +34,8 @@ if ($postDatabase != null) {
                         <p class="description">' . $value['description'] . '</p>
                         <form method="post">
 
-                        <button onclick="clickMe()"> Click </button>
+                        <form method="post">
+                            <input type="submit" name="button1" class="button" value="Button1" />
                         </form>
                     </div>  
                     <img src= "../assets/postImage/' . $value['postImage'] . '"class="post-image" alt="Post Image">
@@ -57,8 +60,36 @@ if ($postDatabase != null) {
         }
     }
 }
-function clickMe(){
-    var result ="<?php php_func(); ?>"
-    document.write(result);
-    }
 
+
+
+function button1(){
+// read json file
+$json_data = file_get_contents("../database/post.db");
+
+// decode json to associative array
+$post = json_decode($json_data, true);
+
+// get array index to delete
+$arr_index = array();
+foreach ($post as $key => $value)
+{
+    if ($value['postID'])
+    {
+        $arr_index[] = $key;
+    }
+}
+
+// delete data
+foreach ($arr_index as $i)
+{
+    unset($post[$i]);
+}
+
+// rebase array
+$post = array_values($post);
+
+// encode array to json and save to file
+file_put_contents("../database/post.db", json_encode($post));
+}
+?>
