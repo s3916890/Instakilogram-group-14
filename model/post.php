@@ -63,6 +63,7 @@ if ($postDatabase != null) {
 
 
 
+
 function button1(){
 // read json file
 $json_data = file_get_contents("../database/post.db");
