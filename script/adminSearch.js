@@ -8,7 +8,7 @@
         })
     
         let result = []; 
-        let searchValue=searchUserInput.value.toString().toLowerCase();
+        let input = document.getElementsByClassName('searchInput').toString().toLowerCase();
         data.forEach((user) => {
             let email = user.email.toLowerCase0;
             let firstName = user.firstName.toLowerCase();
@@ -25,4 +25,4 @@
             }
         }
 
-
+        )
