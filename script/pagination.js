@@ -7,7 +7,6 @@ function displayList(items, wrapper, rowsPerPage, page) {
 
     let loopStart = rowsPerPage * page,
         loopEnd = loopStart + rowsPerPage;
-
     let paginationItems = items.slice(loopStart, loopEnd);
 
     for (let i = 0; i < paginationItems.length; i++) {
@@ -15,10 +14,12 @@ function displayList(items, wrapper, rowsPerPage, page) {
 
         let itemElement = document.createElement("div");
         itemElement.classList.add("item");
-
         itemElement.innerText = paginationItem;
+        var splittedItem = paginationItem.split(':'); 
+        let accountID = splittedItem[0]; 
         itemElement.onclick = function() {
-            ='?myaccount.php'
+            location.href='accountDetails.php?accountID='+accountID;
+            
         }
 
 
