@@ -1,8 +1,28 @@
-     let fetches = fetch("../database/post.db");
-     fetches
-        .then(res => res.json())
-        .then(data => {
-            for (let i = 0; i < data.length; i++){
-                console.log(data[i]["postID"])
-            }
+
+    fetch('../database/account.db')
+        .then((response) => {
+            return response.json(); 
         })
+        .then((data) => {
+            callback(data); 
+        })
+    
+        let result = []; 
+        let searchValue=searchUserInput.value.toString().toLowerCase();
+        data.forEach((user) => {
+            let email = user.email.toLowerCase0;
+            let firstName = user.firstName.toLowerCase();
+            let LastName = user.LastName. toLowerCase () ;
+            let name = firstName + " " + lastName; 
+            if (
+                email.includes(searchValue) ||
+                firstName.includes(searchValue) ||
+                lastName.includes(searchValue) ||
+                name.includes(searchValue)
+            ) {
+                result.push(user); 
+                console.log(result); 
+            }
+        }
+
+
