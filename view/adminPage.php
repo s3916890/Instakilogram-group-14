@@ -53,11 +53,10 @@ if (!isset($_SESSION['adminLoggedIn'])) {
     <script src="../script/pagination.js"></script>
     <script>
         <?php include "../model/listUserAccount.php" ?>
-        <?php $listUserAccounts = $_SESSION["listUserAccounts"] ?>
-
+        <?php $fullUserInfo = $_SESSION["fullUserInfo"] ?>
         let listAccounts = new Array();
 
-        <?php foreach ($_SESSION["listUserAccounts"] as $userKey => $userValue) { ?>
+        <?php foreach ($_SESSION["fullUserInfo"] as $userKey => $userValue) { ?>
             listAccounts.push("<?php echo $userValue; ?>");
         <?php } ?>
 
