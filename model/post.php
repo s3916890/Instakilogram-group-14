@@ -37,15 +37,7 @@ if ($postDatabase != null) {
                         <form method="post">
                             <input type="submit" name="button" class="button" value="Delete post"/>
                             <input type="hidden" name="postID" value=' . $value['postID'] .  '>
-                        </form>
-                            <form action="/action_page.php" method="get" id="form1">
-                            <label for="fname">First name:</label>
-                            <input type="text" id="fname" name="fname"><br><br>
-                            <label for="lname">Last name:</label>
-                            <input type="text" id="lname" name="lname">
-                        </form>
-
-                        <button type="submit" form="form1" value="Submit">Submit</button>
+                       
                     </div>  
                     <img src= "../assets/postImage/' . $value['postImage'] . '"class="post-image" alt="Post Image">
                     
