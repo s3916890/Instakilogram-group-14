@@ -1,4 +1,3 @@
-July Lương
 <?php
 session_start();
 if (!isset($_SESSION['adminLoggedIn'])) {
@@ -25,12 +24,16 @@ if (!isset($_SESSION['adminLoggedIn'])) {
     <!-- <link rel="stylesheet" href="../style/userPosts.css"> -->
 
 
-    <title></title>
+    <title>Admin Page</title>
 </head>
 
 <body>
     <div class="homepage-container">
         <!-- Header of the site -->
+        <?php
+                include '../inc/header.php';
+                ?>
+
         <!-- Main content section -->
         <!-- CONTENT ROW -->
         <main class="main-section">
@@ -50,11 +53,10 @@ if (!isset($_SESSION['adminLoggedIn'])) {
     <script src="../script/pagination.js"></script>
     <script>
         <?php include "../model/listUserAccount.php" ?>
-        <?php $listUserAccounts = $_SESSION["listUserAccounts"] ?>
-
+        <?php $fullUserInfo = $_SESSION["fullUserInfo"] ?>
         let listAccounts = new Array();
 
-        <?php foreach ($_SESSION["listUserAccounts"] as $userKey => $userValue) { ?>
+        <?php foreach ($_SESSION["fullUserInfo"] as $userKey => $userValue) { ?>
             listAccounts.push("<?php echo $userValue; ?>");
         <?php } ?>
 

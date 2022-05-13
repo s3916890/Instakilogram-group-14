@@ -5,16 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-     let fetches = fetch("../database/post.db");
-     fetches
-        .then(res => res.json())
-        .then(data => {
-            for (let i = 0; i < data.length; i++){
-                console.log(data[i]["postID"])
-            }
-        })
-    </script>
 
 </head>
 
