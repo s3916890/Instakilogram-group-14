@@ -1,6 +1,8 @@
 <?php
 session_start();
 $_SESSION['adminLoggedIn'] = false;
+$_SESSION['myAccount'] = false;
+
 if (!isset($_SESSION['loggedin'])) {
     header('location: login.php');
 }

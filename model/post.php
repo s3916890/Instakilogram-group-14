@@ -2,12 +2,33 @@
 $postDatabase = json_decode(file_get_contents("../database/post.db"), true);
 $accountDatabase = json_decode(file_get_contents("../database/account.db"), true);
 
-if(array_key_exists('button', $_POST)) {
-    deletepost($_POST['postID']);
+if (array_key_exists('button', $_POST)) {
+    // get array index to delete
+    $arr_index = array();
+    foreach ($postDatabase as $key => $value) {
+        if ($value['postID'] === $_POST['postID']) {
+            if ($value['uID'] === $_SESSION['userID'] || $_SESSION['adminLoggedIn']){
+                $arr_index[] = $key;
+            }
+        }
+    }
+
+    // delete data
+    foreach ($arr_index as $i) {
+        unset($postDatabase[$i]);
+    }
+
+    // rebase array
+    $postDatabase = array_values($postDatabase);
+
+    // encode array to json and save to file
+    file_put_contents("../database/post.db", json_encode($postDatabase));
 }
 
+
 if ($postDatabase != null) {
-    function post_created_time_cmp($firstPost, $nextPost) {
+    function post_created_time_cmp($firstPost, $nextPost)
+    {
         return strtotime($nextPost['createdTime']) - strtotime($firstPost['createdTime']);
     }
     uasort($postDatabase, 'post_created_time_cmp');
@@ -29,14 +50,12 @@ if ($postDatabase != null) {
                         </label>   
                     </div>
                     <div class="post-desc">
-                        <p class="created-time">' . $value['postID'] .  '</p>
                         <p class="created-time">' . $value['createdTime'] .  '</p>
                         <p class="description">' . $value['description'] . '</p>
-                        <form method="post">
 
                         <form method="post">
                             <input type="submit" name="button" class="button" value="Delete post"/>
-                            <input type="hidden" name="postID" value=' . $value['postID'] .  '>
+                        </form>
                        
                     </div>  
                     <img src= "../assets/postImage/' . $value['postImage'] . '"class="post-image" alt="Post Image">
@@ -45,52 +64,24 @@ if ($postDatabase != null) {
                 </div>';
             }
         }
-        if ($_SESSION['adminLoggedIn']) {
-            echo $postImg;
-        }
-        if ($value['status'] === 'public') {
-            echo $postImg;
-        } elseif ($value['status'] === 'internal') {
-            if ($_SESSION['loggedin'] === true) {
+        if ($_SESSION['myAccount']) {
+            if ($_SESSION['userID'] === $value['uID']) {
                 echo $postImg;
             }
-        } elseif ($value['status'] === 'private') {
-            if ($_SESSION['loggedin'] === true && $_SESSION['userID'] === $value['uID']) {
+        } elseif ($_SESSION['adminLoggedIn']) {
+            echo $postImg;
+        } else {
+            if ($value['status'] === 'public') {
                 echo $postImg;
+            } elseif ($value['status'] === 'internal') {
+                if ($_SESSION['loggedin'] === true) {
+                    echo $postImg;
+                }
+            } elseif ($value['status'] === 'private') {
+                if ($_SESSION['loggedin'] === true && $_SESSION['userID'] === $value['uID']) {
+                    echo $postImg;
+                }
             }
         }
     }
 }
-
-
-
-function deletepost($deletepost){
-    // read json file
-    $json_data = file_get_contents("../database/post.db");
-
-    // decode json to associative array
-    $post = json_decode($json_data, true);
-
-    // get array index to delete
-    $arr_index = array();
-    foreach ($post as $key => $value)
-    {
-     if ($value['postID'] == $deletepost)
-        {
-            $arr_index[] = $key;
-        }
-    }
-
-    // delete data
-    foreach ($arr_index as $i)
-    {
-        unset($post[$i]);
-    }
-
-    // rebase array
-    $post = array_values($post);
-
-    // encode array to json and save to file
-    file_put_contents("../database/post.db", json_encode($post));
- }
-?>

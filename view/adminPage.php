@@ -1,8 +1,13 @@
 <?php
+header('Cache-Control: no cache'); 
+session_cache_limiter('private_no_expire'); 
 session_start();
 if (!isset($_SESSION['adminLoggedIn'])) {
     header('location: AdminLogin.php');
 }
+$_SESSION['myAccount'] = false;
+$_SESSION['userID'] = false;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,20 +24,13 @@ if (!isset($_SESSION['adminLoggedIn'])) {
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/homepage.css">
     <link rel="stylesheet" href="../style/pagination.css">
-    <!-- <link rel="stylesheet" href="../style/responsive.css"> -->
     <link rel="stylesheet" href="../style/footer.css">
-    <!-- <link rel="stylesheet" href="../style/userPosts.css"> -->
-
 
     <title>Admin Page</title>
 </head>
 
 <body>
     <div class="homepage-container">
-        <!-- Header of the site -->
-        <?php
-                include '../inc/header.php';
-                ?>
 
         <!-- Main content section -->
         <!-- CONTENT ROW -->

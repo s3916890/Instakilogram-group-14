@@ -1,6 +1,8 @@
 <?php
 $_SESSION['adminLoggedIn'] = false;
 $_SESSION['loggedin'] = false;
+$_SESSION['myAccount'] = false;
+$_SESSION['userID'] = false;
 
 ?>
 
