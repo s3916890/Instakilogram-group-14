@@ -1,9 +1,23 @@
 <?php
 session_start();
-
-if (!isset($_SESSION['adminLoggedin'])) {
-    header('location: adminLogin.php');
+if (!isset($_SESSION['adminLoggedIn'])) {
+    header('location: AdminLogin.php');
 }
+$accountID = $_GET['accountID'];
+$fileName = "../database/account.db";
+$accounts = json_decode(file_get_contents($fileName));
+if ($accounts != null) {
+    for ($i = 0; $i < count($accounts); $i++) {
+        // Go to homepage if the email and password are correct
+        if ($accountID == $accounts[$i]->userID) {
+            $_SESSION["userName"] = $accounts[$i]->userName; 
+            $_SESSION["firstName"] = $accounts[$i]->firstName;
+            $_SESSION["lastName"] = $accounts[$i]->lastName;
+            $_SESSION["email"] = $accounts[$i]->email;
+            $_SESSION["avatar"] = $accounts[$i]->avatar;
+        }
+    }    
+}; 
 ?>
 
 
