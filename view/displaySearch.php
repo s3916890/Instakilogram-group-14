@@ -32,17 +32,14 @@ $_SESSION['adminLoggedIn'] = true;
 <body>
     <div class="homepage-container">
             <!-- Header of the site -->
-            <header><?php include_once "../inc/header.php"?></header>
+            <header><?php include_once "../inc/header.php"?>
+            </header>
         <!-- Main content section -->
         <!-- CONTENT ROW -->
         <main class="main-section">
             <div class="list" id="list"></div>
             <div class="pageNumbers" id="pagination"></div>
             <div class="post-content">
-                <?php
-                include '../model/post.php';
-                ?>
-
             </div>
         </main>
         <!-- Footer -->
@@ -51,7 +48,7 @@ $_SESSION['adminLoggedIn'] = true;
 
     <script src="../script/pagination.js"></script>
     <script>
-        <?php include "../model/listUserAccount.php" ?>
+        <?php include "../model/adminSearch.php" ?>
         <?php $fullUserInfo = $_SESSION["fullUserInfo"] ?>
         let listAccounts = new Array();
 

@@ -12,7 +12,7 @@
     <form method="post" action="../model/adminLogin.php">
         Username <input type="text" name="admin-account"><br>
         Password <input type="password" name="admin-password"><br>
-        <input type="submit" name="act" value="Login">
+        <input type="submit" name="submit" value="Login">
     </form>
 </body>
 

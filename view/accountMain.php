@@ -54,7 +54,7 @@
 
             <form class="change-avatar" method="POST" action="../model/avatarChange.php" enctype='multipart/form-data'>
                 <input id="new-avatar" name="newAvatar" type="file" placeholder="New Profile Picture">
-                <button type="submit" name="submit" class="upload-btn">Change Avatar</button>
+                <button type="submit" name="submit" class="upload-btn">Change Button</button>
             </form>
         </div>
 
