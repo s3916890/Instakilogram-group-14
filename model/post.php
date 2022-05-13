@@ -2,8 +2,6 @@
 $postDatabase = json_decode(file_get_contents("../database/post.db"), true);
 $accountDatabase = json_decode(file_get_contents("../database/account.db"), true);
 
-
-
 if ($postDatabase != null) {
     function post_created_time_cmp($firstPost, $nextPost)
     {

@@ -7,7 +7,6 @@ if (!isset($_SESSION['adminLoggedIn'])) {
 }
 $_SESSION['myAccount'] = false;
 $_SESSION['userID'] = false;
-$_SESSION['adminLoggedIn'] = true; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +24,8 @@ $_SESSION['adminLoggedIn'] = true;
     <link rel="stylesheet" href="../style/homepage.css">
     <link rel="stylesheet" href="../style/pagination.css">
     <link rel="stylesheet" href="../style/footer.css">
+    <script src="../script/searchFunction.js"></script>
+
 
     <title>Admin Page</title>
 </head>
@@ -32,8 +33,8 @@ $_SESSION['adminLoggedIn'] = true;
 <body>
     <div class="homepage-container">
             <!-- Header of the site -->
-            <header><?php include_once "../inc/header.php"?></header>
-        <!-- Main content section -->
+            <header><?php include_once "../inc/adminHeader.php"?>
+            </header>
         <!-- CONTENT ROW -->
         <main class="main-section">
             <div class="list" id="list"></div>

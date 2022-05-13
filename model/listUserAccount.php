@@ -2,7 +2,6 @@
     $fileName = "../database/account.db";
     $oldRecords = json_decode(file_get_contents($fileName), TRUE);
     
-    function searchInformation($database) {
         $currentEmailInFileDb = array();
         $currentRegisterTimeInFileDb = array();
         $currentUserName = array(); 
@@ -28,7 +27,6 @@
         $_SESSION['fullUserInfo'] =  $fullUserInfo;    
         $_SESSION["listUserAccounts"] = $listUserAccounts;
     
-    }
-    searchInformation($oldRecords); 
+
 ?>
 
