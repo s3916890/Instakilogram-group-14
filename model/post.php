@@ -2,8 +2,8 @@
 $postDatabase = json_decode(file_get_contents("../database/post.db"), true);
 $accountDatabase = json_decode(file_get_contents("../database/account.db"), true);
 
-if(array_key_exists('button1', $_POST)) {
-    button1();
+if(array_key_exists('button', $_POST)) {
+    deletepost($_POST['postID']);
 }
 
 if ($postDatabase != null) {
@@ -35,8 +35,17 @@ if ($postDatabase != null) {
                         <form method="post">
 
                         <form method="post">
-                            <input type="submit" name="button1" class="button" value="Button1" />
+                            <input type="submit" name="button" class="button" value="Delete post"/>
+                            <input type="hidden" name="postID" value=' . $value['postID'] .  '>
                         </form>
+                            <form action="/action_page.php" method="get" id="form1">
+                            <label for="fname">First name:</label>
+                            <input type="text" id="fname" name="fname"><br><br>
+                            <label for="lname">Last name:</label>
+                            <input type="text" id="lname" name="lname">
+                        </form>
+
+                        <button type="submit" form="form1" value="Submit">Submit</button>
                     </div>  
                     <img src= "../assets/postImage/' . $value['postImage'] . '"class="post-image" alt="Post Image">
                     
@@ -63,33 +72,33 @@ if ($postDatabase != null) {
 
 
 
-function button1(){
-// read json file
-$json_data = file_get_contents("../database/post.db");
+function deletepost($deletepost){
+    // read json file
+    $json_data = file_get_contents("../database/post.db");
 
-// decode json to associative array
-$post = json_decode($json_data, true);
+    // decode json to associative array
+    $post = json_decode($json_data, true);
 
-// get array index to delete
-$arr_index = array();
-foreach ($post as $key => $value)
-{
-    if ($value['postID'])
+    // get array index to delete
+    $arr_index = array();
+    foreach ($post as $key => $value)
     {
-        $arr_index[] = $key;
+     if ($value['postID'] == $deletepost)
+        {
+            $arr_index[] = $key;
+        }
     }
-}
 
-// delete data
-foreach ($arr_index as $i)
-{
-    unset($post[$i]);
-}
+    // delete data
+    foreach ($arr_index as $i)
+    {
+        unset($post[$i]);
+    }
 
-// rebase array
-$post = array_values($post);
+    // rebase array
+    $post = array_values($post);
 
-// encode array to json and save to file
-file_put_contents("../database/post.db", json_encode($post));
-}
+    // encode array to json and save to file
+    file_put_contents("../database/post.db", json_encode($post));
+ }
 ?>
