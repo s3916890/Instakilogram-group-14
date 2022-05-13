@@ -15,15 +15,13 @@
                 <h1>InstaKilogram</h1>
             </a>
         </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search InstaKilogram..." class="searchInput">
-            <button id="search-btn" type="submit"><i class="icon-style fa-lg fa-solid fa-magnifying-glass"></i></button>
-        </div>
         <?php
         if ($_SESSION['loggedin']) { ?>
-            <?php include ('../inc/loggedInBlock.php') ?>
+            <?php include('../inc/headerCore.php'); 
+            include ('../inc/loggedInBlock.php') ?>
         <?php } elseif ($_SESSION['adminLoggedIn']) { ?>
-            <?php include('../inc/loggedInBlock.php') ?>
+            <?php include('../inc/adminHeader.php'); 
+             include('../inc/loggedInBlock.php') ?>
         <?php } else { ?>
             <?php include('../inc/signupBlock.php') ?>
         <?php }
