@@ -18,7 +18,6 @@
             </a>
         </div>
         <?php
-        
         if (isset($_SESSION['loggedin'])) {
             if ($_SESSION['loggedin']) { ?>
                 <?php include('headerCore.php') ?>
