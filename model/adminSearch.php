@@ -1,21 +1,21 @@
-<?php 
-    $fileName = "../database/account.db";
-    $accounts = json_decode(file_get_contents($fileName), TRUE); 
-    
-    $currentEmailInFileDb = array();
-    $currentRegisterTimeInFileDb = array();
-    $currentUserName = array(); 
+<?php
+$userInput = $_GET['searchInput'];
+$fileName = "../database/account.db";
+$userList = []; 
+$decodeDatabase = json_decode(file_get_contents($fileName));
+for ($i = 0; $i < count($decodeDatabase); $i++) {
+    // Go to homepage if the email and password are correct
+    if ($userInput === strtolower($decodeDatabase[$i]->email) or $userInput === strtolower($decodeDatabase[$i]->firstName) or $userInput === strtolower($decodeDatabase[$i]->lastName)) {
+        $account = array(
+            "userID" => $decodeDatabase[$i]->userID,
+            "userName" => $decodeDatabase[$i]->userName,
+            "firstName" => $decodeDatabase[$i]->firstName,
+            "lastName" => $decodeDatabase[$i]->firstName,
+            "email" =>  $decodeDatabase[$i]->email,
+            "password" => $decodeDatabase[$i]->password,
+            "avatar" => $decodeDatabase[$i]->avatar
+        );
+    } 
+}
 
-    function user_created_time_cmp($firstPost, $nextPost) {
-            return strtotime($nextPost['registerTime']) - strtotime($firstPost['registerTime']);
-        }
-    uasort($oldRecords, 'user_created_time_cmp');
-    foreach ($oldRecords as $userInputObject) {
-        array_push($currentEmailInFileDb, strtolower($userInputObject['email']));
-        array_push($currentRegisterTimeInFileDb, strtolower($userInputObject['registerTime']));
-        array_push($currentUserName, strtolower($userInputObject['userID']));
-    }
-    $listUserAccounts = array();
-    for($i = 0; $i < sizeof($currentRegisterTimeInFileDb); $i++){
-        array_push($listUserAccounts, $currentEmailInFileDb[$i] . " (" . $currentRegisterTimeInFileDb[$i] . ")");
-    }
+echo $account;

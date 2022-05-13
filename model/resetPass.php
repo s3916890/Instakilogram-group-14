@@ -7,17 +7,19 @@ $decodeDatabase = json_decode($getDatabase);
 
 
 if (isset($_POST["submit"])) {
-    $pass = password_hash($_POST["password"], PASSWORD_DEFAULT);
+    $before_pass = $_POST["Confirm_Password"];
+    $pass = password_hash($_POST["Confirm_Password"], PASSWORD_DEFAULT);
+    echo('hello'); 
+    echo($before_pass); 
+    echo($pass); 
     if ($decodeDatabase != null) {
-        // Find the matching email and password
         for ($i = 0; $i < count($decodeDatabase); $i++) {
             $temp = $decodeDatabase[$i]->password;
-            // Go to homepage if the email and password are correct
             if ($userName == $decodeDatabase[$i]->userName) {
                 $temp = $pass;  
             } 
             }
+            header('location:../view/adminPage.php'); 
         }
-        file_put_contents("../database/account.db", json_encode($post));
+        header('location:../view/adminPage.php'); 
     }
-    

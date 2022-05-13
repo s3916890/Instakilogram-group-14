@@ -19,7 +19,6 @@ function displayList(items, wrapper, rowsPerPage, page) {
         let accountID = splittedItem[0]; 
         itemElement.onclick = function() {
             location.href='accountDetails.php?accountID='+accountID;
-            
         }
 
 
