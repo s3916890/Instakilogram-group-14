@@ -15,7 +15,7 @@ function displayList(items, wrapper, rowsPerPage, page) {
         let itemElement = document.createElement("div");
         itemElement.classList.add("item");
         itemElement.innerText = paginationItem;
-        var splittedItem = paginationItem.split(':'); 
+        var splittedItem = paginationItem.split(','); 
         let accountID = splittedItem[0]; 
         itemElement.onclick = function() {
             location.href='accountDetails.php?accountID='+accountID;

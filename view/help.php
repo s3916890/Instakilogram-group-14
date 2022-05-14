@@ -1,18 +1,5 @@
 <?php
 session_start(); 
-if (isset($_SESSION['loggedin'])) {
-    $_SESSION['adminLoggedIn'] = false;
-    $_SESSION['myAccount'] = false;
-}
-elseif (isset($_SESSION['adminLoggedIn'])) {
-    $_SESSION['myAccount'] = false;
-    $_SESSION['loggedin'] = false;
-}
-else {
-    $_SESSION['adminLoggedIn'] = false;
-    $_SESSION['myAccount'] = false;
-    $_SESSION['loggedin'] = false;
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,8 +51,7 @@ else {
         <h6 class="mb-3"><i class="fas fa-pen-alt pe-2"></i> Is InstaKilogram a paid app?
         </h6>
         <p>
-          <strong><u>Nope!</u></strong> InstaKilogram is completely free! <a href='#'>Sign up here</a> to enjoy
-          InstaKilogram completely free!
+          <strong><u>Nope!</u></strong> InstaKilogram is completely free! 
         </p>
       </div>
 

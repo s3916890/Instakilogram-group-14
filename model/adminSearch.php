@@ -3,7 +3,6 @@ $userInput = $_GET['searchInput'];
 $fileName = "../database/account.db";
 $decodeDatabase = json_decode(file_get_contents($fileName));
 for ($i = 0; $i < count($decodeDatabase); $i++) {
-    // Go to homepage if the email and password are correct
     if (str_contains($decodeDatabase[$i]->email,$userInput) or str_contains($decodeDatabase[$i]->firstName,$userInput) or str_contains($decodeDatabase[$i]->lastName,$userInput)) {
         $accountArray = array(
             "userID" => $decodeDatabase[$i]->userID,

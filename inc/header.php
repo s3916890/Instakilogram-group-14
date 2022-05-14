@@ -4,9 +4,7 @@
             <?php
             if ($_SESSION['loggedin']) { ?>
                 <?php $logoLink = 'homepage.php' ?>
-            <?php } elseif ($_SESSION['adminLoggedIn']) { ?>
-                <?php $logoLink = 'adminPage.php' ?>
-            <?php } else { ?>
+            <?php }  else { ?>
                 <?php $logoLink = '../www/index.php' ?>
             <?php }
             ?>
@@ -22,10 +20,7 @@
         <?php
         if ($_SESSION['loggedin']) { ?>
             <?php include('loggedInBlock.php') ?>
-        <?php } elseif ($_SESSION['adminLoggedIn']) {
-
-        }
-         else { ?>
+        <?php } else { ?>
             <?php include('signupBlock.php') ?>
         <?php }
         ?>

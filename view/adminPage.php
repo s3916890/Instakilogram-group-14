@@ -23,17 +23,19 @@ if (!isset($_SESSION['adminLoggedIn'])) {
     <link rel="stylesheet" href="../style/homepage.css">
     <link rel="stylesheet" href="../style/pagination.css">
     <link rel="stylesheet" href="../style/footer.css">
+    <script src="../script/searchAccount.js"></script>
 
     <title>Admin Page</title>
 </head>
 
 <body>
     <div class="homepage-container">
-        <!-- Header of the site -->
-        <?php include_once("../inc/header.php") ?>
         <!-- Main content section -->
-        <!-- CONTENT ROW -->
         <main class="main-section">
+            <form method="post" action="../model/search.php">
+                <input type="text" name="search" placeholder="Search Accounts...">
+                <input type="submit" value="Submit">
+            </form>
             <div class="list" id="list"></div>
             <div class="pageNumbers" id="pagination"></div>
             <div class="post-content">
@@ -42,8 +44,6 @@ if (!isset($_SESSION['adminLoggedIn'])) {
                 ?>
             </div>
         </main>
-        <!-- Footer -->
-        <?php include_once "../inc/footer.php" ?>
     </div>
 
     <script src="../script/pagination.js"></script>
@@ -51,7 +51,8 @@ if (!isset($_SESSION['adminLoggedIn'])) {
         let listAccounts = new Array();
         <?php include_once "../model/listUserAccount.php" ?>
 
-        <?php foreach ($_SESSION["listUserAccounts"] as $userKey => $userValue) { ?>
+        <?php 
+        foreach ($_SESSION["listUserAccounts"] as $userKey => $userValue) { ?>
             listAccounts.push("<?php echo $userValue; ?>");
         <?php } ?>
 
