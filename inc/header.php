@@ -6,7 +6,7 @@
                 <?php $logoLink = 'homepage.php' ?>
             <?php } elseif ($_SESSION['adminLoggedIn']) { ?>
                 <?php $logoLink = 'adminPage.php' ?>
-            <?php } else {?>
+            <?php } else { ?>
                 <?php $logoLink = '../www/index.php' ?>
             <?php }
             ?>
@@ -20,13 +20,14 @@
             <button id="search-btn" type="submit"><i class="icon-style fa-lg fa-solid fa-magnifying-glass"></i></button>
         </div>
         <?php
-            if ($_SESSION['loggedin']) { ?>
-                <?php include('loggedInBlock.php') ?>
-            <?php } elseif ($_SESSION['adminLoggedIn']) { ?>
-                <?php  ?>
-            <?php } else { ?>
-                <?php include('signupBlock.php') ?>
-            <?php }
+        if ($_SESSION['loggedin']) { ?>
+            <?php include('loggedInBlock.php') ?>
+        <?php } elseif ($_SESSION['adminLoggedIn']) {
+
+        }
+         else { ?>
+            <?php include('signupBlock.php') ?>
+        <?php }
         ?>
 
     </nav>

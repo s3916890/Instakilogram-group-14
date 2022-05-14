@@ -1,5 +1,18 @@
 <?php
-session_start()
+session_start(); 
+if (isset($_SESSION['loggedin'])) {
+    $_SESSION['adminLoggedIn'] = false;
+    $_SESSION['myAccount'] = false;
+}
+elseif (isset($_SESSION['adminLoggedIn'])) {
+    $_SESSION['myAccount'] = false;
+    $_SESSION['loggedin'] = false;
+}
+else {
+    $_SESSION['adminLoggedIn'] = false;
+    $_SESSION['myAccount'] = false;
+    $_SESSION['loggedin'] = false;
+}
 ?>
 
 <!DOCTYPE html>
