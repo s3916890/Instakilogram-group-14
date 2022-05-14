@@ -42,7 +42,7 @@ if ($accounts != null) {
 <body>
     <div class="homepage-container">
      <!-- Header of the site -->
-     <?php include_once "../inc/header.php" ?>
+     <header><?php include_once "../inc/adminHeader.php"?></header>
         <!-- Main section -->
         <?php include "accountMain.php" ?>
 

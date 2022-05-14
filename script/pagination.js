@@ -20,8 +20,6 @@ function displayList(items, wrapper, rowsPerPage, page) {
         itemElement.onclick = function() {
             location.href='accountDetails.php?accountID='+accountID;
         }
-
-
         wrapper.appendChild(itemElement);
     }
 }

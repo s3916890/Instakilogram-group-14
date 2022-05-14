@@ -1,4 +1,5 @@
 <script src="../script/searchFunction.js"></script>
+
 <header id="header-section">
   <nav>
       <div>
@@ -11,7 +12,7 @@
       </div>
       <div class="search-bar">
                   <input type="text" placeholder="Search InstaKilogram..." id="searchInput">
-                  <button onclick="redirect()">Click me</button>
+                  <button onclick="redirect()">Search</button>
       </div>
       <ul class="sign-btn">
               <a href="../view/login.php">

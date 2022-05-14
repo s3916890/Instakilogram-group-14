@@ -1,4 +1,4 @@
-<?php
+ <?php
 header('Cache-Control: no cache'); 
 session_cache_limiter('private_no_expire'); 
 session_start();
@@ -17,7 +17,7 @@ $_SESSION['userID'] = false;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://use.fontawesome.com/releases/v6.1.1/js/all.js" data-auto-replace-svg="nest"></script>
 
-    <!-- Stylesheet CSS -->
+    <!-- Stylesheet CSS  -->
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/cookies.css">
     <link rel="stylesheet" href="../style/header.css">
@@ -68,4 +68,4 @@ $_SESSION['userID'] = false;
     </script>
 </body>
 
-</html>
+</html> -->

@@ -6,3 +6,4 @@
   <input type="submit" value="submit" name='submit'>
 </form> 
 
+<h1><?php echo($_SESSION["userName"])?></h1>

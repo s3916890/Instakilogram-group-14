@@ -1,5 +1,6 @@
 <!-- Main content section -->
 <!-- CONTENT ROW -->
+<script src="../script/resetPass.js"></script>
 <main class="main-section">
 
     <div class="profile">
@@ -52,14 +53,16 @@
                 </ul>
             </div>
 
-            <form class="change-avatar" method="POST" action="../model/avatarChange.php" enctype='multipart/form-data'>
-                <input id="new-avatar" name="newAvatar" type="file" placeholder="New Profile Picture">
-                <button type="submit" name="submit" class="upload-btn">Change Button</button>
+            <form class="change-avatar" method="POST" action='../view/resetPass.php'>
+            <button>Click me</button>
             </form>
         </div>
 
     </div>
-
+    <h1><?php echo($_SESSION["userName"])?></h1>
+    <?php
+        include '../model/resetPass.php';
+        ?>
     <div class="post-content">
         <?php
         include '../model/post.php';
