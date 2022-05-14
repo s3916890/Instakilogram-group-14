@@ -32,8 +32,7 @@ $_SESSION['userID'] = false;
 <body>
     <div class="homepage-container">
             <!-- Header of the site -->
-            <header><?php include_once "../inc/adminHeader.php"?>
-            </header>
+            <header class='searchBar'><?php include_once "../inc/searchBar.php"?></header>
         <!-- Main content section -->
         <!-- CONTENT ROW -->
         <main class="main-section">
@@ -49,10 +48,9 @@ $_SESSION['userID'] = false;
     <script src="../script/pagination.js"></script>
     <script>
         <?php include "../model/adminSearch.php" ?>
-        <?php $fullUserInfo = $_SESSION["fullUserInfo"] ?>
         let listAccounts = new Array();
-
-        <?php foreach ($_SESSION["fullUserInfo"] as $userKey => $userValue) { ?>
+        <?php 
+        foreach ($_SESSION["listUserAccounts"] as $userKey => $userValue) { ?>
             listAccounts.push("<?php echo $userValue; ?>");
         <?php } ?>
 
