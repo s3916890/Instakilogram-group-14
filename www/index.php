@@ -23,7 +23,6 @@ $_SESSION['userID'] = false;
     <!-- <link rel="stylesheet" href="../style/cookies.css"> -->
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/footer.css">
-    <!-- <link rel="stylesheet" href="../style/responsive.css"> -->
 
     <!-- Javascript -->
     <script src="../script/cookies.js"></script>
@@ -32,7 +31,7 @@ $_SESSION['userID'] = false;
 <body>
     <div class="homepage-container">
         <!-- Header of the site -->
-        <?php include_once "../inc/header.php" ?>
+        <?php include "../inc/header.php" ?>
 
         <!-- Main content section -->
         <main class="main-section">
@@ -45,7 +44,7 @@ $_SESSION['userID'] = false;
         </main>
 
         <!-- Footer -->
-        <?php include_once "../inc/footer.php" ?>
+        <?php include "../inc/footer.php" ?>
 
     </div>
 

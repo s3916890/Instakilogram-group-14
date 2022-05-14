@@ -1,4 +1,3 @@
-
 <div class="avatar-container dropdown">
     <div class="user">
         <div class="profile-pic">

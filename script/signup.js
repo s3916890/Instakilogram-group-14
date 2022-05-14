@@ -39,7 +39,7 @@ function FormValidator(formSelection, options) {
             }
         },
         regexPassword: (value) => {
-            let regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
+            let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&\*])[a-zA-Z0-9!@#$%^&\*]{8,20}$/;
             return regex.test(value) ? undefined : 'Password must contain at least 1 lower case letter, at least 1 upper case letter, at least 1 digit' || regex.test(value) === false;
         },
         isConfirmed: (value) => {

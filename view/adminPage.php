@@ -1,8 +1,10 @@
 <?php
 session_start();
+$_SESSION['myAccount'] = false;
+$_SESSION['loggedin'] = false;
 
 if (!isset($_SESSION['adminLoggedIn'])) {
-    header('location: AdminLogin.php');
+    header('location: adminLogin.php');
 }
 ?>
 <!DOCTYPE html>
@@ -28,7 +30,7 @@ if (!isset($_SESSION['adminLoggedIn'])) {
 <body>
     <div class="homepage-container">
         <!-- Header of the site -->
-        <header><?php include_once "../inc/adminHeader.php"?></header>
+        <?php include_once("../inc/header.php") ?>
         <!-- Main content section -->
         <!-- CONTENT ROW -->
         <main class="main-section">

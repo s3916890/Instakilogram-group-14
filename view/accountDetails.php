@@ -4,9 +4,10 @@ if (!isset($_SESSION['adminLoggedIn'])) {
     header('location: AdminLogin.php');
 }
 $accountID = $_GET['accountID'];
+$_SESSION['accountID'] = $accountID;
+// echo $_SESSION['accountID'];
 $fileName = "../database/account.db";
 $accounts = json_decode(file_get_contents($fileName));
-
 if ($accounts != null) {
     for ($i = 0; $i < count($accounts); $i++) {
         if ($accountID == $accounts[$i]->userID) {
@@ -18,6 +19,28 @@ if ($accounts != null) {
         }
     }
 };
+// Reset the password
+if (isset($_POST["resetPass"])) {
+    $pass = $_POST["newPass"];
+    if ($accounts != null) {
+        if (preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&\*])[a-zA-Z0-9!@#$%^&\*]{8,20}$/", $pass)) {
+            for ($i = 0; $i < count($accounts); $i++) {
+                $temp = $accounts[$i]->password;
+                if ($accountID == $accounts[$i]->userID) {
+                    $temp = $pass;
+                    $accounts[$i]->password = password_hash($temp, PASSWORD_DEFAULT);
+                    echo 'sucessfully saved';
+                }
+            }
+        } else {
+            echo 'failed';
+        }
+    }
+    file_put_contents('../database/account.db', json_encode($accounts));
+}
+$getDatabase = file_get_contents("../database/account.db");
+$accounts = json_decode($getDatabase);
+// echo $accountID;
 ?>
 
 
@@ -41,8 +64,6 @@ if ($accounts != null) {
 
 <body>
     <div class="homepage-container">
-     <!-- Header of the site -->
-     <header><?php include_once "../inc/adminHeader.php"?></header>
         <!-- Main section -->
         <?php include "accountMain.php" ?>
 
