@@ -5,6 +5,9 @@ if (!isset($_SESSION['loggedin'])) {
     header('location: login.php');
 }
 $_SESSION['myAccount'] = true;
+$_SESSION['adminPage'] = false;
+$_SESSION['accountDetail'] = false;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

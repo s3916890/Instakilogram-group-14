@@ -1,34 +1,6 @@
 <?php
-
-$accountID = $_GET['accountID'];
-$postDatabase = array();
-$targetDatabase = json_decode(file_get_contents("../database/post.db"));
-for ($i=0; $i<count($targetDatabase); $i++) {
-    if($accountID == $targetDatabase[$i]->uID) {
-        $currentPost = array(
-        "postID" => $targetDatabase[$i]->postID,
-        'postImage' => $targetDatabase[$i]->postImage,
-        'description' => $targetDatabase[$i]->description,
-        'createdTime' => $targetDatabase[$i]->createdTime,
-        'status' => $targetDatabase[$i]->status,
-        'uID' => $targetDatabase[$i]->uID,
-        'uName' => $targetDatabase[$i]->uName,
-        'uAva' => $targetDatabase[$i]->uAva,
-        );
-          // Save the account in JSON file 
-          if (count($postDatabase) == 0) {
-            $firstRecord = array($currentPost);
-            $postDatabase = $firstRecord;
-        } 
-        else {
-            array_push($postDatabase, $currentPost);
-        }
-    }
-}
-
 $accountDatabase = json_decode(file_get_contents("../database/account.db"), true);
-
-
+$postDatabase = json_decode(file_get_contents("../database/post.db"), true);
 
 if (array_key_exists('delBtn', $_POST)) {
     // get array index to delete
@@ -62,6 +34,7 @@ if ($postDatabase != null) {
     uasort($postDatabase, 'post_created_time_cmp');
 
     foreach ($postDatabase as $key => $value) {
+        // echo $value['uID'];
         foreach ($accountDatabase as $k => $v) {
             // change the avatar appearing in the post
             if ($value['uID'] === $v['userID']) {
@@ -92,16 +65,22 @@ if ($postDatabase != null) {
                 </div>';
             }
         }
+        // Print all the user's post if the session is adminPage
+        if ($_SESSION['adminPage']) {
+            echo $postImg;
+        }
+        // For the admin search page, print the user's posts
+        elseif ($_SESSION['accountDetail']) {
+            if ($_SESSION['accountID'] === $value['uID']) {
+                echo $postImg;
+            }
+        }
         // Only print the user's post if the session is myAccount
-        if ($_SESSION['myAccount']) {
+        elseif ($_SESSION['myAccount']) {
             if ($_SESSION['userID'] === $value['uID']) {
                 echo $postImg;
             }
-        } 
-        // Print all the user's post if the session is adminLoggedIn
-        elseif ($_SESSION['adminLoggedIn']) {
-            echo $postImg;
-        } 
+        }
         // For other cases
         else {
             // Check the status of the post and render the post to the right users
@@ -119,4 +98,3 @@ if ($postDatabase != null) {
         }
     }
 }
-?>

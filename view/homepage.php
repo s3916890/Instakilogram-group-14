@@ -1,8 +1,10 @@
 <?php
-header('Cache-Control: no cache'); 
-session_cache_limiter('private_no_expire'); 
+// session_cache_limiter('public');
+
 session_start();
 $_SESSION['adminLoggedIn'] = false;
+$_SESSION['adminPage'] = false;
+$_SESSION['accountDetail'] = false;
 $_SESSION['myAccount'] = false;
 
 if (!isset($_SESSION['loggedin'])) {
@@ -61,7 +63,7 @@ if (!isset($_SESSION['loggedin'])) {
 
             <div class="post-content">
                 <?php
-                include '../model/postAdmin.php';
+                include '../model/post.php';
                 ?>
 
             </div>

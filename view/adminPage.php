@@ -1,12 +1,10 @@
 <?php
 session_start();
-$_SESSION['myAccount'] = false;
-$_SESSION['loggedin'] = false;
-
-
 if (!isset($_SESSION['adminLoggedIn'])) {
     header('location: AdminLogin.php');
 }
+$_SESSION['adminPage'] = true;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +21,6 @@ if (!isset($_SESSION['adminLoggedIn'])) {
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/homepage.css">
     <link rel="stylesheet" href="../style/pagination.css">
-    <link rel="stylesheet" href="../style/footer.css">
 
     <title>Admin Page</title>
 </head>
@@ -39,12 +36,10 @@ if (!isset($_SESSION['adminLoggedIn'])) {
             <div class="pageNumbers" id="pagination"></div>
             <div class="post-content">
                 <?php
-                include '../model/postAdmin.php';
+                include '../model/post.php';
                 ?>
             </div>
         </main>
-        <!-- Footer -->
-        <?php include_once "../inc/footer.php" ?>
     </div>
 
     <script src="../script/pagination.js"></script>

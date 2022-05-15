@@ -5,6 +5,8 @@ if (!isset($_SESSION['adminLoggedIn'])) {
 }
 $_SESSION['myAccount'] = false;
 $_SESSION['loggedin'] = false;
+$_SESSION['adminPage'] = false;
+$_SESSION['accountDetail'] = true;
 
 $accountID = $_GET['accountID'];
 $_SESSION['accountID'] = $accountID;
@@ -22,6 +24,7 @@ if ($accounts != null) {
         }
     }
 };
+
 // Reset the password
 if (isset($_POST["resetPass"])) {
     $pass = $_POST["newPass"];
@@ -41,9 +44,6 @@ if (isset($_POST["resetPass"])) {
     }
     file_put_contents('../database/account.db', json_encode($accounts));
 }
-$getDatabase = file_get_contents("../database/account.db");
-$accounts = json_decode($getDatabase);
-// echo $accountID;
 ?>
 
 
@@ -66,7 +66,7 @@ $accounts = json_decode($getDatabase);
 <body>
     <div class="homepage-container">
         <!-- Main section -->
-        <?php include "accountMainAdmin.php" ?>
+        <?php include "accountMain.php" ?>
     </div>
 
 </body>

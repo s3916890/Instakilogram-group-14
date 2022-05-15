@@ -1,8 +1,10 @@
 <?php
-$_SESSION['adminLoggedIn'] = false;
+$_SESSION['adminPage'] = false;
 $_SESSION['loggedin'] = false;
 $_SESSION['myAccount'] = false;
+$_SESSION['accountDetail'] = false;
 $_SESSION['userID'] = false;
+$_SESSION['adminLoggedIn'] = false;
 
 ?>
 
@@ -37,7 +39,7 @@ $_SESSION['userID'] = false;
         <main class="main-section">
             <div class="post-content">
                 <?php
-                    include '../model/postAdmin.php';
+                    include '../model/post.php';
                 ?>
 
             </div>
