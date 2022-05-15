@@ -66,9 +66,6 @@ if (!isset($_SESSION['adminLoggedIn'])) {
             <div class="list" id="list"></div>
             <div class="pageNumbers" id="pagination"></div>
             <div class="post-content">
-                <?php
-                include '../model/post.php';
-                ?>
             </div>
         </main>
         <!-- Footer -->

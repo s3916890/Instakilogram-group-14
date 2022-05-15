@@ -75,7 +75,8 @@
 
     </div>
 
-    <div class="post-content">
+    <div class="post-content"> <!-- display posts of all accounts -->
+            
         <?php
         include '../model/post.php';
         ?>

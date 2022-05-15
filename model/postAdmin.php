@@ -1,34 +1,6 @@
 <?php
-
-$accountID = $_GET['accountID'];
-$postDatabase = array();
-$targetDatabase = json_decode(file_get_contents("../database/post.db"));
-for ($i=0; $i<count($targetDatabase); $i++) {
-    if($accountID == $targetDatabase[$i]->uID) {
-        $currentPost = array(
-        "postID" => $targetDatabase[$i]->postID,
-        'postImage' => $targetDatabase[$i]->postImage,
-        'description' => $targetDatabase[$i]->description,
-        'createdTime' => $targetDatabase[$i]->createdTime,
-        'status' => $targetDatabase[$i]->status,
-        'uID' => $targetDatabase[$i]->uID,
-        'uName' => $targetDatabase[$i]->uName,
-        'uAva' => $targetDatabase[$i]->uAva,
-        );
-          // Save the account in JSON file 
-          if (count($postDatabase) == 0) {
-            $firstRecord = array($currentPost);
-            $postDatabase = $firstRecord;
-        } 
-        else {
-            array_push($postDatabase, $currentPost);
-        }
-    }
-}
-
+$postDatabase = json_decode(file_get_contents("../database/post.db"), true);
 $accountDatabase = json_decode(file_get_contents("../database/account.db"), true);
-
-
 
 if (array_key_exists('delBtn', $_POST)) {
     // get array index to delete

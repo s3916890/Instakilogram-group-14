@@ -3,6 +3,9 @@ session_start();
 if (!isset($_SESSION['adminLoggedIn'])) {
     header('location: AdminLogin.php');
 }
+$_SESSION['myAccount'] = false;
+$_SESSION['loggedin'] = false;
+
 $accountID = $_GET['accountID'];
 $_SESSION['accountID'] = $accountID;
 // echo $_SESSION['accountID'];

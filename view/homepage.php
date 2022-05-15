@@ -61,7 +61,7 @@ if (!isset($_SESSION['loggedin'])) {
 
             <div class="post-content">
                 <?php
-                include '../model/post.php';
+                include '../model/postAdmin.php';
                 ?>
 
             </div>

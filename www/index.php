@@ -37,7 +37,7 @@ $_SESSION['userID'] = false;
         <main class="main-section">
             <div class="post-content">
                 <?php
-                    include '../model/post.php';
+                    include '../model/postAdmin.php';
                 ?>
 
             </div>
