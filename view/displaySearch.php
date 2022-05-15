@@ -1,12 +1,15 @@
- <?php
-
+<?php
 session_start();
+$_SESSION['myAccount'] = false;
+$_SESSION['userID'] = false;
+
+
 if (!isset($_SESSION['adminLoggedIn'])) {
     header('location: AdminLogin.php');
 }
-$_SESSION['myAccount'] = false;
-$_SESSION['userID'] = false;
 ?>
+<?php include_once "../model/adminSearch.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,39 +19,42 @@ $_SESSION['userID'] = false;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://use.fontawesome.com/releases/v6.1.1/js/all.js" data-auto-replace-svg="nest"></script>
 
-    <!-- Stylesheet CSS  -->
+    <!-- Stylesheet CSS -->
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/cookies.css">
+    <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/homepage.css">
     <link rel="stylesheet" href="../style/pagination.css">
     <link rel="stylesheet" href="../style/footer.css">
-
-    <!-- Javascript -->
-    <script src="../script/cookies.js"></script>
-    <script src="../script/searchFunction.js"></script>
-
 
     <title>Admin Page</title>
 </head>
 
 <body>
     <div class="homepage-container">
+        <!-- Header of the site -->
+        <header><?php include_once "../inc/searchBar.php"?></header>
         <!-- Main content section -->
+        <!-- CONTENT ROW -->
         <main class="main-section">
             <div class="list" id="list"></div>
             <div class="pageNumbers" id="pagination"></div>
             <div class="post-content">
+                <?php
+                include '../model/post.php';
+                ?>
             </div>
         </main>
-
+        <!-- Footer -->
+        <?php include_once "../inc/footer.php" ?>
     </div>
 
     <script src="../script/pagination.js"></script>
     <script>
-        <?php include "../model/adminSearch.php" ?>
         let listAccounts = new Array();
-        <?php 
-        foreach ($_SESSION["listUserAccounts"] as $userKey => $userValue) { ?>
+        <?php include_once "../model/listUserSearch.php" ?>
+
+        <?php foreach ($_SESSION["listUserAccounts"] as $userKey => $userValue) { ?>
             listAccounts.push("<?php echo $userValue; ?>");
         <?php } ?>
 
@@ -63,4 +69,4 @@ $_SESSION['userID'] = false;
     </script>
 </body>
 
-</html> -->
+</html>

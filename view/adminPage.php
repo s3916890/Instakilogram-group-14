@@ -3,8 +3,9 @@ session_start();
 $_SESSION['myAccount'] = false;
 $_SESSION['loggedin'] = false;
 
+
 if (!isset($_SESSION['adminLoggedIn'])) {
-    header('location: adminLogin.php');
+    header('location: AdminLogin.php');
 }
 ?>
 <!DOCTYPE html>
@@ -19,24 +20,21 @@ if (!isset($_SESSION['adminLoggedIn'])) {
     <!-- Stylesheet CSS -->
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/cookies.css">
+    <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/homepage.css">
     <link rel="stylesheet" href="../style/pagination.css">
     <link rel="stylesheet" href="../style/footer.css">
-    <!-- Javascript -->
-    <script src="../script/cookies.js"></script>
-    <script src="../script/searchAccount.js"></script>
 
     <title>Admin Page</title>
 </head>
 
 <body>
     <div class="homepage-container">
+        <!-- Header of the site -->
+        <header><?php include_once "../inc/searchBar.php"?></header>
         <!-- Main content section -->
+        <!-- CONTENT ROW -->
         <main class="main-section">
-            <form method="post" action="../view/displaySearch.php">
-                <input type="text" name="search" placeholder="Search Accounts...">
-                <input type="submit" value="Submit">
-            </form>
             <div class="list" id="list"></div>
             <div class="pageNumbers" id="pagination"></div>
             <div class="post-content">
@@ -45,6 +43,8 @@ if (!isset($_SESSION['adminLoggedIn'])) {
                 ?>
             </div>
         </main>
+        <!-- Footer -->
+        <?php include_once "../inc/footer.php" ?>
     </div>
 
     <script src="../script/pagination.js"></script>
@@ -52,8 +52,7 @@ if (!isset($_SESSION['adminLoggedIn'])) {
         let listAccounts = new Array();
         <?php include_once "../model/listUserAccount.php" ?>
 
-        <?php 
-        foreach ($_SESSION["listUserAccounts"] as $userKey => $userValue) { ?>
+        <?php foreach ($_SESSION["listUserAccounts"] as $userKey => $userValue) { ?>
             listAccounts.push("<?php echo $userValue; ?>");
         <?php } ?>
 

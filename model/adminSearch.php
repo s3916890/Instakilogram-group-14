@@ -1,21 +1,46 @@
 <?php
-$userInput = $_GET['searchInput'];
+// Loop through array and return objects of matched accounts 
+$beforeUpperUserInput = $_GET['searchInput'];
+$userInput = strtolower($beforeUpperUserInput); 
+$filteredFile = "../database/searchAccount.db";
+
+
 $fileName = "../database/account.db";
 $decodeDatabase = json_decode(file_get_contents($fileName));
 for ($i = 0; $i < count($decodeDatabase); $i++) {
-    if (str_contains($decodeDatabase[$i]->email,$userInput) or str_contains($decodeDatabase[$i]->firstName,$userInput) or str_contains($decodeDatabase[$i]->lastName,$userInput)) {
+    $seleEmail = $decodeDatabase[$i]->email; 
+    $seleFirstName = $decodeDatabase[$i]->firstName;
+    $seleLastName = $decodeDatabase[$i]->lastName; 
+    $lowerEmail = strtolower($seleEmail); 
+    $lowerFirstName = strtolower($seleFirstName); 
+    $lowerLastName = strtolower($seleLastName); 
+    if (str_contains($lowerEmail,$userInput) or str_contains($lowerFirstName,$userInput) or str_contains($lowerLastName,$userInput)) {
         $accountArray = array(
             "userID" => $decodeDatabase[$i]->userID,
             "userName" => $decodeDatabase[$i]->userName,
             "firstName" => $decodeDatabase[$i]->firstName,
-            "lastName" => $decodeDatabase[$i]->firstName,
+            "lastName" => $decodeDatabase[$i]->lastName,
             "email" =>  $decodeDatabase[$i]->email,
             "password" => $decodeDatabase[$i]->password,
-            "avatar" => $decodeDatabase[$i]->avatar
+            "avatar" => $decodeDatabase[$i]->avatar, 
+            "registerTime" => $decodeDatabase[$i]->registerTime
+
         );
+        // Save the account in JSON file 
+        if (filesize($filteredFile) == 0) {
+            $firstRecord = array($accountArray);
+            $dataToSave = $firstRecord;
+        } 
+        else {
+            $oldRecords = json_decode(file_get_contents($filteredFile), TRUE);
+            array_push($oldRecords, $accountArray);
+            $dataToSave = $oldRecords;
+        }
+        $encoded_data = json_encode($dataToSave, JSON_PRETTY_PRINT);
+        file_put_contents($filteredFile, $encoded_data, LOCK_EX);
+        }
+    else {
+        ?><h1> User not Found</h1> <?php
     } 
 }
-$json = json_encode($accountArray);
-$selectedAccounts = file_put_contents("../database/filteredAccounts.db", $json);
 
-?>

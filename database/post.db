@@ -1,0 +1,32 @@
+[
+    {
+        "postID": "post-62800ef3a202d",
+        "postImage": "1200px-RMIT_University_Logo.svg.png",
+        "description": "",
+        "createdTime": "2022-05-15 03:20:03",
+        "status": "public",
+        "uID": "user-62800ee1d7df7",
+        "uName": "username",
+        "uAva": "2560px-RMIT_University_Logo.svg-2.png"
+    },
+    {
+        "postID": "post-62800f1c248ea",
+        "postImage": "1200px-RMIT_University_Logo.svg.png",
+        "description": "",
+        "createdTime": "2022-05-15 03:20:44",
+        "status": "public",
+        "uID": "user-62800ee1d7df7",
+        "uName": "username",
+        "uAva": "2560px-RMIT_University_Logo.svg-2.png"
+    },
+    {
+        "postID": "post-62800f481db22",
+        "postImage": "280156294_572021554162836_5379973158573983402_n.jpg",
+        "description": "",
+        "createdTime": "2022-05-15 03:21:28",
+        "status": "public",
+        "uID": "user-62800ee1d7df7",
+        "uName": "username",
+        "uAva": "2560px-RMIT_University_Logo.svg-2.png"
+    }
+]
