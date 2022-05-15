@@ -78,7 +78,7 @@
     <div class="post-content"> <!-- display posts of all accounts -->
             
         <?php
-        include '../model/postAdmin.php';
+        include '../model/post.php';
         ?>
 
     </div>

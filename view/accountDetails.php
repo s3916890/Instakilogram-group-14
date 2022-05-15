@@ -66,7 +66,7 @@ $accounts = json_decode($getDatabase);
 <body>
     <div class="homepage-container">
         <!-- Main section -->
-        <?php include "accountMain.php" ?>
+        <?php include "accountMainAdmin.php" ?>
     </div>
 
 </body>
