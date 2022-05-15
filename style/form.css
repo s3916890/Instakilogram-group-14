@@ -199,3 +199,14 @@ html {
         right: 0;
     }
 }
+
+@media screen and (max-width: 767px) {
+    .formBackgroundImage{
+        display: none;
+    }
+    .form{
+        transform: translateX(-3rem);
+        animation: none;
+        right: 0;
+    }
+}

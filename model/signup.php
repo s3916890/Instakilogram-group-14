@@ -7,7 +7,6 @@ if (isset($_POST['submit'])) {
         "lastName" => $_POST['lastName'],
         "email" => $_POST['email'],
         "password" => password_hash($_POST["password"], PASSWORD_DEFAULT),
-        // "retypePassword" => $_POST['password_confirmation'],
         "avatar" => $_FILES['avatar']['name'],
         "registerTime" => date('Y-m-d H:i:s')
     );

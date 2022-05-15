@@ -18,6 +18,7 @@ $_SESSION['myAccount'] = true;
     <link rel="stylesheet" href="../style/homepage.css">
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/cookies.css">
 
     <title>Instakilogram</title>
     <!-- Javascript -->

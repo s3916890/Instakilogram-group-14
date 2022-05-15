@@ -19,10 +19,12 @@ $_SESSION['userID'] = false;
     <!-- Stylesheet CSS  -->
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/cookies.css">
-    <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/homepage.css">
     <link rel="stylesheet" href="../style/pagination.css">
     <link rel="stylesheet" href="../style/footer.css">
+
+    <!-- Javascript -->
+    <script src="../script/cookies.js"></script>
     <script src="../script/searchFunction.js"></script>
 
 
@@ -31,18 +33,14 @@ $_SESSION['userID'] = false;
 
 <body>
     <div class="homepage-container">
-            <!-- Header of the site -->
-            <header class='searchBar'><?php include_once "../inc/searchBar.php"?></header>
         <!-- Main content section -->
-        <!-- CONTENT ROW -->
         <main class="main-section">
             <div class="list" id="list"></div>
             <div class="pageNumbers" id="pagination"></div>
             <div class="post-content">
             </div>
         </main>
-        <!-- Footer -->
-        <?php include_once "../inc/footer.php" ?>
+
     </div>
 
     <script src="../script/pagination.js"></script>

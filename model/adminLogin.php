@@ -1,5 +1,5 @@
 <?php
-  session_start();
+session_start();
 $email = $_POST['admin-account'];
   if (isset($_POST['submit'])) {
     if (strtolower($email) == 'admin@gmail.com' && $_POST['admin-password'] == 'Admin123') {

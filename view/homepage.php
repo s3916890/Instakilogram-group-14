@@ -1,4 +1,6 @@
 <?php
+header('Cache-Control: no cache'); 
+session_cache_limiter('private_no_expire'); 
 session_start();
 $_SESSION['adminLoggedIn'] = false;
 $_SESSION['myAccount'] = false;
@@ -25,7 +27,6 @@ if (!isset($_SESSION['loggedin'])) {
     <link rel="stylesheet" href="../style/cookies.css">
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/footer.css">
-    <!-- <link rel="stylesheet" href="../style/responsive.css"> -->
 
     <!-- Javascript -->
     <script src="../script/cookies.js"></script>

@@ -19,10 +19,11 @@ if (!isset($_SESSION['adminLoggedIn'])) {
     <!-- Stylesheet CSS -->
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/cookies.css">
-    <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/homepage.css">
     <link rel="stylesheet" href="../style/pagination.css">
     <link rel="stylesheet" href="../style/footer.css">
+    <!-- Javascript -->
+    <script src="../script/cookies.js"></script>
     <script src="../script/searchAccount.js"></script>
 
     <title>Admin Page</title>
@@ -32,7 +33,7 @@ if (!isset($_SESSION['adminLoggedIn'])) {
     <div class="homepage-container">
         <!-- Main content section -->
         <main class="main-section">
-            <form method="post" action="../model/search.php">
+            <form method="post" action="../view/displaySearch.php">
                 <input type="text" name="search" placeholder="Search Accounts...">
                 <input type="submit" value="Submit">
             </form>

@@ -15,8 +15,7 @@ session_start();
     <link rel="stylesheet" href="../style/cookies.css">
     <link rel="stylesheet" href="../style/footerPage.css">
     <link rel="stylesheet" href="../style/header.css">
-    <link rel="stylesheet" href="../style/responsive.css">
-    <link rel="stylesheet" href="../style/homepage.css">
+    <link rel="stylesheet" href="../style/footer.css">
 
     <!-- Javascript -->
     <script src="../script/cookies.js"></script>

@@ -23,7 +23,7 @@ if ($accounts != null) {
 if (isset($_POST["resetPass"])) {
     $pass = $_POST["newPass"];
     if ($accounts != null) {
-        if (preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&\*])[a-zA-Z0-9!@#$%^&\*]{8,20}$/", $pass)) {
+        if (preg_match("/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/", $pass)) {
             for ($i = 0; $i < count($accounts); $i++) {
                 $temp = $accounts[$i]->password;
                 if ($accountID == $accounts[$i]->userID) {
@@ -54,8 +54,6 @@ $accounts = json_decode($getDatabase);
     <script src="https://use.fontawesome.com/releases/v6.1.1/js/all.js" data-auto-replace-svg="nest"></script>
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/homepage.css">
-    <link rel="stylesheet" href="../style/header.css">
-    <link rel="stylesheet" href="../style/footer.css">
 
     <title>Instakilogram</title>
     <!-- Javascript -->
@@ -66,11 +64,6 @@ $accounts = json_decode($getDatabase);
     <div class="homepage-container">
         <!-- Main section -->
         <?php include "accountMain.php" ?>
-
-        <!-- Footer -->
-        <?php include_once "../inc/footer.php" ?>
-
-
     </div>
 
 </body>

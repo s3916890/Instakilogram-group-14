@@ -54,7 +54,7 @@ if ($postDatabase != null) {
                         <p class="description">' . $value['description'] . '</p>
 
                         <form method="post">
-                            <input type="submit" name="delBtn" class="button" value="Delete post"/>
+                            <input type="submit" name="delBtn" class="delete-btn" value="Delete post"/>
                             <input type="hidden" name="postID" value=' . $value['postID'] .  '>
                         </form>
                                                     
@@ -64,14 +64,19 @@ if ($postDatabase != null) {
                 </div>';
             }
         }
-
+        // Only print the user's post if the session is myAccount
         if ($_SESSION['myAccount']) {
             if ($_SESSION['userID'] === $value['uID']) {
                 echo $postImg;
             }
-        } elseif ($_SESSION['adminLoggedIn']) {
+        } 
+        // Print all the user's post if the session is adminLoggedIn
+        elseif ($_SESSION['adminLoggedIn']) {
             echo $postImg;
-        } else {
+        } 
+        // For other cases
+        else {
+            // Check the status of the post and render the post to the right users
             if ($value['status'] === 'public') {
                 echo $postImg;
             } elseif ($value['status'] === 'internal') {
@@ -86,3 +91,4 @@ if ($postDatabase != null) {
         }
     }
 }
+?>

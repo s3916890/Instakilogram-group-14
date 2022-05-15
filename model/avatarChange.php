@@ -19,7 +19,6 @@ if (isset($_POST["submit"])) {
     // If the extension of file upload is not proper, the executing will immediately exit to the statement. 
     if (in_array($fileUploadExtension, $allowedExtension) and $_FILES["newAvatar"]["error"] == 0) {
         foreach ($decodeDatabase as $key => $value) {
-            // print_r($value['userID']);
             if ($value['userID'] === $_SESSION['userID']) {
                 $decodeDatabase[$key]['avatar'] = $newAvatar;
                 move_uploaded_file($_FILES['newAvatar']["tmp_name"], $target_file);  
@@ -31,7 +30,7 @@ if (isset($_POST["submit"])) {
         }
     }
     header("location: ../view/myAccount.php");
-    // encode array to json and save to file
+    // Encode array to json and save to file
     file_put_contents('../database/account.db', json_encode($decodeDatabase));
 
 }

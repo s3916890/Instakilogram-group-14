@@ -49,24 +49,3 @@ body {
 #privacy h3 {
     color: #3702b3;
 }
-
-/* FOOTER: FIXED LATER */
-#footer {
-    bottom: 0;
-    margin: 1rem 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    color: #5e5e5e;
-    font-weight: bold;
-}
-
-#footer a {
-    text-decoration: none;
-    color: #5e5e5e;
-}
-
-#footer a:hover {
-    color: #4700D8;
-}

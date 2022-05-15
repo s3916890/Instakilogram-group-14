@@ -18,4 +18,4 @@ for ($i = 0; $i < count($decodeDatabase); $i++) {
 $json = json_encode($accountArray);
 $selectedAccounts = file_put_contents("../database/filteredAccounts.db", $json);
 
-
+?>

@@ -2,9 +2,14 @@
     <nav>
         <div class="header-logo">
             <?php
-            if ($_SESSION['loggedin']) { ?>
-                <?php $logoLink = 'homepage.php' ?>
-            <?php }  else { ?>
+            if (isset($_SESSION['loggedin'])) {
+                if ($_SESSION['loggedin']) { ?>
+                    <?php $logoLink = 'homepage.php' ?>
+                <?php } else { ?>
+                    <?php $logoLink = '../www/index.php' ?>
+                <?php }
+                ?>
+            <?php } else { ?>
                 <?php $logoLink = '../www/index.php' ?>
             <?php }
             ?>
@@ -17,13 +22,18 @@
             <input type="text" placeholder="Search InstaKilogram..." class="searchInput">
             <button id="search-btn" type="submit"><i class="icon-style fa-lg fa-solid fa-magnifying-glass"></i></button>
         </div>
+
         <?php
-        if ($_SESSION['loggedin']) { ?>
-            <?php include('loggedInBlock.php') ?>
+        if (isset($_SESSION['loggedin'])) {
+            if ($_SESSION['loggedin']) { ?>
+                <?php include('loggedInBlock.php') ?>
+            <?php } else { ?>
+                <?php include('signupBlock.php') ?>
+            <?php }
+            ?>
         <?php } else { ?>
             <?php include('signupBlock.php') ?>
         <?php }
         ?>
-
     </nav>
 </header>
