@@ -1,5 +1,3 @@
-<script src="../script/searchFunction.js"></script>
-
 <header id="header-section">
   <nav>
       <div>
@@ -10,9 +8,13 @@
                   </a>
               </div>
       </div>
-      <div class="search-bar" method="GET">
-                  <input type="text" placeholder="Search InstaKilogram..." id="searchInput">
-                  <button onclick="redirect()" id="search-btn" type="submit"><i class="icon-style fa-lg fa-solid fa-magnifying-glass"></i></button>
+      <div class="search-bar">
+            <form method="GET" action="../view/displaySearch.php">
+                <input type="text" placeholder="Search InstaKilogram..." id="searchInput" name ="searchInput">
+                <button type="submit" name="search-submit" value="Search">Search Button</button>
+            </form>
+
       </div>
   </nav>
 </header>
+

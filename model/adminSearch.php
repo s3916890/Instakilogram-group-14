@@ -39,8 +39,6 @@ for ($i = 0; $i < count($decodeDatabase); $i++) {
         $encoded_data = json_encode($dataToSave, JSON_PRETTY_PRINT);
         file_put_contents($filteredFile, $encoded_data, LOCK_EX);
         }
-    else {
-        ?><h1> User not Found</h1> <?php
-    } 
+    
 }
 
