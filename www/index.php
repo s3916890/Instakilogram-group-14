@@ -30,15 +30,10 @@
         <script src="../script/cookies.js"></script>
     </head>
 
-<<<<<<< HEAD
-    </div>
-</body>
-=======
     <body>
         <div class="homepage-container">
             <!-- Header of the site -->
             <?php include "../inc/header.php" ?>
->>>>>>> NewTri
 
             <!-- Main content section -->
             <main class="main-section">

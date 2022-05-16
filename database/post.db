@@ -1,43 +1,92 @@
 [
     {
-        "postID": "post-6281bfa80f48e",
+        "postID": "post-62827087904f1",
         "postImage": "demo1.jpeg",
         "description": "",
-        "createdTime": "2022-05-16 10:06:16",
+        "createdTime": "2022-05-16 22:40:55",
         "status": "public",
-        "uID": "user-6281ab2b11a68",
+        "uID": "user-6282706ac0541",
         "uName": "ThuPham02",
-        "uAva": "demo5.jpeg"
+        "uAva": "demo1.jpeg"
     },
     {
-        "postID": "post-6281bfb5cb821",
+        "postID": "post-6282708dee664",
         "postImage": "demo2.jpeg",
         "description": "",
-        "createdTime": "2022-05-16 10:06:29",
+        "createdTime": "2022-05-16 22:41:01",
         "status": "internal",
-        "uID": "user-6281ab2b11a68",
+        "uID": "user-6282706ac0541",
         "uName": "ThuPham02",
-        "uAva": "demo5.jpeg"
+        "uAva": "demo1.jpeg"
     },
     {
-        "postID": "post-6281bfccae542",
+        "postID": "post-6282709f1d380",
         "postImage": "demo3.jpeg",
         "description": "hello",
-        "createdTime": "2022-05-16 10:06:52",
+        "createdTime": "2022-05-16 22:41:19",
         "status": "private",
-        "uID": "user-6281ab2b11a68",
+        "uID": "user-6282706ac0541",
         "uName": "ThuPham02",
-        "uAva": "demo5.jpeg"
+        "uAva": "demo1.jpeg"
     },
     {
-        "postID": "post-6281c033984a2",
-        "postImage": "demo3.jpeg",
-        "description": "", 
-        "createdTime": "2022-05-16 10:08:35",
-        "status": "public", 
-        "uID": "user-62800ee1d7df7",
-        "uName": "username",
-        "uAva": "2560px-RMIT_University_Logo.svg-2.png"
+        "postID": "post-62827208a2e15",
+        "postImage": "demo5.jpeg",
+        "description": "",
+        "createdTime": "2022-05-16 22:47:20",
+        "status": "public",
+        "uID": "user-628271e848446",
+        "uName": "karma.2710",
+        "uAva": "demo2.jpeg"
     },
-    
+    {
+        "postID": "post-628273559da4c",
+        "postImage": "demo3.jpeg",
+        "description": "This is a private post!",
+        "createdTime": "2022-05-16 22:52:53",
+        "status": "private",
+        "uID": "user-628273106ce40",
+        "uName": "Tri Lai",
+        "uAva": "demo3.jpeg"
+    },
+    {
+        "postID": "post-6282736bdacb4",
+        "postImage": "demo5.jpeg",
+        "description": "This is a public post!",
+        "createdTime": "2022-05-16 22:53:15",
+        "status": "public",
+        "uID": "user-628273106ce40",
+        "uName": "Tri Lai",
+        "uAva": "demo3.jpeg"
+    },
+    {
+        "postID": "post-628273ba90b9d",
+        "postImage": "demo2.jpeg",
+        "description": "this is an internal post",
+        "createdTime": "2022-05-16 22:54:34",
+        "status": "internal",
+        "uID": "user-628272e4a5971",
+        "uName": "July Luong",
+        "uAva": "demo4.jpeg"
+    },
+    {
+        "postID": "post-628273c191bf5",
+        "postImage": "demo5.jpeg",
+        "description": "",
+        "createdTime": "2022-05-16 22:54:41",
+        "status": "public",
+        "uID": "user-628272e4a5971",
+        "uName": "July Luong",
+        "uAva": "demo4.jpeg"
+    },
+    {
+        "postID": "post-62827d96a8090",
+        "postImage": "demo5.jpeg",
+        "description": "helloooo",
+        "createdTime": "2022-05-16 23:36:38",
+        "status": "public",
+        "uID": "user-62827d4f5b452",
+        "uName": "demo1",
+        "uAva": "demo4.jpeg"
+    }
 ]

@@ -1,19 +1,15 @@
-<header id="header-section">
-  <nav>
-      <div>
-      <div class="header-logo">
-                  <?php $logoLink = 'adminPage.php' ?>
-                  <a href=" <?php echo $logoLink ?>">
-                      <h1>InstaKilogram</h1>
-                  </a>
-              </div>
-      </div>
-      <div class="search-bar">
+<header class="header-section">
+    <nav>
+        <div class="header-logo">
+            <a href="adminPage.php">
+                <h1>InstaKilogram</h1>
+            </a>
+        </div>
+        <div class="search-bar">
             <form method="GET" action="../view/displaySearch.php">
-                <input type="text" placeholder="Search InstaKilogram..." id="searchInput" name ="searchInput">
-                <button class="search-btn" type="submit" name="search-submit" value="Search">Search</button>
+                <input type="text" placeholder="Search InstaKilogram..." class="search-input">
+                <button class="search-btn" type="submit"><i class="icon-style fa-lg fa-solid fa-magnifying-glass"></i></button>
             </form>
-
-      </div>
-  </nav>
+        </div>
+    </nav>
 </header>

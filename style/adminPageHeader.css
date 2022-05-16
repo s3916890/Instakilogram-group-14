@@ -1,19 +1,46 @@
+.header-logo h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.06em;
+    color: #000000;
+}
+
+.header-logo a {
+    text-decoration: none;
+}
 .search-bar {
     height: 50%;
     width: 40%;
     display: flex;
-    /* margin: auto; */
+    margin: 0 auto;
 }
 .search-bar form {
+    display: flex;
+    flex-direction: row;
     color: #fff;
     width: 76%;
 }
-
-#search-btn {
+.search-btn{
     height: 100%;
     width: 10%;
     background-color: #4700D8;
     border: none;
+}
+.search-btn:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.icon-style {
+    color: #fff;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 5rem;
 }
 
 nav input {
@@ -28,23 +55,6 @@ nav input {
 nav input::placeholder {
     font-family: 'Poppins', sans-serif;
     color: #C8C4C4;
-    /* position: absolute; */
     left: 24px;
     top: 15%;
-}
-.search-btn{
-    outline: none;
-    background-color: var(--primary-color-1);
-    color: var(--white-color);
-    padding: 4px 16px;
-    border: 2px solid var(--primary-color-1);
-    border-radius: 50px;
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    top: 8px;
-    left: 40%;
-}
-.search-btn:hover{
-    cursor: pointer;
-    opacity: 0.8;
 }

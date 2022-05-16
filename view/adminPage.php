@@ -18,7 +18,6 @@
         <!-- Stylesheet CSS -->
         <link rel="stylesheet" href="../style/style.css">
         <link rel="stylesheet" href="../style/cookies.css">
-        <link rel="stylesheet" href="../style/header.css">
         <link rel="stylesheet" href="../style/homepage.css">
         <link rel="stylesheet" href="../style/pagination.css">
         <link rel="stylesheet" href="../style/adminPageHeader.css">
