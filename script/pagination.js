@@ -11,12 +11,14 @@ function displayList(items, wrapper, rowsPerPage, page) {
 
     for (let i = 0; i < paginationItems.length; i++) {
         let paginationItem = paginationItems[i];
-
         let itemElement = document.createElement("div");
+
         itemElement.classList.add("item");
         itemElement.innerText = paginationItem;
+
         var splittedItem = paginationItem.split(','); 
         let accountID = splittedItem[0]; 
+
         itemElement.onclick = function() {
             location.href='accountDetails.php?accountID='+accountID;
         }

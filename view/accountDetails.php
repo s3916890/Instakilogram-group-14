@@ -35,7 +35,7 @@ if (isset($_POST["resetPass"])) {
                 if ($accountID == $accounts[$i]->userID) {
                     $temp = $pass;
                     $accounts[$i]->password = password_hash($temp, PASSWORD_DEFAULT);
-                    echo 'sucessfully saved';
+                    echo 'Successfully saved';
                 }
             }
         } else {
