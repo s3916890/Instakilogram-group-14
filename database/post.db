@@ -1,32 +1,42 @@
 [
     {
-        "postID": "post-62800ef3a202d",
-        "postImage": "1200px-RMIT_University_Logo.svg.png",
+        "postID": "post-6281bfa80f48e",
+        "postImage": "demo1.jpeg",
         "description": "",
-        "createdTime": "2022-05-15 03:20:03",
+        "createdTime": "2022-05-16 10:06:16",
         "status": "public",
-        "uID": "user-62800ee1d7df7",
-        "uName": "username",
-        "uAva": "2560px-RMIT_University_Logo.svg-2.png"
+        "uID": "user-6281ab2b11a68",
+        "uName": "ThuPham02",
+        "uAva": "demo5.jpeg"
     },
     {
-        "postID": "post-62800f1c248ea",
-        "postImage": "1200px-RMIT_University_Logo.svg.png",
+        "postID": "post-6281bfb5cb821",
+        "postImage": "demo2.jpeg",
         "description": "",
-        "createdTime": "2022-05-15 03:20:44",
-        "status": "public",
-        "uID": "user-62800ee1d7df7",
-        "uName": "username",
-        "uAva": "2560px-RMIT_University_Logo.svg-2.png"
+        "createdTime": "2022-05-16 10:06:29",
+        "status": "internal",
+        "uID": "user-6281ab2b11a68",
+        "uName": "ThuPham02",
+        "uAva": "demo5.jpeg"
     },
     {
-        "postID": "post-62800f481db22",
-        "postImage": "280156294_572021554162836_5379973158573983402_n.jpg",
+        "postID": "post-6281bfccae542",
+        "postImage": "demo3.jpeg",
+        "description": "hello",
+        "createdTime": "2022-05-16 10:06:52",
+        "status": "private",
+        "uID": "user-6281ab2b11a68",
+        "uName": "ThuPham02",
+        "uAva": "demo5.jpeg"
+    },
+    {
+        "postID": "post-6281c033984a2",
+        "postImage": "demo3.jpeg",
         "description": "",
-        "createdTime": "2022-05-15 03:21:28",
+        "createdTime": "2022-05-16 10:08:35",
         "status": "public",
-        "uID": "user-62800ee1d7df7",
-        "uName": "username",
-        "uAva": "2560px-RMIT_University_Logo.svg-2.png"
+        "uID": "user-6281ab4a9c53e",
+        "uName": "a",
+        "uAva": "demo2.jpeg"
     }
 ]

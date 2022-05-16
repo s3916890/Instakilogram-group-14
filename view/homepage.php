@@ -1,5 +1,6 @@
 <?php
-// session_cache_limiter('public');
+header('Cache-Control: no cache'); 
+session_cache_limiter('private_no_expire');
 
 session_start();
 $_SESSION['adminLoggedIn'] = false;

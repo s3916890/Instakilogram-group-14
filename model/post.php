@@ -5,26 +5,27 @@ $postDatabase = json_decode(file_get_contents("../database/post.db"), true);
 if (array_key_exists('delBtn', $_POST)) {
     // get array index to delete
     $arr_index = array();
-    foreach ($postDatabase as $key => $value) {
-        if ($value['postID'] === $_POST['postID']) {
-            if ($value['uID'] === $_SESSION['userID'] || $_SESSION['adminLoggedIn']) {
-                $arr_index[] = $key;
+    if ($postDatabase != null) {
+        foreach ($postDatabase as $key => $value) {
+            if ($value['postID'] === $_POST['postID']) {
+                if ($value['uID'] === $_SESSION['userID'] || $_SESSION['adminLoggedIn']) {
+                    $arr_index[] = $key;
+                }
             }
         }
+
+        // delete data
+        foreach ($arr_index as $i) {
+            unset($postDatabase[$i]);
+        }
+
+        // rebase array
+        $postDatabase = array_values($postDatabase);
+
+        // encode array to json and save to file
+        file_put_contents("../database/post.db", json_encode($postDatabase));
     }
-
-    // delete data
-    foreach ($arr_index as $i) {
-        unset($postDatabase[$i]);
-    }
-
-    // rebase array
-    $postDatabase = array_values($postDatabase);
-
-    // encode array to json and save to file
-    file_put_contents("../database/post.db", json_encode($postDatabase));
 }
-
 
 if ($postDatabase != null) {
     function post_created_time_cmp($firstPost, $nextPost)
