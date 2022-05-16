@@ -9,28 +9,35 @@ if (!isset($_SESSION['adminLoggedIn'])) {
 }
 ?>
 <?php 
-            if (array_key_exists('search-submit', $_GET)) {
-                $data = file_get_contents('../database/searchAccount.db');
-                // decode json to associative array
-                $json_arr = json_decode($data, true);
-                
-                // get array index to delete
-                $arr_index = array();
-                foreach ($json_arr as $key => $value) {
-                        $arr_index[] = $key;
-                }
-                
-                // delete data
-                foreach ($arr_index as $i) {
-                    unset($json_arr[$i]);
-                }
-                
-                // rebase array
-                $json_arr = array_values($json_arr);
-                
-                // encode array to json and save to file
-                file_put_contents('../database/searchAccount.db', json_encode($json_arr));  
-            }
+$data = '../database/searchAccount.db';
+
+    if (array_key_exists('search-submit', $_GET)) {
+        $json = file_get_contents('../database/searchAccount.db');
+        // decode json to associative array
+        $json_arr = json_decode($json,true);
+        if(filesize($data) == 0) {
+            $json_arr[] = array();
+        }
+        else {
+                    // get array index to delete
+        $arr_index = array();
+        foreach ($json_arr as $key => $value) {
+                $arr_index[] = $key;
+        }
+        
+        // delete data
+        foreach ($arr_index as $i) {
+            unset($json_arr[$i]);
+        }
+        
+        // rebase array
+        $json_arr = array_values($json_arr);
+        
+        // encode array to json and save to file
+        file_put_contents('../database/searchAccount.db', json_encode($json_arr));  
+
+        }
+    }
 ?>
 <?php include_once "../model/adminSearch.php" ?>
 

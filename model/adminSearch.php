@@ -4,7 +4,6 @@ $beforeUpperUserInput = $_GET['searchInput'];
 $userInput = strtolower($beforeUpperUserInput); 
 $filteredFile = "../database/searchAccount.db";
 
-
 $fileName = "../database/account.db";
 $decodeDatabase = json_decode(file_get_contents($fileName));
 for ($i = 0; $i < count($decodeDatabase); $i++) {
