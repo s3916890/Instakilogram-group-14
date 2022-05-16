@@ -2,6 +2,7 @@
     width: min(50rem, 60%);
 	background-color: #F5F7FB;
 	border: 1px solid #CCC;
+	margin-top: 8rem;
 }
 
 .list, .pageNumbers{

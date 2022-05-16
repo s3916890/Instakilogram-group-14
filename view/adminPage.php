@@ -21,6 +21,7 @@ $_SESSION['adminPage'] = true;
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/homepage.css">
     <link rel="stylesheet" href="../style/pagination.css">
+    <link rel="stylesheet" href="../style/adminPageHeader.css">
 
     <!-- Javascript -->
     <script src="../script/cookies.js"></script>
