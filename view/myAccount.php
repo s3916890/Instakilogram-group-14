@@ -1,47 +1,47 @@
 <?php
-session_start();
+    session_start();
 
-if (!isset($_SESSION['loggedin'])) {
-    header('location: login.php');
-}
-$_SESSION['myAccount'] = true;
-$_SESSION['adminPage'] = false;
-$_SESSION['accountDetail'] = false;
+    if (!isset($_SESSION['loggedin'])) {
+        header('location: login.php');
+    }
+    $_SESSION['myAccount'] = true;
+    $_SESSION['adminPage'] = false;
+    $_SESSION['accountDetail'] = false;
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://use.fontawesome.com/releases/v6.1.1/js/all.js" data-auto-replace-svg="nest"></script>
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/homepage.css">
-    <link rel="stylesheet" href="../style/header.css">
-    <link rel="stylesheet" href="../style/footer.css">
-    <link rel="stylesheet" href="../style/cookies.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://use.fontawesome.com/releases/v6.1.1/js/all.js" data-auto-replace-svg="nest"></script>
+        <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="../style/homepage.css">
+        <link rel="stylesheet" href="../style/header.css">
+        <link rel="stylesheet" href="../style/footer.css">
+        <link rel="stylesheet" href="../style/cookies.css">
 
-    <title>Instakilogram</title>
-    <!-- Javascript -->
-    <script src="../script/cookies.js"></script>
-</head>
+        <title>Instakilogram</title>
+        <!-- Javascript -->
+        <script src="../script/cookies.js"></script>
+    </head>
 
-<body>
-    <div class="homepage-container">
-        <!-- Header of the site -->
-        <?php include_once "../inc/header.php" ?>
+    <body>
+        <div class="homepage-container">
+            <!-- Header of the site -->
+            <?php include_once "../inc/header.php" ?>
 
-        <!-- Main section -->
-        <?php include "accountMain.php" ?>
+            <!-- Main section -->
+            <?php include "accountMain.php" ?>
 
-        <!-- Footer -->
-        <?php include_once "../inc/footer.php" ?>
+            <!-- Footer -->
+            <?php include_once "../inc/footer.php" ?>
 
 
-    </div>
+        </div>
 
-</body>
+    </body>
 
 </html>
