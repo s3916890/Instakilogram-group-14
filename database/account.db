@@ -1,0 +1,32 @@
+[
+    {
+        "userID": "user-6281e9fb80f21",
+        "userName": "karma.2710",
+        "firstName": "Karma",
+        "lastName": "Nguyen",
+        "email": "bo.codename.bourbon@gmail.com",
+        "password": "$2y$10$CgI0EhLGhZGBRufNOhzRgur1rq2FYR8azbOvTsecm\/fn4XVAkoB.C",
+        "avatar": "karma2710.jpeg",
+        "registerTime": "2022-05-16 06:06:51"
+    },
+    {
+        "userID": "user-6281f1a292a2f",
+        "userName": "pb_twister",
+        "firstName": "Gia",
+        "lastName": "Huy",
+        "email": "giahuy123@gmail.com",
+        "password": "$2y$10$PAjdmwpQYlm2ZuBzVzI1AepRaE26vkQon0QxVmu3xNfADCIi4P\/.2",
+        "avatar": "twister.jpeg",
+        "registerTime": "2022-05-16 06:39:30"
+    },
+    {
+        "userID": "user-6281fc4f076c6",
+        "userName": "jack123",
+        "firstName": "Jack",
+        "lastName": "Nguyen",
+        "email": "phucloi123@gmail.com",
+        "password": "$2y$10$bKOEd\/mBtkjqXXeWqtnKnuc30K2P7AoVSgZz0j3kTyIspq173I.L.",
+        "avatar": "twister.jpeg",
+        "registerTime": "2022-05-16 07:25:03"
+    }
+]

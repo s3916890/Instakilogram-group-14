@@ -1,13 +1,14 @@
 <?php
+    session_start();
+
+    if (!isset($_SESSION['loggedin'])) {
+        header('location: login.php');
+    }
+    $_SESSION['myAccount'] = true;
     $_SESSION['adminPage'] = false;
-    $_SESSION['loggedin'] = false;
-    $_SESSION['myAccount'] = false;
     $_SESSION['accountDetail'] = false;
-    $_SESSION['userID'] = false;
-    $_SESSION['adminLoggedIn'] = false;
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,43 +16,29 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Instakilogram</title>
-
         <script src="https://use.fontawesome.com/releases/v6.1.1/js/all.js" data-auto-replace-svg="nest"></script>
-
-        <!-- Stylesheet CSS -->
         <link rel="stylesheet" href="../style/style.css">
         <link rel="stylesheet" href="../style/homepage.css">
-        <link rel="stylesheet" href="../style/cookies.css">
         <link rel="stylesheet" href="../style/header.css">
         <link rel="stylesheet" href="../style/footer.css">
+        <link rel="stylesheet" href="../style/cookies.css">
 
+        <title>Instakilogram</title>
         <!-- Javascript -->
         <script src="../script/cookies.js"></script>
     </head>
 
-<<<<<<< HEAD
-    </div>
-</body>
-=======
     <body>
         <div class="homepage-container">
             <!-- Header of the site -->
-            <?php include "../inc/header.php" ?>
->>>>>>> NewTri
+            <?php include_once "../inc/header.php" ?>
 
-            <!-- Main content section -->
-            <main class="main-section">
-                <div class="post-content">
-                    <?php
-                        include '../model/post.php';
-                    ?>
-
-                </div>
-            </main>
+            <!-- Main section -->
+            <?php include "accountMain.php" ?>
 
             <!-- Footer -->
-            <?php include "../inc/footer.php" ?>
+            <?php include_once "../inc/footer.php" ?>
+
 
         </div>
 
