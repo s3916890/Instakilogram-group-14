@@ -57,6 +57,12 @@
         <script src="https://use.fontawesome.com/releases/v6.1.1/js/all.js" data-auto-replace-svg="nest"></script>
         <link rel="stylesheet" href="../style/style.css">
         <link rel="stylesheet" href="../style/homepage.css">
+          <!-- Stylesheet CSS -->
+        <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="../style/cookies.css">
+        <link rel="stylesheet" href="../style/homepage.css">
+        <link rel="stylesheet" href="../style/pagination.css">
+        <link rel="stylesheet" href="../style/adminPageHeader.css">
 
         <title>Instakilogram</title>
         <!-- Javascript -->
@@ -64,6 +70,7 @@
     </head>
 
     <body>
+    <header><?php include_once "../inc/searchBar.php" ?></header>
         <div class="homepage-container">
             <!-- Main section -->
             <?php include "accountMain.php" ?>
