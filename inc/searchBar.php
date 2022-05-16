@@ -11,10 +11,9 @@
       <div class="search-bar">
             <form method="GET" action="../view/displaySearch.php">
                 <input type="text" placeholder="Search InstaKilogram..." id="searchInput" name ="searchInput">
-                <button type="submit" name="search-submit" value="Search">Search Button</button>
+                <button type="submit" name="search-submit" value="Search">Search</button>
             </form>
 
       </div>
   </nav>
 </header>
-

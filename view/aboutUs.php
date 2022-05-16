@@ -10,7 +10,7 @@ session_start();
     <script src="https://use.fontawesome.com/releases/v6.1.1/js/all.js" data-auto-replace-svg="nest"></script>
     <title>About Us</title>
 
-    <!-- CSS Stylesheet -->
+    <!-- Stylesheet CSS -->
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/cookies.css">
     <link rel="stylesheet" href="../style/footerPage.css">
@@ -27,7 +27,7 @@ session_start();
 
     <!-- Main section -->
     <main id="about-us">
-        <img src="../assets/karma2710.jpeg" alt="Our Group Picture">
+        <img src="../assets/teamwork.jpeg" alt="About Us ">
         <div class="about-text">
             <h1>About Us</h1>
             <h2>Instakilogram</h2>

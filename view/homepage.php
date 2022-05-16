@@ -1,8 +1,11 @@
 <?php
 header('Cache-Control: no cache'); 
-session_cache_limiter('private_no_expire'); 
+session_cache_limiter('private_no_expire');
+
 session_start();
 $_SESSION['adminLoggedIn'] = false;
+$_SESSION['adminPage'] = false;
+$_SESSION['accountDetail'] = false;
 $_SESSION['myAccount'] = false;
 
 if (!isset($_SESSION['loggedin'])) {

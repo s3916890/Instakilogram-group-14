@@ -3,6 +3,11 @@ session_start();
 if (!isset($_SESSION['adminLoggedIn'])) {
     header('location: AdminLogin.php');
 }
+$_SESSION['myAccount'] = false;
+$_SESSION['loggedin'] = false;
+$_SESSION['adminPage'] = false;
+$_SESSION['accountDetail'] = true;
+
 $accountID = $_GET['accountID'];
 $_SESSION['accountID'] = $accountID;
 // echo $_SESSION['accountID'];
@@ -19,6 +24,7 @@ if ($accounts != null) {
         }
     }
 };
+
 // Reset the password
 if (isset($_POST["resetPass"])) {
     $pass = $_POST["newPass"];
@@ -38,9 +44,6 @@ if (isset($_POST["resetPass"])) {
     }
     file_put_contents('../database/account.db', json_encode($accounts));
 }
-$getDatabase = file_get_contents("../database/account.db");
-$accounts = json_decode($getDatabase);
-// echo $accountID;
 ?>
 
 

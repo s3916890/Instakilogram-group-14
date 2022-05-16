@@ -1,4 +1,9 @@
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #4700D8;
 }
 
@@ -6,8 +11,8 @@ h1, h2, h3, h4, h5, h6 {
 body {
     font-size: 1rem;
     line-height: 2;
-    overflow-x: hidden; 
-    min-height: 1vw;
+    /* overflow-x: hidden;  */
+    /* min-height: 1vw; */
 }
 
 #about-us {
@@ -33,7 +38,8 @@ body {
     margin: 5rem;
 }
 
-#faq h1, #faq h6{
+#faq h1,
+#faq h6 {
     color: #4700D8;
 }
 
@@ -48,4 +54,23 @@ body {
 
 #privacy h3 {
     color: #3702b3;
+}
+
+@media screen and (max-width: 1023px) {
+    #about-us {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    #privacy {
+        margin: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #privacy {
+        margin: 1rem;
+        width: 120%;
+    }
 }
