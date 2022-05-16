@@ -22,13 +22,15 @@ $_SESSION['adminPage'] = true;
     <link rel="stylesheet" href="../style/homepage.css">
     <link rel="stylesheet" href="../style/pagination.css">
 
+    <!-- Javascript -->
+    <script src="../script/cookies.js"></script>
     <title>Admin Page</title>
 </head>
 
 <body>
     <div class="homepage-container">
         <!-- Header of the site -->
-        <header><?php include_once "../inc/searchBar.php"?></header>
+        <header><?php include_once "../inc/searchBar.php" ?></header>
         <!-- Main content section -->
         <!-- CONTENT ROW -->
         <main class="main-section">
