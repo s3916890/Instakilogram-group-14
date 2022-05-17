@@ -7,10 +7,10 @@ if (!isset($_SESSION['adminLoggedIn'])) {
 }
 ?>
 <?php 
-$data = '../database/searchAccount.db';
+$data = '../../database/searchAccount.db';
 
     if (array_key_exists('search-submit', $_GET)) {
-        $json = file_get_contents('../database/searchAccount.db');
+        $json = file_get_contents('../../database/searchAccount.db');
         // decode json to associative array
         $json_arr = json_decode($json,true);
         if(filesize($data) == 0) {
@@ -32,7 +32,7 @@ $data = '../database/searchAccount.db';
         $json_arr = array_values($json_arr);
 
         // encode array to json and save to file
-        file_put_contents('../database/searchAccount.db', json_encode($json_arr));  
+        file_put_contents('../../database/searchAccount.db', json_encode($json_arr));  
 
         }
     }

@@ -1,6 +1,6 @@
 <?php
-$postDatabase = json_decode(file_get_contents("post.db"), true);
-$accountDatabase = json_decode(file_get_contents("account.db"), true);
+$postDatabase = json_decode(file_get_contents("../../post.db"), true);
+$accountDatabase = json_decode(file_get_contents("../../account.db"), true);
 
 if ($postDatabase != null) {
     function post_created_time_cmp($firstPost, $nextPost) {

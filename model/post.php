@@ -1,6 +1,6 @@
 <?php
-    $accountDatabase = json_decode(file_get_contents("../database/account.db"), true);
-    $postDatabase = json_decode(file_get_contents("../database/post.db"), true);
+    $accountDatabase = json_decode(file_get_contents("../../database/account.db"), true);
+    $postDatabase = json_decode(file_get_contents("../../database/post.db"), true);
 
     if (array_key_exists('delBtn', $_POST)) {
         // get array index to delete
@@ -23,7 +23,7 @@
             $postDatabase = array_values($postDatabase);
 
             // encode array to json and save to file
-            file_put_contents("../database/post.db", json_encode($postDatabase));
+            file_put_contents("../../database/post.db", json_encode($postDatabase));
         }
     }
 

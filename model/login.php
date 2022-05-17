@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $getDatabase = file_get_contents("../database/account.db");
+    $getDatabase = file_get_contents("../../database/account.db");
     $decodeDatabase = json_decode($getDatabase);
 
     if (isset($_POST["submit"])) {

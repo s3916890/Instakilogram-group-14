@@ -11,7 +11,7 @@
     $accountID = $_GET['accountID'];
     $_SESSION['accountID'] = $accountID;
     // echo $_SESSION['accountID'];
-    $fileName = "../database/account.db";
+    $fileName = "../../database/account.db";
     $accounts = json_decode(file_get_contents($fileName));
     if ($accounts != null) {
         for ($i = 0; $i < count($accounts); $i++) {
@@ -42,7 +42,7 @@
                 echo 'failed';
             }
         }
-        file_put_contents('../database/account.db', json_encode($accounts));
+        file_put_contents('../../database/account.db', json_encode($accounts));
     }
 ?>
 
