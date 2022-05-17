@@ -4,7 +4,7 @@
         header('location: AdminLogin.php');
     }
     $_SESSION['adminPage'] = true;
-
+    $_SESSION['userID'] = false;
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -14,7 +14,7 @@ All members contribute equally.
 ## Github URL 
 https://github.com/s3916890/Instakilogram-group-14
 
-## Github URL 
+## Demonstration Video URL 
 
 ## Requirement
 - PHP 8.0 and above.
@@ -71,5 +71,5 @@ Email: demo2@demo.com <br>
 Password: Demo22022 <br>
 
 ### Admin Account
-Email: admin@gmail.com
+Email: admin@gmail.com <br>
 Password: Admin123
