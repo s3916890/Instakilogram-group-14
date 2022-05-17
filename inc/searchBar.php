@@ -7,8 +7,8 @@
         </div>
         <div class="search-bar">
             <form method="GET" action="../view/displaySearch.php">
-                <input type="text" placeholder="Search InstaKilogram..." class="search-input">
-                <button class="search-btn" type="submit"><i class="icon-style fa-lg fa-solid fa-magnifying-glass"></i></button>
+                <input type="text" name='searchInput' placeholder="Search InstaKilogram..." class="search-input">
+                <button class="search-btn" type="submit" name = 'search-submit'><i class="icon-style fa-lg fa-solid fa-magnifying-glass"></i></button>
             </form>
         </div>
     </nav>

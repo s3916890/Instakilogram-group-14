@@ -5,10 +5,16 @@ Assessment name: Full-stack Web Application <br>
 Lecturer: Dang Tran Tri <br>
 
 ## Contributors
-Pham Anh Thu <br>
-Nguyen Phuc Loi<br>
-Luong Thao My<br>
-Lai Minh Tri<br>
+Pham Anh Thu - s3878246<br> 
+Nguyen Phuc Loi - s3916890<br>
+Luong Thao My - s3922086<br>
+Lai Minh Tri - 3927026<br>
+All members contribute equally. 
+
+## Github URL 
+https://github.com/s3916890/Instakilogram-group-14
+
+## Github URL 
 
 ## Requirement
 - PHP 8.0 and above.
@@ -32,62 +38,38 @@ Lai Minh Tri<br>
 - CSS Validator
 
 ## How to run
-There is an "index.php" file inside the "www" folder. This is the homepage of our web application. Please start running our application from this index.php file.
-    
-## Folder Structure 
-```
-Instakilogram-group-14
-├─ assets
-│  ├─ Poppins
-│  ├─ postImage
-│  ├─ userAvatar
-│  ├─ FormBackgroundImage(Login).png
-│  ├─ FormBackgroundImage(Register).png
-│  ├─ HOMEPAGE-(LOGGED-IN)-Dropdown.png
-│  ├─ HOMEPAGE-(LOGGED-IN)-My-PROFILE.png
-│  ├─ HOMEPAGE-(LOGGED-IN).png
-│  └─ HOMEPAGE-(Non-login).png
-├─ database
-│  ├─ accounts.db
-│  └─ post.db
-├─ inc
-│  ├─ footer.php
-│  ├─ header.php
-│  ├─ loggedInBlock.php
-│  └─ signupBlock.php
-├─ model
-│  ├─ avatarChange.php
-│  ├─ login.php
-│  ├─ logout.php
-│  ├─ post.php
-│  ├─ postGenerator.php
-│  └─ signup.php
-├─ script
-│  ├─ cookies.js
-│  ├─ pagination.js
-│  └─ signup.js
-├─ style
-│  ├─ animation.css
-│  ├─ cookies.css
-│  ├─ footer.css
-│  ├─ footerPage.css
-│  ├─ form.css
-│  ├─ header.css
-│  ├─ homepage.css
-│  ├─ myAccount.css
-│  ├─ pagination.css
-│  ├─ responsive.css
-│  └─ style.css
-├─ view
-│  ├─ aboutUs.php
-│  ├─ help.php
-│  ├─ homepage.php
-│  ├─ login.php
-│  ├─ myAccount.php
-│  ├─ privacy.php
-│  └─ signup.php
-├─ www 
-│  └─ index.php
-└─ README.md
-```
+- Install PHP version 8.0 or above. 
+- Open the COSC2430 - Web Programming folder.
+- Inside this folder, there is a database folder and the Instakilogram-group-14 folder (this is the document root).
+- In the document root, there is an "index.php" file inside the "www" folder. This is the homepage of our web application. Please start running our application from this index.php file.
 
+## Existing Accounts
+
+### User Accounts
+#### User 1: <br>
+Email: s3878246@rmit.edu.vn <br>
+Password: Thupham100602 <br>
+
+#### User 2: <br>
+Email: s3916890@rmit.edu.vn <br>
+Password: Loinguyen2710 <br>
+
+#### User 3: <br>
+Email: s3922086@rmit.edu.vn <br>
+Password: Julyluong1707 <br>
+
+#### User 4: <br>
+Email: s3927026@rmit.edu.vn <br>
+Password: Trilai2208 <br>
+
+#### User 5: <br>
+Email: demo@demo.com <br>
+Password: Demo12022 <br>
+
+#### User 6: <br>
+Email: demo2@demo.com <br>
+Password: Demo22022 <br>
+
+### Admin Account
+Email: admin@gmail.com
+Password: Admin123
