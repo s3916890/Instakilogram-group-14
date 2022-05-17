@@ -17,7 +17,7 @@
             $fileName = "../../database/account.db";
             stat(iconv('UTF-8', 'ISO-8859-1', $fileName));
             // Set the path to save the image
-            $targetDirectory    = "../assets/userAvatar/";
+            $targetDirectory    = "../../database/userAvatar/";
             $targetFile   = $targetDirectory . basename($_FILES["avatar"]["name"]);
             $allowUpload   = true;
             $fileUploadExtension = pathinfo($targetFile, PATHINFO_EXTENSION);

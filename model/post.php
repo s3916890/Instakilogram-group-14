@@ -44,7 +44,7 @@
                     <div class="post">
                         <div class="author">
                             <div class="info-container">
-                                <img src= "../assets/userAvatar/' . $value['uAva'] . '"class="avatar" alt="Avatar">
+                                <img src= "../../database/userAvatar/' . $value['uAva'] . '"class="avatar" alt="Avatar">
                                 <h1 class="user-name">' . $value['uName'] . '</h1>
                             </div>
                             <label for="status">
@@ -61,7 +61,7 @@
                             </form>
                                                         
                         </div>  
-                        <img src= "../assets/postImage/' . $value['postImage'] . '"class="post-image" alt="Post Image">
+                        <img src= "../../database/postImage/' . $value['postImage'] . '"class="post-image" alt="Post Image">
 
                     </div>';
                 }

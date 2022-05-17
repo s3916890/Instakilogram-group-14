@@ -4,7 +4,7 @@
             <?php
             if (isset($_SESSION['avatar'])) {
             ?>
-                <img src="<?php echo '../assets/userAvatar/' . $_SESSION['avatar']; ?>" class="avatar" alt="Avatar">
+                <img src="<?php echo '../../database/userAvatar/' . $_SESSION['avatar']; ?>" class="avatar" alt="Avatar">
             <?php
             }
             ?>

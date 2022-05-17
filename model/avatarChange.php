@@ -12,7 +12,7 @@
 
     if (isset($_POST["submit"])) {
         $newAvatar = $_FILES['newAvatar']['name'];
-        $target_dir    = "../assets/userAvatar/";
+        $target_dir    = "../../database/userAvatar/";
         $target_file   = $target_dir . basename($newAvatar);
         $fileUploadExtension = pathinfo($target_file,PATHINFO_EXTENSION);
         $allowedExtension = array("jpg", "jpeg", "png", "gif");
